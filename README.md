@@ -11,11 +11,11 @@
 ### 3. What will be the input/output for our project?
 > * The inputs to our project will be the restaurant, the total amount, the number of consumers, and the specific items each consumer purchased. The output of SPLICE will be the amount each consumer needs to pay after the bill is split. In addition, we intend on incorporating subjacent features that are related to the user, such as the total amount of money spent over the course of a year, details of monthly consumption, and etc. It is also possible that we output certain data regarding each transaction at a restaurant. For instance, with “burger” as the keyword, the amount of hamburgers that have been purchased in total will display.
 ### 4. What design patterns will we be incorporating?
-#### Prototype
+> **Prototype**
 > * Incorporating the prototype design pattern within our project would entail creating multiple new objects of “restaurants” that we can copy the template from. It would allow us to create copies of existing objects, and also modify it to our needs. As we are going to include numerous fast-food chains, cloning each object would be more efficient as opposed to creating new objects. 
-#### Composite 
+> **Composite**
 > * Incorporating the composite design pattern would allow us to treat individual objects in an uniformed manner. For example, a total bill will have a specified amount of people and number of items they purchased and the composite design pattern will allow us to use those variables/data in the same manner for different restaurants. In addition, this can also be applied in our project in other instances such as specific menu items and the tax amount allocated with it.
-#### Strategy
+> **Strategy**
 > * Incorporating the strategy design pattern would allow us to use the individual objects, which in this case would be the amount from a specific individual, and use the same algorithm to get the individual's total amount. As tax is distributed based on the percentage of the total bill, we can use the strategy method and create a function that generates the tax from an individual and adds it to the amount ordered. In addition, the strategy pattern could also be used when we have individuals who split an item and depending on the amount of people that split the item we can generate that total to their specified amounts. 
 
 ## Phase II
