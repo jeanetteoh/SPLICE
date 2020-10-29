@@ -1,15 +1,15 @@
 # SPLICE
  > **Authors**: [**Xin Wang**](https://github.com/xinwng), [**Jeanette Oh**](https://github.com/jeanetteoh), [**Hongan Zhang**](https://github.com/hongan-z)
 
-## Project Description
-### Why is this project interesting to us?
+# Project Description
+## Why is this project interesting to us?
 > * SPLICE is a way of simplifying everyday experiences. Our group holds the idea of efficiency and convenience to a high level so we wanted to create an easy to use application that simplifies splitting the check with friends or family. It has always been an inconvenience to do the math and figure out who needs to pay what when going out, and using multiple cards is not always an option. SPLICE allows a simple way of denoted what was ordered, by who, and how much they need to pay. 
 > * SPLICE will have many useful prospects. Not only is SPLICE a tool for splitting bills amongst friends, this project will also allow us to acknowledge trending food preferences from specific restaurants. It can also be utilized as a tool to track food pricing changes over the course of a certain period of time. Under this notion, SPLICE is a tool that can provide insight into a user’s spending habits as well as food preferences. 
-### What languages/tools/technologies do we plan to use?
+## What languages/tools/technologies do we plan to use?
 > * At this moment, we intend to implement SPLICE through C++, as well as pushing it onto GitHub over a time period. In addition, we will utilize Valgrind with its extensive toolkit, we will use the Memcheck tool to detect memory-management problems for SPLICE projects, as our project is developed with C++. Testing is a very important part of the software development process, and thus we will be incorporating the fairly standard Google Unit Test Framework (gtest) for SPLICE project in pursuance of ensuring the quality of our project.
-### What will be the input/output for our project?
+## What will be the input/output for our project?
 > * The inputs to our project will be the restaurant, the total amount, the number of consumers, and the specific items each consumer purchased. The output of SPLICE will be the amount each consumer needs to pay after the bill is split. In addition, we intend on incorporating subjacent features that are related to the user, such as the total amount of money spent over the course of a year, details of monthly consumption, and etc. It is also possible that we output certain data regarding each transaction at a restaurant. For instance, with “burger” as the keyword, the amount of hamburgers that have been purchased in total will display.
-### Incorporating design patterns
+## Incorporating design patterns
 We intend on incorporating:
 #### Prototype
 >   * Incorporating the prototype design pattern within our project would entail creating multiple new objects of “restaurants” that we can copy the template from. It would allow us to create copies of existing objects, and also modify it to our needs. As we are going to include numerous fast-food chains, cloning each object would be more efficient as opposed to creating new objects. 
