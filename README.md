@@ -1,11 +1,15 @@
 # SPLICE
- > **Authors**: **Xin Wang** (https://github.com/xinwng), **Jeanette Oh** (https://github.com/jeanetteoh), **Hongan Zhang** (https://github.com/hongan-z)
+ > **Authors**: [**Xin Wang**](https://github.com/xinwng), [**Jeanette Oh**](https://github.com/jeanetteoh), [**Hongan Zhang**](https://github.com/hongan-z)
 
 ## Project Description
 ### Why is this project interesting to us?
 > * SPLICE is a way of simplifying everyday experiences. Our group holds the idea of efficiency and convenience to a high level so we wanted to create an easy to use application that simplifies splitting the check with friends or family. It has always been an inconvenience to do the math and figure out who needs to pay what when going out, and using multiple cards is not always an option. SPLICE allows a simple way of denoted what was ordered, by who, and how much they need to pay. 
 
 > * SPLICE will have many useful prospects. Not only is SPLICE a tool for splitting bills amongst friends, this project will also allow us to acknowledge trending food preferences from specific restaurants. It can also be utilized as a tool to track food pricing changes over the course of a certain period of time. Under this notion, SPLICE is a tool that can provide insight into a user’s spending habits as well as food preferences. 
+
+### What languages/tools/technologies do you plan to use?
+> * At this moment, we intend to implement SPLICE through C++, as well as pushing it onto GitHub over a time period. In addition, we will utilize Valgrind with its extensive toolkit, we will use the Memcheck tool to detect memory-management problems for SPLICE projects, as our project is developed with C++. Testing is a very important part of the software development process, and thus we will be incorporating the fairly standard Google Unit Test Framework (gtest) for SPLICE project in pursuance of ensuring the quality of our project.
+
 
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
