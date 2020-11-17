@@ -30,8 +30,13 @@
  >   * Create smaller development tasks as issues and assign them to team members. Place these in the `Backlog` column.
  >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
 ## Class Diagram
- > Include a class diagram(s) for each design pattern and a description of the diagram(s). This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper OMT notation (as discussed in the course slides). You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description). 
- 
+ > 1) User Strategy Pattern
+	> The user strategy pattern allows us to implement user management within the application. Consumer information can be added and removed in this module and a record of the user's reciepts can be formed. Consumption information at different restaurants is printed out and retained as data information. Each purchase, where and the list of consumers can be displayed in this module.
+ > 2) Party Composite Pattern
+	> With the component being the Party containing the masterCart vector (all the food items), the OrganizeParty Composite objects provide the ability to add and remove Party(s), while the PartyMember Leaf Object stores all party members and will add, delete, and modify party members
+
+ > 3) Restaurant Protype Patten
+	> The Restaurant protype allows for the cloning of objects of menu items. This allows us to clone objects of a specific restaurant type into a user cart. This prototype is used by having the user input an item in which, the class type denotes where to recieve the data and thus clones it for usage.
 ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
  > * Before the meeting you should perform a sprint plan like you did in Phase II
