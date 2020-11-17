@@ -21,18 +21,18 @@
 
 ## Phase II
 ## Class Diagrams
- #### User Strategy Pattern
-	> * The user strategy pattern allows us to implement user management within the application. Consumer information can be added and removed in this module and a record of the user's reciepts can be formed. Consumption information at different restaurants is printed out and retained as data information. Each purchase, where and the list of consumers can be displayed in this module.
+User Strategy Pattern
+	> The user strategy pattern allows us to implement user management within the application. Consumer information can be added and removed in this module and a record of the user's reciepts can be formed. Consumption information at different restaurants is printed out and retained as data information. Each purchase, where and the list of consumers can be displayed in this module.
 	
 	![strategy](https://user-images.githubusercontent.com/32968430/99349762-9d36ac00-2851-11eb-88d0-71171f02c32a.png)
 	
- #### Party Composite Pattern
-	> * With the component being the Party containing the masterCart vector (all the food items), the OrganizeParty Composite objects provide the ability to add and remove Party(s), while the PartyMember Leaf Object stores all party members and will add, delete, and modify party members
+Party Composite Pattern
+	> With the component being the Party containing the masterCart vector (all the food items), the OrganizeParty Composite objects provide the ability to add and remove Party(s), while the PartyMember Leaf Object stores all party members and will add, delete, and modify party members
 	
 	![composite](https://user-images.githubusercontent.com/32968430/99349756-9ad45200-2851-11eb-9307-71cc82ca09e9.png)
 
- #### Restaurant Protype Patten
-	> * The Restaurant protype allows for the cloning of objects of menu items. This allows us to clone objects of a specific restaurant type into a user cart. This prototype is used by having the user input an item in which, the class type denotes where to recieve the data and thus clones it for usage.
+Restaurant Protype Patten
+	> The Restaurant protype allows for the cloning of objects of menu items. This allows us to clone objects of a specific restaurant type into a user cart. This prototype is used by having the user input an item in which, the class type denotes where to recieve the data and thus clones it for usage.
 	
 	<img width="594" alt="prototype" src="https://user-images.githubusercontent.com/32968430/99349757-9b6ce880-2851-11eb-91c8-e30f4a777c33.png">
 	
