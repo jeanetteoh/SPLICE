@@ -20,26 +20,20 @@
 > * The strategic strategy is the functions that allows us to implement user management. Consumer information can be added and removed in this module, and a record can be formed.Consumption information at different restaurants is also printed out and retained as data information.Each purchase, where and the list of consumers can be displayed in this module.
 
 ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to 
- > * Set up your GitHub project board as a Kanban board for the project. It should have columns that map roughly to 
- >   * Backlog, TODO, In progress, In testing, Done
- >   * You can change these or add more if you'd like, but we should be able to identify at least these.
- > * There is no requirement for automation in the project board but feel free to explore those options.
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller development tasks as issues and assign them to team members. Place these in the `Backlog` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
-## Class Diagram
- > 1) User Strategy Pattern
-	> The user strategy pattern allows us to implement user management within the application. Consumer information can be added and removed in this module and a record of the user's reciepts can be formed. Consumption information at different restaurants is printed out and retained as data information. Each purchase, where and the list of consumers can be displayed in this module.
+## Class Diagrams
+ #### User Strategy Pattern
+	> * The user strategy pattern allows us to implement user management within the application. Consumer information can be added and removed in this module and a record of the user's reciepts can be formed. Consumption information at different restaurants is printed out and retained as data information. Each purchase, where and the list of consumers can be displayed in this module.
+	
 	![strategy](https://user-images.githubusercontent.com/32968430/99349762-9d36ac00-2851-11eb-88d0-71171f02c32a.png)
 	
- > 2) Party Composite Pattern
-	> With the component being the Party containing the masterCart vector (all the food items), the OrganizeParty Composite objects provide the ability to add and remove Party(s), while the PartyMember Leaf Object stores all party members and will add, delete, and modify party members
+ #### Party Composite Pattern
+	> * With the component being the Party containing the masterCart vector (all the food items), the OrganizeParty Composite objects provide the ability to add and remove Party(s), while the PartyMember Leaf Object stores all party members and will add, delete, and modify party members
+	
 	![composite](https://user-images.githubusercontent.com/32968430/99349756-9ad45200-2851-11eb-9307-71cc82ca09e9.png)
 
- > 3) Restaurant Protype Patten
-	> The Restaurant protype allows for the cloning of objects of menu items. This allows us to clone objects of a specific restaurant type into a user cart. This prototype is used by having the user input an item in which, the class type denotes where to recieve the data and thus clones it for usage.
+ #### Restaurant Protype Patten
+	> * The Restaurant protype allows for the cloning of objects of menu items. This allows us to clone objects of a specific restaurant type into a user cart. This prototype is used by having the user input an item in which, the class type denotes where to recieve the data and thus clones it for usage.
+	
 	<img width="594" alt="prototype" src="https://user-images.githubusercontent.com/32968430/99349757-9b6ce880-2851-11eb-91c8-e30f4a777c33.png">
 	
 ## Phase III
