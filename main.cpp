@@ -1,8 +1,9 @@
-#include "header/fastfood_factory.hpp"
+#include "header/fastfood_client.hpp"
+#include "header/fastfood_creator.hpp"
 
 int main()
 {
-    FastFood_Factory test;
+    FastFood_Client test;
     test.fastfood_run();
 
     return 0;

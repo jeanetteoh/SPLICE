@@ -33,7 +33,7 @@ public:
 
     virtual void fastfood_display_store_info() = 0;
 
-    
+    virtual FastFood * clone() = 0;
     // Restaurant *clone()
     // {
     //     return new FastFood(*this);
