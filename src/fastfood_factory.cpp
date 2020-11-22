@@ -5,6 +5,7 @@ void FastFood_Factory::fastfood_run()
 {
     m_FastFood.push_back(new McDonalds("McDonald's"));
     m_FastFood.push_back(new TacoBell("Taco Bell"));
+    m_FastFood.push_back(new ChickFilA("Chick-Fil-A"));
 
     int count = 1;
     while(count != 0)

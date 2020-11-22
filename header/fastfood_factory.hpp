@@ -2,6 +2,7 @@
 #define FASTFOOD_FACTORY
 #include "../header/mcdonalds_fastfood.hpp"
 #include "../header/tacobell_fastfood.hpp"
+#include "../header/chickfila_fastfood.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
