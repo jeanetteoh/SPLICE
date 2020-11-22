@@ -3,16 +3,16 @@
 #include "../header/fastfood_restaurant.hpp"
 
 #include <vector>
-void FastFood_Client::fastfood_run()
+void FastFood_Client::fastfood_test_run()
 {
-    m_FastFood.push_back(Create("Burger", "McDonald's"));
-    m_FastFood.push_back(Create("Taco", "Taco Bell"));
-    m_FastFood.push_back(Create("Pizza", "Chick-Fil-A"));
+    m_Burger.push_back(Create("Burger", "McDonald's"));
+    m_Taco.push_back(Create("Taco", "Taco Bell"));
+    m_Pizza.push_back(Create("Pizza", "Chick-Fil-A"));
 
     int count = 1;
     while (count != 0)
     {
-        for (auto FastFood : m_FastFood)
+        for (auto FastFood : m_Burger)
         {
             FastFood->fastfood_display_store_info();
         }
@@ -20,9 +20,26 @@ void FastFood_Client::fastfood_run()
     }
 }
 
+void FastFood_Client::fastfood_burger_run()
+{
+    
+}
+void fastfood_taco_run();
+void fastfood_pizza_run();
+
 FastFood_Client::~FastFood_Client()
 {
-    for (auto FastFood : m_FastFood)
+    for (auto FastFood : m_Burger)
+    {
+        delete FastFood;
+    }
+
+    for (auto FastFood : m_Taco)
+    {
+        delete FastFood;
+    }
+
+    for (auto FastFood : m_Pizza)
     {
         delete FastFood;
     }

@@ -3,7 +3,7 @@
 #include "../header/fastfood_category_pizza.hpp"
 #include "../header/fastfood_category_taco.hpp"
 
-FastFood *Create(string_view fastfood_type, const string &fastfood_store_name)
+FastFood *Create(const string &fastfood_store_name, string_view fastfood_type)
 {
     if (fastfood_type == "Burger")
     {

@@ -4,7 +4,7 @@
 int main()
 {
     FastFood_Client test;
-    test.fastfood_run();
+    test.fastfood_test_run();
 
     return 0;
 }

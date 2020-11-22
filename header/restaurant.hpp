@@ -12,7 +12,7 @@ protected:
     string restaurant_category;
     // string restaurantName;
 public:
-    Restaurant(){};
+    Restaurant() = default;
 
     Restaurant(const string &restaurant_category)
     {

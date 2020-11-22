@@ -21,8 +21,8 @@ TEST(FastFood_Tests, StringTest)
 {
     vector<FastFood *> m_stringTest;
     m_stringTest.push_back(new Pizza("Domino's Pizza"));
-    m_stringTest.push_back(new Taco("Taco"));
-    m_stringTest.push_back(new Burger("McDonalds"));
+    m_stringTest.push_back(new Taco("Taco Bell"));
+    m_stringTest.push_back(new Burger("McDonald's"));
     for (auto FastFood : m_stringTest)
     {
         EXPECT_EQ(m_stringTest.at(0)->get_fastfood_store_name(), "Domino's Pizza");
