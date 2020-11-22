@@ -22,7 +22,7 @@
 ## Phase II
 ## Class Diagrams
 ### User Strategy Pattern
-- The user strategy pattern allows us to implement user management within the application. Consumer information can be added and removed in this module and a record of the user's reciepts can be formed. Consumption information at different restaurants is printed out and retained as data information. Each purchase, where and the list of consumers can be displayed in this module.
+- Restaurant strategic pattern, can let us to corresponding to sorting algorithm operation of the restaurant, such as the restaurant according to the price of ordering (from the highest price to the restaurant to the cheapest to the restaurant）, the restaurant can also be sorted in alphabetical order (from A to Z or from A to Z), algorithm can also be in accordance with the type of restaurant to restaurant for sorting (western food, Mexican food, Chinese food, etc.).
 	
 ![strategy](https://user-images.githubusercontent.com/32968430/99349762-9d36ac00-2851-11eb-88d0-71171f02c32a.png)
 	
