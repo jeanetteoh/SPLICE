@@ -1,14 +1,15 @@
-#ifndef MCDONALDS_FASTFOOD
-#define MCDONALDS_FASTFOOD
+#ifndef FASTFOOD_CATEGORY_TACO
+#define FASTFOOD_CATEGORY_TACO
 #include "../header/restaurant.hpp"
 #include "../header/fastfood_restaurant.hpp"
 
-class McDonalds : public FastFood
+class Taco : public FastFood
 {
     using FastFood::FastFood;
 
 public:
     void fastfood_display_store_info() override;
+    FastFood *clone() override;
 };
 
-#endif /* MCDONALDS_FASTFOOD */
+#endif /* FASTFOOD_CATEGORY_TACO */

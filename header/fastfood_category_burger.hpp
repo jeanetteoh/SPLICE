@@ -1,14 +1,15 @@
-#ifndef CHICKFILA_FASTFOOD
-#define CHICKFILA_FASTFOOD
+#ifndef FASTFOOD_CATEGORY_BURGER
+#define FASTFOOD_CATEGORY_BURGER
 #include "../header/restaurant.hpp"
 #include "../header/fastfood_restaurant.hpp"
 
-class ChickFilA : public FastFood
+class Burger : public FastFood
 {
     using FastFood::FastFood;
 
 public:
     void fastfood_display_store_info() override;
+    FastFood *clone() override;
 };
 
-#endif /* CHICKFILA_FASTFOOD */
+#endif /* FASTFOOD_CATEGORY_BURGER */
