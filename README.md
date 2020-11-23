@@ -42,13 +42,19 @@
 ![Restaurant Prototype](https://user-images.githubusercontent.com/58233764/99926233-db224d00-2cf5-11eb-9a10-b08ccc626c2c.png)
 	
 ## Phase III
- > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
- > * Before the meeting you should perform a sprint plan like you did in Phase II
- > * In the meeting with your TA you will discuss: 
+ > Meeting with Phillip Park : Monday, November 23 (11:00am - 2:00pm)
  >   - How effective your last sprint was (each member should talk about what they did)
+ 	Our sprint was successfully and we were able to start the process of our application SPLICE. During our meetings we were able to talk to one another about 	the progress and implementations we were adding/added. Our team had started working on the composite, strategy, and prototype patterns for our project.
+	
  >   - Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
+ 	During the last sprint majority of our tasks were not finished but in progress. Since we are working as a team for this application we need to implement and work together to create a cohesive app. As we move further, we must communicate and look over one anothers code to ensure that we nothing will conflict.
+ 	
  >   - Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
+ 	One bug we have in our program so far is in the strategy pattern. We will be debugging sortByPrice(), sortbyName(), sortbyType() into party. Since this is a high priority, we will be fixing this by updating the ztrategy class and debugging the code to work alongside the party composite.
+ 	
  >   - What tasks you are planning for this next sprint.
+ 	Our next tasks will be to finish implementing our main three patterns and being able to use them 	with one another. In more specifics, retrieving data, debugging, making sure to include the correct 	files with one another, and testing.
+ 	
 
 ## Final deliverable
  > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
