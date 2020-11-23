@@ -33,8 +33,8 @@
 	
 #### Menu Composite Pattern
 - The Menu composite pattern will represent a part-whole treeh hierarchy of how we intend to implement the items on the menu and the menus for different restaurants. MenuItem will be our leaf component, and Menu will be our composite component.
-	
-![Menu Composite](https://user-images.githubusercontent.com/58233764/100002829-f8006400-2d79-11eb-8dbe-3a2dfc04c2ed.png)
+
+![Menu Composite](https://user-images.githubusercontent.com/58233764/100003031-50cffc80-2d7a-11eb-87c7-3b6d78d19a6b.png)
 
 #### Restaurant Prototype Patten
 - The Restaurant prototype allows for the clonining of different Restaurant categories. This allows for the client to easily copy any object that follows such prototype interface. The "Concrete Prototypes" will be the different categories of Fast Food places such as burgers, pizzas, and tacos. 
