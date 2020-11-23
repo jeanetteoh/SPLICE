@@ -22,9 +22,9 @@
 ## Phase II
 ## Class Diagrams
 ### User Strategy Pattern
-- Restaurant strategic pattern, can let us to corresponding to sorting algorithm operation of the restaurant, such as the restaurant according to the price of ordering (from the highest price to the restaurant to the cheapest to the restaurant）, the restaurant can also be sorted in alphabetical order (from A to Z or from A to Z), algorithm can also be in accordance with the type of restaurant to restaurant for sorting (western food, Mexican food, Chinese food, etc.).
+- RestaurantSort Strategy pattern, can let us to corresponding to sorting algorithm operation of the restaurant, such as the restaurant according to the price of ordering (from the highest price to the restaurant to the cheapest to the restaurant）, the restaurant can also be sorted in alphabetical order (from A to Z or from A to Z), algorithm can also be in accordance with the type of restaurant to restaurant for sorting (western food, Mexican food, Chinese food, etc.).
 	
-![up-1](https://user-images.githubusercontent.com/32968430/99920507-d8652f00-2cd8-11eb-86fa-5f1cf9924175.png)
+![Sort Strategy](https://user-images.githubusercontent.com/58233764/99926181-a44c3700-2cf5-11eb-889b-36309dfe1711.png)
 	
 ### Party Composite Pattern
 - With the component being the Party containing the masterCart vector (all the food items), the OrganizeParty Composite objects provide the ability to add and remove Party(s), while the PartyMember Leaf Object stores all party members and will add, delete, and modify party members
