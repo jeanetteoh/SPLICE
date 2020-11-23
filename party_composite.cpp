@@ -22,3 +22,4 @@ void modifyPartyMember(string partyMemberName){
 void getPartyMemberName(){
     return PartyMemberName;
 }
+
