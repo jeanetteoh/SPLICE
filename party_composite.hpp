@@ -9,21 +9,33 @@
 #include <vector>
 using namespace std;
 
-struct Person{
-    string name;
+class PartyMember{
+    public:
+    string partyMemberName;
     float amount;
     vector<items*> order;
-
+    vector<Party*> PartyMembers;
+    
+    protected:
+        string printPartMember();
+        void addPartyMember(string partyMemberName);
+        void deletePartyMember(string partyMemberName);
+        void modifyPartyMember(string partyMemberName);
+        void getPartyMemberName();
 }
 class Party{
 public:
-virtual void Add(Person* a);
-virtual void Remove();
-virtual void Delete(Person* a);
+printPartMember();
+        virtual void addPartyMember(string partyMemberName);
+        virtual void deletePartyMember(string partyMemberName);
+        virtual void modifyPartyMember(string partyMemberName);
+        virtual void getPartyMemberName();
 
 private:
-string restaurant_location;
+
+string masterMember;
 \\specification of which restaurant they are at
 int numParty;
 \\the number of people within the party
+
 ;}
