@@ -54,8 +54,9 @@
  >   - Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
  
  One bug we have in our program so far is in the strategy pattern. We will be debugging sortByPrice(), sortbyName(), sortbyType() into party. Since this is a high priority, we will be fixing this by updating the ztrategy class and debugging the code to work alongside the party composite.
- 	
+ 
  >   - What tasks you are planning for this next sprint.
+ 
 Our next tasks will be to finish implementing our main three patterns and being able to use them 	with one another. In more specifics, retrieving data, debugging, making sure to include the correct 	files with one another, and testing.
  	
 
