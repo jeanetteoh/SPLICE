@@ -31,8 +31,8 @@
 	
 ![composite](https://user-images.githubusercontent.com/32968430/99349756-9ad45200-2851-11eb-9307-71cc82ca09e9.png)
 
-### Restaurant Protype Patten
-- The Restaurant protype allows for the cloning of objects of menu items. This allows us to clone objects of a specific restaurant type into a user cart. This prototype is used by having the user input an item in which, the class type denotes where to recieve the data and thus clones it for usage.
+### Restaurant Prototype Patten
+- The Restaurant prototype allows for the clonining of different Restaurant categories. This allows for the client to easily copy any object that follows such prototype interface. The "Concrete Prototypes" will be the different categories of Fast Food places such as burgers, pizzas, and tacos. 
 	
 <img width="594" alt="prototype" src="https://user-images.githubusercontent.com/32968430/99349757-9b6ce880-2851-11eb-91c8-e30f4a777c33.png">
 	
