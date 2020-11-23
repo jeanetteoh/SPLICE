@@ -15,15 +15,15 @@
 
 **What design patterns will we be incorporating?**
 ##### 1. Prototype
-> Incorporating the prototype design pattern within our project would entail creating multiple new categories of restaurants that we can clone the template from. It would allow us to create copies of existing objects, and also modify it to our needs. As we are going to include numerous different categories of restaurant chains, cloning each object would be more efficient and less expensive as opposed to creating new objects. 
+> * Incorporating the prototype design pattern within our project would entail creating multiple new categories of restaurants that we can clone the template from. It would allow us to create copies of existing objects, and also modify it to our needs. As we are going to include numerous different categories of restaurant chains, cloning each object would be more efficient and less expensive as opposed to creating new objects. 
 
 ##### 2. Composite
-> Incorporating the composite design pattern would allow us to treat individual objects in an uniformed manner. For example, a total bill will have a specified amount of people and number of items they purchased and the composite design pattern will allow us to use those variables/data in the same manner for different restaurants. In addition, this can also be applied in our project in other instances such as specific menu items and the tax amount allocated with it.
+> * Incorporating the composite design pattern would allow us to treat individual objects in an uniformed manner. For example, a total bill will have a specified amount of people and number of items they purchased and the composite design pattern will allow us to use those variables/data in the same manner for different restaurants. In addition, this can also be applied in our project in other instances such as specific menu items and the tax amount allocated with it.
 
 ##### 3. Strategy
-> Incorporating the strategy design pattern would allow us to use the individual objects, which in this case would be the amount from a specific individual, and use the same algorithm to get the individual's total amount. As tax is distributed based on the percentage of the total bill, we can use the strategy method and create a function that generates the tax from an individual and adds it to the amount ordered. In addition, the strategy pattern could also be used when we have individuals who split an item and depending on the amount of people that split the item we can generate that total to their specified amounts. 
+> * Incorporating the strategy design pattern would allow us to use the individual objects, which in this case would be the amount from a specific individual, and use the same algorithm to get the individual's total amount. As tax is distributed based on the percentage of the total bill, we can use the strategy method and create a function that generates the tax from an individual and adds it to the amount ordered. In addition, the strategy pattern could also be used when we have individuals who split an item and depending on the amount of people that split the item we can generate that total to their specified amounts. 
 
-> The strategic strategy is the functions that allows us to implement user management. Consumer information can be added and removed in this module, and a record can be formed.Consumption information at different restaurants is also printed out and retained as data information.Each purchase, where and the list of consumers can be displayed in this module.
+> * The strategic strategy is the functions that allows us to implement user management. Consumer information can be added and removed in this module, and a record can be formed.Consumption information at different restaurants is also printed out and retained as data information.Each purchase, where and the list of consumers can be displayed in this module.
 
 ## Phase II: Class Diagrams
 #### User Strategy Pattern
