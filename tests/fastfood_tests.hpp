@@ -31,4 +31,17 @@ TEST(FastFood_Tests, StringTest)
     }
 }
 
+TEST(FastFood_Tests, Clone_McDonalds_FiveGuys)
+{
+    vector<FastFood *> m_Burgers;
+    m_Burgers.push_back(new Burger("McDonald's")); //Clone this
+    
+    auto FastFood = m_Burgers[0]->clone();
+    FastFood->set_fastfood_store_name("Five Guys");
+    m_Burgers.push_back(FastFood);
+
+    EXPECT_EQ(m_Burgers.at(0)->get_fastfood_store_name(), "McDonald's");
+    EXPECT_EQ(m_Burgers.at(1)->get_fastfood_store_name(), "Five Guys");
+}
+
 #endif /* FASTFOOD_TESTS */

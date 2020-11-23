@@ -101,6 +101,21 @@ void FastFood_Client::fastfood_test_run()
         }
         count--;
     }
+
+    auto FastFood = m_Burger[0]->clone();
+    FastFood->set_fastfood_store_name("Carl's Jr.");
+    m_Burger.push_back(FastFood);
+    int _count{1};
+    int _i = 1;
+    while (_count != 0)
+    {
+        for (auto FastFood : m_Burger)
+        {
+            cout << _i++ << endl;
+            FastFood->fastfood_display_store_info();
+        }
+        _count--;
+    }
 }
 
 FastFood_Client::~FastFood_Client()
