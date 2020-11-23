@@ -31,10 +31,10 @@
 	
 ![Sort Strategy](https://user-images.githubusercontent.com/58233764/99926181-a44c3700-2cf5-11eb-889b-36309dfe1711.png)
 	
-#### Party Composite Pattern
-- With the component being the Party containing the masterCart vector (all the food items), the OrganizeParty Composite objects provide the ability to add and remove Party(s), while the PartyMember Leaf Object stores all party members and will add, delete, and modify party members
+#### Menu Composite Pattern
+- The Menu composite pattern will represent a part-whole treeh hierarchy of how we intend to implement the items on the menu and the menus for different restaurants. MenuItem will be our leaf component, and Menu will be our composite component.
 	
-![composite](https://user-images.githubusercontent.com/32968430/99349756-9ad45200-2851-11eb-9307-71cc82ca09e9.png)
+![Menu Composite](https://user-images.githubusercontent.com/58233764/100002829-f8006400-2d79-11eb-8dbe-3a2dfc04c2ed.png)
 
 #### Restaurant Prototype Patten
 - The Restaurant prototype allows for the clonining of different Restaurant categories. This allows for the client to easily copy any object that follows such prototype interface. The "Concrete Prototypes" will be the different categories of Fast Food places such as burgers, pizzas, and tacos. 
