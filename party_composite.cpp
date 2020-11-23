@@ -4,12 +4,21 @@
 
 using namespace std;
 
-void Add(Person* a){
+string printPartyMember(){
+    return PartyMember;
+}
+void addPartyMember(string partyMemberName){
+    memberMaster.push_back(partyMemberName);
+}
+void deletePartyMember(string partyMemberName){
+    memberMaster.remove(partyMemberName);
+    partyMemberName = "null";
 
 }
-void Remove(){
-
+void modifyPartyMember(string partyMemberName){
+    string newName;
+    this->partMemberName = newName;
 }
-void Delete(Person* a){
-
+void getPartyMemberName(){
+    return PartyMemberName;
 }
