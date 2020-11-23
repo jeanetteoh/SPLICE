@@ -1,8 +1,10 @@
-# SPLICE
- > **Authors**: [**Xin Wang**](https://github.com/xinwng), [**Jeanette Oh**](https://github.com/jeanetteoh), [**Hongan Zhang**](https://github.com/hongan-z)
+## SPLICE ## 
+ > **Authors**:\
+ > [*Xin Wang*](https://github.com/xinwng)\
+ > [*Jeanette Oh*](https://github.com/jeanetteoh)\
+ > [*Hongan Zhang*](https://github.com/hongan-z)
 
-**Project Description**
-## Phase I
+## Phase I: Project Description
 ### **Why is this project interesting to us?**
 > * SPLICE is a way of simplifying everyday experiences. Our group holds the idea of efficiency and convenience to a high level so we wanted to create an easy to use application that simplifies splitting the check with friends or family. It has always been an inconvenience to do the math and figure out who needs to pay what when going out, and using multiple cards is not always an option. SPLICE allows a simple way of denoting what was ordered, by who, and how much they need to pay. 
 > * SPLICE will have many useful prospects. Not only is SPLICE a tool for splitting bills amongst friends, this project will also allow us to acknowledge trending food preferences from specific restaurants. It can also be utilized as a tool to track food pricing changes over the course of a certain period of time. Under this notion, SPLICE is a tool that can provide insight into a user’s spending habits as well as food preferences. 
@@ -11,16 +13,15 @@
 ### **What will be the input/output for our project?**
 > * The inputs to our project will be the restaurant, the total amount, the number of consumers, and the specific items each consumer purchased. The output of SPLICE will be the amount each consumer needs to pay after the bill is split. In addition, we intend on incorporating subjacent features that are related to the user, such as the total amount of money spent over the course of a year, details of monthly consumption, and etc. It is also possible that we output certain data regarding each transaction at a restaurant. For instance, with “burger” as the keyword, the amount of hamburgers that have been purchased in total will display.
 ### **What design patterns will we be incorporating?**
-#### 1. Prototype
-> * Incorporating the prototype design pattern within our project would entail creating multiple new categories of restaurants that we can clone the template from. It would allow us to create copies of existing objects, and also modify it to our needs. As we are going to include numerous different categories of restaurant chains, cloning each object would be more efficient and less expensive as opposed to creating new objects. 
-#### 2. Composite
-> * Incorporating the composite design pattern would allow us to treat individual objects in an uniformed manner. For example, a total bill will have a specified amount of people and number of items they purchased and the composite design pattern will allow us to use those variables/data in the same manner for different restaurants. In addition, this can also be applied in our project in other instances such as specific menu items and the tax amount allocated with it.
-#### 3. Strategy
-> * Incorporating the strategy design pattern would allow us to use the individual objects, which in this case would be the amount from a specific individual, and use the same algorithm to get the individual's total amount. As tax is distributed based on the percentage of the total bill, we can use the strategy method and create a function that generates the tax from an individual and adds it to the amount ordered. In addition, the strategy pattern could also be used when we have individuals who split an item and depending on the amount of people that split the item we can generate that total to their specified amounts. 
-> * The strategic strategy is the functions that allows us to implement user management. Consumer information can be added and removed in this module, and a record can be formed.Consumption information at different restaurants is also printed out and retained as data information.Each purchase, where and the list of consumers can be displayed in this module.
+##### 1. Prototype
+> Incorporating the prototype design pattern within our project would entail creating multiple new categories of restaurants that we can clone the template from. It would allow us to create copies of existing objects, and also modify it to our needs. As we are going to include numerous different categories of restaurant chains, cloning each object would be more efficient and less expensive as opposed to creating new objects. 
+##### 2. Composite
+> Incorporating the composite design pattern would allow us to treat individual objects in an uniformed manner. For example, a total bill will have a specified amount of people and number of items they purchased and the composite design pattern will allow us to use those variables/data in the same manner for different restaurants. In addition, this can also be applied in our project in other instances such as specific menu items and the tax amount allocated with it.
+##### 3. Strategy
+> Incorporating the strategy design pattern would allow us to use the individual objects, which in this case would be the amount from a specific individual, and use the same algorithm to get the individual's total amount. As tax is distributed based on the percentage of the total bill, we can use the strategy method and create a function that generates the tax from an individual and adds it to the amount ordered. In addition, the strategy pattern could also be used when we have individuals who split an item and depending on the amount of people that split the item we can generate that total to their specified amounts. 
+> The strategic strategy is the functions that allows us to implement user management. Consumer information can be added and removed in this module, and a record can be formed.Consumption information at different restaurants is also printed out and retained as data information.Each purchase, where and the list of consumers can be displayed in this module.
 
-## Phase II
-#### Class Diagrams
+## Phase II: Class Diagrams
 #### User Strategy Pattern
 - RestaurantSort Strategy pattern, can let us to corresponding to sorting algorithm operation of the restaurant, such as the restaurant according to the price of ordering (from the highest price to the restaurant to the cheapest to the restaurant）, the restaurant can also be sorted in alphabetical order (from A to Z or from A to Z), algorithm can also be in accordance with the type of restaurant to restaurant for sorting (western food, Mexican food, Chinese food, etc.).
 	
