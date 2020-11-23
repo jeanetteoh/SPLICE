@@ -3,124 +3,101 @@
 #include "../header/fastfood_restaurant.hpp"
 #include "../header/restaurant.hpp"
 
-// FastFood *getMcDonalds()
-// {
-//     auto FastFood = FastFood_Prototypes::get_FastFood_Prototype("Burger");
-//     FastFood->set_fastfood_store_name("McDonald's");
-//     FastFood->set_fastfood_restaurant_category("Fast Food");
-//     Restaurant McDonalds{"Fast Food"};
-//     FastFood->set_fastfood_restaurant_category(McDonalds.get_restaurant_category());
-//     return FastFood;
-// }
-
-// void FastFood_Client::fastfood_test_run()
-// {
-//     m_Burger.push_back(getMcDonalds());
-//     m_Burger.at(0)->fastfood_display_store_info();
-//     // for (auto burger_restaurants : m_Burger)
-//     // {
-//     //     burger_restaurants->fastfood_display_store_info();
-//     // }
-// }
-
-// void FastFood_Client::fastfood_test_run()
-// {
-//     m_Burger.push_back(Create("Burger", "McDonald's"));
-//     m_Taco.push_back(Create("Taco", "Taco Bell"));
-//     m_Pizza.push_back(Create("Pizza", "Chick-Fil-A"));
-
-//     int count = 1;
-//     while (count != 0)
-//     {
-//         for(auto burger_restaurants : m_Burger)
-//         {
-//             burger_restaurants->fastfood_display_store_info();
-//         }
-
-//         for(auto taco_restaurants : m_Taco)
-//         {
-//             taco_restaurants->fastfood_display_store_info();
-//         }
-
-//         for(auto pizza_restaurants : m_Pizza)
-//         {
-//             pizza_restaurants->fastfood_display_store_info();
-//         }
-
-//         --count;
-//     }
-// }
-
-// void FastFood_Client::fastfood_burger_run()
-// {
-//     auto burger_restaurants = m_Burger[0]->clone();
-//     burger_restaurants->set_fastfood_store_name("Chick-Fil-A");
-//     m_Burger.push_back(burger_restaurants);
-// }
-// void fastfood_taco_run()
-// {
-
-// }
-
-// void fastfood_pizza_run()
-// {
-
-// }
-
-// FastFood_Client::~FastFood_Client()
-// {
-//     for (auto FastFood : m_Burger)
-//     {
-//         delete FastFood;
-//     }
-
-//     for (auto FastFood : m_Taco)
-//     {
-//         delete FastFood;
-//     }
-
-//     for (auto FastFood : m_Pizza)
-//     {
-//         delete FastFood;
-//     }
-// }
-
-void FastFood_Client::fastfood_test_run()
+void FastFood_Client::fastfood_burger_run()
 {
-    m_Burger.push_back(Create("McDonald's", "Burger"));
-    m_Burger.push_back(Create("Burger King", "Burger"));
-    m_Burger.push_back(Create("In-N-Out", "Burger"));
-    int count {1};
-    int i = 1;
-    while(count != 0)
-    {
-        for(auto FastFood : m_Burger)
-        {
-            cout << i++ << endl;
-            FastFood->fastfood_display_store_info();
-        }
-        count--;
-    }
+    int burgerCount{1};
 
-    auto FastFood = m_Burger[0]->clone();
-    FastFood->set_fastfood_store_name("Carl's Jr.");
-    m_Burger.push_back(FastFood);
-    int _count{1};
-    int _i = 1;
-    while (_count != 0)
+    m_Burger.push_back(Create("McDonald's", "Burger"));
+    
+    auto ChickFilA = m_Burger[0]->clone();
+    ChickFilA->set_fastfood_store_name("Chick-Fil-A");
+    m_Burger.push_back(ChickFilA);
+
+    auto InNOut = m_Burger[0]->clone();
+    InNOut->set_fastfood_store_name("In-N-Out");
+    m_Burger.push_back(InNOut);
+
+    auto BurgerKing = m_Burger[0]->clone();
+    BurgerKing->set_fastfood_store_name("Burger King");
+    m_Burger.push_back(BurgerKing);
+
+    auto CarlsJr = m_Burger[0]->clone();
+    CarlsJr->set_fastfood_store_name("Carl's Jr");
+    m_Burger.push_back(CarlsJr);
+
+    int listBurger = 1;
+    while(burgerCount != 0)
     {
         for (auto FastFood : m_Burger)
         {
-            cout << _i++ << endl;
+            cout << listBurger++ << ". ";
             FastFood->fastfood_display_store_info();
         }
-        _count--;
+    --burgerCount;
+    }
+}
+
+void FastFood_Client::fastfood_pizza_run()
+{
+    int pizzaCount{1};
+
+    m_Pizza.push_back(Create("Domino's Pizza", "Pizza"));
+
+    auto PizzaHut = m_Pizza[0]->clone();
+    PizzaHut->set_fastfood_store_name("Pizza Hut");
+    m_Pizza.push_back(PizzaHut);
+
+    auto PapaJohns = m_Pizza[0]->clone();
+    PapaJohns->set_fastfood_store_name("Papa John's Pizza");
+    m_Pizza.push_back(PapaJohns);
+
+    int listPizza = 1;
+    while (pizzaCount != 0)
+    {
+        for (auto FastFood : m_Pizza)
+        {
+            cout << listPizza++ << ". ";
+            FastFood->fastfood_display_store_info();
+        }
+        --pizzaCount;
+    }
+}
+
+void FastFood_Client::fastfood_taco_run()
+{
+    int tacoCount{1};
+
+    m_Taco.push_back(Create("Taco Bell", "Taco"));
+
+    auto DelTaco = m_Taco[0]->clone();
+    DelTaco->set_fastfood_store_name("Del Taco");
+    m_Taco.push_back(DelTaco);
+
+    int listTaco = 1;
+    while (tacoCount != 0)
+    {
+        for (auto FastFood : m_Taco)
+        {
+            cout << listTaco++ << ". ";
+            FastFood->fastfood_display_store_info();
+        }
+        --tacoCount;
     }
 }
 
 FastFood_Client::~FastFood_Client()
 {
     for (auto FastFood : m_Burger)
+    {
+        delete FastFood;
+    }
+
+    for (auto FastFood : m_Taco)
+    {
+        delete FastFood;
+    }
+
+    for (auto FastFood : m_Pizza)
     {
         delete FastFood;
     }
