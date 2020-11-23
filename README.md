@@ -32,7 +32,7 @@
 ![Sort Strategy](https://user-images.githubusercontent.com/58233764/99926181-a44c3700-2cf5-11eb-889b-36309dfe1711.png)
 	
 #### Menu Composite Pattern
-- The Menu composite pattern will represent a part-whole treeh hierarchy of how we intend to implement the items on the menu and the menus for different restaurants. MenuItem will be our leaf component, and Menu will be our composite component.
+- The Menu composite pattern will represent a part-whole hierarchy of how we intend to implement the items on the menu and the menus for different restaurants. MenuItem will be our leaf component, and Menu will be our composite component.
 
 ![Menu Composite](https://user-images.githubusercontent.com/58233764/100003031-50cffc80-2d7a-11eb-87c7-3b6d78d19a6b.png)
 
