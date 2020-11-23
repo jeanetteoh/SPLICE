@@ -1,29 +1,27 @@
 #include "../header/fastfood_client.hpp"
 #include "../header/fastfood_creator.hpp"
 #include "../header/fastfood_restaurant.hpp"
-#include "../header/fastfood_prototypes.hpp"
 #include "../header/restaurant.hpp"
-#include <vector>
 
-FastFoodPtr getMcDonalds()
-{
-    auto FastFood = FastFood_Prototypes::get_FastFood_Prototype("Burger");
-    FastFood->set_fastfood_store_name("McDonald's");
-    FastFood->set_fastfood_restaurant_category("Fast Food");
-    Restaurant McDonalds{"Fast Food"};
-    FastFood->set_fastfood_restaurant_category(McDonalds.get_restaurant_category());
-    return FastFood;
-}
+// FastFood *getMcDonalds()
+// {
+//     auto FastFood = FastFood_Prototypes::get_FastFood_Prototype("Burger");
+//     FastFood->set_fastfood_store_name("McDonald's");
+//     FastFood->set_fastfood_restaurant_category("Fast Food");
+//     Restaurant McDonalds{"Fast Food"};
+//     FastFood->set_fastfood_restaurant_category(McDonalds.get_restaurant_category());
+//     return FastFood;
+// }
 
-void FastFood_Client::fastfood_test_run()
-{
-    m_Burger.push_back(getMcDonalds());
-    m_Burger.at(0)->fastfood_display_store_info();
-    // for (auto burger_restaurants : m_Burger)
-    // {
-    //     burger_restaurants->fastfood_display_store_info();
-    // }
-}
+// void FastFood_Client::fastfood_test_run()
+// {
+//     m_Burger.push_back(getMcDonalds());
+//     m_Burger.at(0)->fastfood_display_store_info();
+//     // for (auto burger_restaurants : m_Burger)
+//     // {
+//     //     burger_restaurants->fastfood_display_store_info();
+//     // }
+// }
 
 // void FastFood_Client::fastfood_test_run()
 // {
@@ -86,3 +84,29 @@ void FastFood_Client::fastfood_test_run()
 //         delete FastFood;
 //     }
 // }
+
+void FastFood_Client::fastfood_test_run()
+{
+    m_Burger.push_back(Create("McDonald's", "Burger"));
+    m_Burger.push_back(Create("Burger King", "Burger"));
+    m_Burger.push_back(Create("In-N-Out", "Burger"));
+    int count {1};
+    int i = 1;
+    while(count != 0)
+    {
+        for(auto FastFood : m_Burger)
+        {
+            cout << i++ << endl;
+            FastFood->fastfood_display_store_info();
+        }
+        count--;
+    }
+}
+
+FastFood_Client::~FastFood_Client()
+{
+    for (auto FastFood : m_Burger)
+    {
+        delete FastFood;
+    }
+}

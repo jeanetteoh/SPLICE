@@ -6,8 +6,9 @@ void Pizza::fastfood_display_store_info()
          << "Restaurant Category: " << get_fastfood_restaurant_category() << endl << endl;
 }
 
-FastFoodPtr Pizza::clone()
+FastFood *Pizza::clone()
 {
     cout << "Cloning -> " << get_fastfood_store_name() << endl;
-    return shared_ptr<FastFood>(new Pizza(*this));
+    // return shared_ptr<FastFood>(new Pizza(*this));
+    return new Pizza(*this);
 }

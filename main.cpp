@@ -1,6 +1,5 @@
 #include "header/fastfood_client.hpp"
 #include "header/fastfood_creator.hpp"
-#include "header/fastfood_prototypes.hpp"
 #include "header/fastfood_restaurant.hpp"
 #include "header/fastfood_category_burger.hpp"
 #include "header/fastfood_category_taco.hpp"
@@ -10,8 +9,6 @@
 using namespace std;
 int main()
 {
-    FastFood_Prototypes::register_FastFood_Prototype("McDonald's", make_shared<Burger>());
-
     FastFood_Client test;
     test.fastfood_test_run();
 

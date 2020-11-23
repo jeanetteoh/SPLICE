@@ -1,7 +1,6 @@
 #ifndef RESTAURANT
 #define RESTAURANT
 #include <iostream>
-#include <vector>
 #include <string>
 using namespace std;
 
@@ -14,20 +13,11 @@ protected:
 public:
     Restaurant() = default;
 
-    Restaurant(const string &restaurant_category)
-    {
-        this->restaurant_category = restaurant_category;
-    }
+    Restaurant(const string &restaurant_category);
 
-    const string &get_restaurant_category() const
-    {
-        return this->restaurant_category;
-    }
+    const string &get_restaurant_category() const;
 
-    void set_restaurant_category(const string &restaurant_category)
-    {
-        this->restaurant_category = restaurant_category;
-    }
+    void set_restaurant_category(const string &restaurant_category);
 
     // Restaurant(const string &restaurantName, const string &restaurantCategory)
     // {

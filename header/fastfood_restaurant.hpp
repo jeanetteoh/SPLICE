@@ -3,12 +3,9 @@
 #include "../header/restaurant.hpp"
 #include <iostream>
 #include <string>
-#include <memory>
 
 using namespace std;
 class Restaurant;
-class FastFood;
-using FastFoodPtr = shared_ptr<FastFood>;
 class FastFood
 {
 protected:
@@ -22,7 +19,7 @@ public:
     const string &get_fastfood_restaurant_category() const;
     void set_fastfood_restaurant_category(const string &fastfood_store_category);
     virtual void fastfood_display_store_info() = 0;
-    virtual FastFoodPtr clone() = 0;
+    virtual FastFood* clone() = 0;
     /* Rule of three */
     virtual ~FastFood();
     FastFood(const FastFood &other);
