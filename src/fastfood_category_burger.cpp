@@ -7,8 +7,8 @@ void Burger::fastfood_display_store_info()
          << endl;
 }
 
-FastFood *Burger::clone()
+FastFoodPtr Burger::clone()
 {
     cout << "Cloning -> " << get_fastfood_store_name() << endl;
-    return new Burger(*this);
+    return shared_ptr<FastFood>(new Burger(*this));
 }

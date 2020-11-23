@@ -6,20 +6,21 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
 
 /* Factory that manages prorotype instances and produces their clones. */
 class FastFood;
 class FastFood_Client
 {
-    vector<FastFood *> m_Burger;
-    vector<FastFood *> m_Taco;
-    vector<FastFood *> m_Pizza;
+    vector<FastFoodPtr> m_Burger;
+    vector<FastFoodPtr> m_Taco;
+    vector<FastFoodPtr> m_Pizza;
 public:
     void fastfood_test_run();
     void fastfood_burger_run();
     // void fastfood_taco_run();
     // void fastfood_pizza_run();
-    ~FastFood_Client();
+    // ~FastFood_Client();
 };
 
 #endif /* FASTFOOD_CLIENT */

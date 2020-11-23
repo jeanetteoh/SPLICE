@@ -9,7 +9,7 @@ class Pizza : public FastFood
 
 public:
     void fastfood_display_store_info() override;
-    FastFood* clone() override;
+    FastFoodPtr clone() override;
 };
 
 #endif /* FASTFOOD_CATEGORY_PIZZA */
