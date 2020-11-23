@@ -17,8 +17,8 @@ class FastFood_Client
 public:
     void fastfood_test_run();
     void fastfood_burger_run();
-    void fastfood_taco_run();
-    void fastfood_pizza_run();
+    // void fastfood_taco_run();
+    // void fastfood_pizza_run();
     ~FastFood_Client();
 };
 

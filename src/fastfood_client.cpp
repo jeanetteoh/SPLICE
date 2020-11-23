@@ -12,20 +12,40 @@ void FastFood_Client::fastfood_test_run()
     int count = 1;
     while (count != 0)
     {
-        for (auto FastFood : m_Burger)
+        for(auto burger_restaurants : m_Burger)
         {
-            FastFood->fastfood_display_store_info();
+            burger_restaurants->fastfood_display_store_info();
         }
+
+        for(auto taco_restaurants : m_Taco)
+        {
+            taco_restaurants->fastfood_display_store_info();
+        }
+
+        for(auto pizza_restaurants : m_Pizza)
+        {
+            pizza_restaurants->fastfood_display_store_info();
+        }
+
         --count;
     }
 }
 
 void FastFood_Client::fastfood_burger_run()
 {
-    
+    auto burger_restaurants = m_Burger[0]->clone();
+    burger_restaurants->set_fastfood_store_name("Chick-Fil-A");
+    m_Burger.push_back(burger_restaurants);
 }
-void fastfood_taco_run();
-void fastfood_pizza_run();
+// void fastfood_taco_run()
+// {
+
+// }
+
+// void fastfood_pizza_run()
+// {
+
+// }
 
 FastFood_Client::~FastFood_Client()
 {
