@@ -1,8 +1,5 @@
 # SPLICE
-**Authors**:
- > [*Xin Wang*](https://github.com/xinwng)\
- > [*Jeanette Oh*](https://github.com/jeanetteoh)\
- > [*Hongan Zhang*](https://github.com/hongan-z)
+> Authors: [*Xin Wang*](https://github.com/xinwng), [*Jeanette Oh*](https://github.com/jeanetteoh), [*Hongan Zhang*](https://github.com/hongan-z)
 
 ## Phase I: Project Description
 
