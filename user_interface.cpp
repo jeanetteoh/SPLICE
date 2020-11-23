@@ -1,4 +1,10 @@
-#include ""
+#include "../header/fastfood_client.hpp"
+#include "../header/fastfood_creator.hpp"
+#include "../header/fastfood_restaurant.hpp"
+#include "../header/fastfood_category_burger.hpp"
+#include "../header/fastfood_category_taco.hpp"
+#include "../header/fastfood_category_pizza.hpp"
+#include "../fastfood_interface/fastfood_display.hpp"
 #include <iostream>
 using namespace std;
 
@@ -43,14 +49,17 @@ int main(){
     if (answer == 'M' || answer == 'm'){
         cout << " Mcdonald's Menu" << endl;
         key = true;
+        //Input other info to start composite
     }
     else if (answer == 'C' || answer == 'c'){
         cout << " Chick-Fil-A's Menu" << endl;
         key = true;
+        //Input other info to start composite
     }
     else if (answer == 'T' || answer == 't'){
             cout << " Taco Bell's Menu" << endl;
             key = true;
+            //Input other info to start composite
     }
     else if (answer == 'Q' || answer == 'q'){
         cout << "Goodbye!" << endl;
