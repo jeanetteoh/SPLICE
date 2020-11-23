@@ -34,7 +34,7 @@
 ### Restaurant Protype Patten
 - The Restaurant protype allows for the cloning of objects of menu items. This allows us to clone objects of a specific restaurant type into a user cart. This prototype is used by having the user input an item in which, the class type denotes where to recieve the data and thus clones it for usage.
 	
-<img width="594" alt="prototype" src="https://user-images.githubusercontent.com/32968430/99349757-9b6ce880-2851-11eb-91c8-e30f4a777c33.png">
+![Restaurant Prototype](https://user-images.githubusercontent.com/58233764/99925664-d0ff4f00-2cf3-11eb-9144-6c6e85ba330f.png)
 	
 ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
