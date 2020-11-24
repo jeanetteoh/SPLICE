@@ -1,23 +1,23 @@
-#include "party_composite.hpp"
 #include <iostream>
 #include <vector>
+#include "party_composite.hpp"
 
 using namespace std;
 
 string printPartyMember(){
-    return PartyMember;
+    return PartyMemberName;
 }
 void addPartyMember(string partyMemberName){
-    memberMaster.push_back(partyMemberName);
+    masterMember.push_back(partyMemberName);
 }
 void deletePartyMember(string partyMemberName){
-    memberMaster.remove(partyMemberName);
+    masterMember.remove(partyMemberName);
     partyMemberName = "null";
 
 }
 void modifyPartyMember(string partyMemberName){
     string newName;
-    this->partMemberName = newName;
+    partyMemberName = newName;
 }
 void getPartyMemberName(){
     return PartyMemberName;
