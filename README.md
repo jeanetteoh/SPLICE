@@ -43,16 +43,16 @@
 	
 ## Phase III: Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
 **How effective your last sprint was (each member should talk about what they did)**
-> Our sprint was not as successful as we had originally planned. During our meetings, most of the time were spent on explaining concepts and making sure everyone is on the right page. Not a lot of work was actually completed. 
+> * Our sprint was not as successful as we had originally planned. During our meetings, most of the time were spent on explaining concepts and making sure everyone is on the right page. Not a lot of work was actually completed. 
 	
 **Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint**
-> During the last sprint majority of our tasks were not finished but in progress. Since we are working as a team for this application we need to implement and work together to create a cohesive app. As we move further, we must communicate and look over one anothers code to ensure that nothing will conflict.
+> * During the last sprint majority of our tasks were not finished but in progress. Since we are working as a team for this application we need to implement and work together to create a cohesive app. As we move further, we must communicate and look over one anothers code to ensure that nothing will conflict.
  	
 **Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?**
-> No bug has been identified so far. Only issue has been managing memory leaks.
+> * No bug has been identified so far. Only issue has been managing memory leaks.
  
 **What tasks you are planning for this next sprint.**
-> Our next tasks will be to finish implementing our main three patterns and being able to use them with one another. In more specifics, retrieving data, debugging, making sure to include the correct files with one another, and testing.
+> * Our next tasks will be to finish implementing our main three patterns and being able to use them with one another. In more specifics, retrieving data, debugging, making sure to include the correct files with one another, and testing.
 	
 
 ## Final deliverable
