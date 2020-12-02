@@ -41,9 +41,7 @@
 	
 ![Restaurant Prototype](https://user-images.githubusercontent.com/58233764/99926233-db224d00-2cf5-11eb-9a10-b08ccc626c2c.png)
 	
-## Phase III
- > Meeting with Phillip Park : Monday, November 23 (11:00am - 2:00pm)
-
+## Phase III: Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
 **How effective your last sprint was (each member should talk about what they did)**
 > Our sprint was not as successful as we had originally planned. During our meetings, most of the time were spent on explaining concepts and making sure everyone is on the right page. Not a lot of work was actually completed. 
 	
