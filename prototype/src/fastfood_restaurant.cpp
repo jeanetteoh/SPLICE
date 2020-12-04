@@ -47,3 +47,13 @@ const string &FastFood::get_fastfood_restaurant_category() const
 {
     return m_Restaurant->get_restaurant_category();
 }
+
+void FastFood::set_fastfood_store_price(const string &fastfood_store_price)
+{
+    this->fastfood_store_price = fastfood_store_price;
+}
+
+const string &FastFood::get_fastfood_store_price() const
+{
+    return this->fastfood_store_price;
+}

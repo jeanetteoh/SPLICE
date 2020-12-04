@@ -6,6 +6,6 @@
 
 using namespace std;
 class FastFood;
-FastFood *Create(const string &fastfood_store_name, string_view fastfood_type);
+FastFood *Create(const string &fastfood_store_name, const string &fastfood_store_price, string_view fastfood_type);
 
 #endif /* FASTFOOD_CREATOR */

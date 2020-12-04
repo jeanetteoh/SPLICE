@@ -7,22 +7,27 @@ void FastFood_Client::fastfood_burger_run()
 {
     int burgerCount{1};
 
-    m_Burger.push_back(Create("McDonald's", "Burger"));
+    m_Burger.push_back(Create("McDonald's", "$", "Burger"));
+    m_Burger.at(0)->set_fastfood_store_price("$");
     
     auto ChickFilA = m_Burger[0]->clone();
     ChickFilA->set_fastfood_store_name("Chick-Fil-A");
+    ChickFilA->set_fastfood_store_price("$$");
     m_Burger.push_back(ChickFilA);
 
     auto InNOut = m_Burger[0]->clone();
     InNOut->set_fastfood_store_name("In-N-Out");
+    InNOut->set_fastfood_store_price("$");
     m_Burger.push_back(InNOut);
 
     auto BurgerKing = m_Burger[0]->clone();
     BurgerKing->set_fastfood_store_name("Burger King");
+    BurgerKing->set_fastfood_store_price("$");
     m_Burger.push_back(BurgerKing);
 
     auto CarlsJr = m_Burger[0]->clone();
     CarlsJr->set_fastfood_store_name("Carl's Jr");
+    CarlsJr->set_fastfood_store_price("$");
     m_Burger.push_back(CarlsJr);
 
     int listBurger = 1;
@@ -41,14 +46,17 @@ void FastFood_Client::fastfood_pizza_run()
 {
     int pizzaCount{1};
 
-    m_Pizza.push_back(Create("Domino's Pizza", "Pizza"));
+    m_Pizza.push_back(Create("Domino's Pizza", "$", "Pizza"));
+    m_Pizza.at(0)->set_fastfood_store_price("$");
 
     auto PizzaHut = m_Pizza[0]->clone();
     PizzaHut->set_fastfood_store_name("Pizza Hut");
+    PizzaHut->set_fastfood_store_price("$");
     m_Pizza.push_back(PizzaHut);
 
     auto PapaJohns = m_Pizza[0]->clone();
     PapaJohns->set_fastfood_store_name("Papa John's Pizza");
+    PapaJohns->set_fastfood_store_price("$");
     m_Pizza.push_back(PapaJohns);
 
     int listPizza = 1;
@@ -67,10 +75,12 @@ void FastFood_Client::fastfood_taco_run()
 {
     int tacoCount{1};
 
-    m_Taco.push_back(Create("Taco Bell", "Taco"));
+    m_Taco.push_back(Create("Taco Bell", "$", "Taco"));
+    m_Taco.at(0)->set_fastfood_store_price("$");
 
     auto DelTaco = m_Taco[0]->clone();
     DelTaco->set_fastfood_store_name("Del Taco");
+    DelTaco->set_fastfood_store_price("$");
     m_Taco.push_back(DelTaco);
 
     int listTaco = 1;
