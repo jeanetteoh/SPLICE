@@ -11,3 +11,5 @@ test
 output
 client
 build/
+../prototype/experiment/
+main
