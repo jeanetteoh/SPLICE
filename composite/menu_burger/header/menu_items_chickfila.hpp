@@ -11,7 +11,7 @@ private:
     int item_number_chickfila;
 
 public:
-    menu_items_chickfila(int item_number_chickfila, string item_name_chickfila, string item_description_chickfila, double item_price_mcdonalds) : menu_component()
+    menu_items_chickfila(int item_number_chickfila, string item_name_chickfila, string item_description_chickfila, double item_price_chickfila) : menu_component()
     {
         this->item_number_chickfila = item_number_chickfila;
         this->item_name_chickfila = item_name_chickfila;

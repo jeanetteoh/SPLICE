@@ -43,7 +43,7 @@ public:
     void print()
     {
         cout << "Item Number: " << this->item_number_tacobell << endl
-             << "Item Name: " << this->item_description_tacobell << endl
+             << "Item Name: " << this->item_name_tacobell << endl
              << "Item Description: " << this->item_description_tacobell << endl
              << "Item Price: " << this->item_price_tacobell << endl
              << endl;

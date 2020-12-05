@@ -21,7 +21,7 @@ TEST(MenuTest, ChickFilA_CustomerFavorites)
          << "\nRECEIVIED: " << original_chicken_sandwich->get_item_number() << endl;
     EXPECT_EQ(original_chicken_sandwich->get_item_number(), 1);
 
-    menu_component *original_deluxe_sandwich = new menu_items_chickfila(2, "Chick-fil-A® Chicken Sandwich", "A boneless breast of chicken seasoned to perfection, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips, Green Leaf lettuce, tomato and American cheese. ", 4.45);
+    menu_component *original_deluxe_sandwich = new menu_items_chickfila(2, "Chick-fil-A® Deluxe Sandwich", "A boneless breast of chicken seasoned to perfection, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips, Green Leaf lettuce, tomato and American cheese. ", 4.45);
     m_chickfila_customer_favorites->add(original_deluxe_sandwich);
     cout << "EXPECTED ITEM NUMBER: 2"
          << "\nRECEIVIED: " << original_deluxe_sandwich->get_item_number() << endl;

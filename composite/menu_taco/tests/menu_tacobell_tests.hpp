@@ -8,7 +8,7 @@
 
 using namespace std;
 
-TEST(MenuTest, TacoBell_CustomerFavorities)
+TEST(MenuTest, TacoBell_CustomerFavorites)
 {
     menu_component *m_tacobell_customer_favorites = new menu_tacobell("Customer Favorites", "Following Options are the Most Popular Items at Taco Bell");
 
