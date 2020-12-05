@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "../../composite/menu_taco/tests/menu_tacobell_tests.hpp"
+#include "../../composite/menu_taco/tests/menu_deltaco_tests.hpp"
 
 int main(int argc, char **argv)
 {
