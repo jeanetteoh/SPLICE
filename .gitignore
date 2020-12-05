@@ -7,7 +7,8 @@ CMakeCache.txt
 CMakeLists.txt
 .gitmodules
 .DS_Store
-test
+fastfood_test
+menu_mcdonalds_test
 output
 client
 build/
