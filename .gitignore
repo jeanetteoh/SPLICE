@@ -14,3 +14,4 @@ build/
 main
 fastfood_test
 menu_burger_test
+menu_taco_test
