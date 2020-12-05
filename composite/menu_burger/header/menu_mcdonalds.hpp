@@ -33,18 +33,13 @@ public:
         v_menu_mcdonalds.push_back(menu_component);
     }
 
-    // void remove(menu_component *menu_component, int index)
-    // {
-    //     v_menu_mcdonalds.erase(v_menu_mcdonalds.begin() + index);
-    // }
-
     void print()
     {
         cout << "\nMenu Name: " << this->menu_name_mcdonalds << endl
              << "Menu Description: " << this->menu_description_mcdonalds << endl << endl;
-        for(auto m_menu : v_menu_mcdonalds)
+        for(auto m_menu_mcdonalds : v_menu_mcdonalds)
         {
-            m_menu->print();
+            m_menu_mcdonalds->print();
         }
     }
 };

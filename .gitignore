@@ -7,10 +7,10 @@ CMakeCache.txt
 CMakeLists.txt
 .gitmodules
 .DS_Store
-fastfood_test
-menu_mcdonalds_test
 output
 client
 build/
 ../prototype/experiment/
 main
+fastfood_test
+menu_burger_test

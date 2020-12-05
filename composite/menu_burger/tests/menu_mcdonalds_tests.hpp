@@ -21,7 +21,7 @@ TEST(MenuTest, McDonalds_CustomerFavorites)
          << "\nRECEIVIED: " << big_mac->get_item_number() << endl;
     EXPECT_EQ(big_mac->get_item_number(), 1);
 
-    menu_component *mcnuggets_4_piece = new menu_items_mcdonalds(2, "4 Piece Chicken McNuggets", "Our tender, juicy Chicken McNuggets® are made with 100% white meat chicken and no artificial colors, flavors or preservatives.Pair them with your favorite dipping sauces when you Mobile Order & Pay!", 1.99);
+    menu_component *mcnuggets_4_piece = new menu_items_mcdonalds(2, "4 Piece Chicken McNuggets", "Our tender, juicy Chicken McNuggets® are made with 100% white meat chicken and no artificial colors, flavors or preservatives.", 1.99);
     m_mcdonalds_customer_favorites->add(mcnuggets_4_piece);
     cout << "EXPECTED ITEM NUMBER: 2"
          << "\nRECEIVIED: " << mcnuggets_4_piece->get_item_number() << endl;
