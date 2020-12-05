@@ -33,19 +33,17 @@ public:
         v_menu_mcdonalds.push_back(menu_component);
     }
 
-    void remove(menu_component *menu_component, int index)
-    {
-        v_menu_mcdonalds.erase(v_menu_mcdonalds.begin() + index);
-    }
+    // void remove(menu_component *menu_component, int index)
+    // {
+    //     v_menu_mcdonalds.erase(v_menu_mcdonalds.begin() + index);
+    // }
 
     void print()
     {
-        cout << "Menu Name: " << this->menu_name_mcdonalds << endl
-             << "Menu Description: " << this->menu_description_mcdonalds << endl;
-        unsigned i = 1;
+        cout << "\nMenu Name: " << this->menu_name_mcdonalds << endl
+             << "Menu Description: " << this->menu_description_mcdonalds << endl << endl;
         for(auto m_menu : v_menu_mcdonalds)
         {
-            cout << "\nItem Number " << i++ << ": \n";
             m_menu->print();
         }
     }
