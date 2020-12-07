@@ -15,8 +15,8 @@ public:
     virtual void remove(menu_component *menu_component){}
     virtual string get_name() = 0;
     virtual string get_description() = 0;
-    virtual double get_item_price(){}
-    virtual int get_item_number(){}
+    virtual double get_item_price() {};
+    virtual int get_item_number() {};
     virtual void print() = 0;
 };
 

@@ -1,6 +1,6 @@
 #ifndef MENU_ITEMS_INNOUT
 #define MENU_ITEMS_INNOUT
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 
 class menu_items_innout : public menu_component
 {

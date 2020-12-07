@@ -1,6 +1,6 @@
 #ifndef MENU_TACOBELL
 #define MENU_TACOBELL
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 #include <iostream>
 
 using namespace std;

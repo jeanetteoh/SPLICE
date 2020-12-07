@@ -1,6 +1,6 @@
 #ifndef MENU_ITEMS_MCDONALDS
 #define MENU_ITEMS_MCDONALDS
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 
 class menu_items_mcdonalds : public menu_component
 {

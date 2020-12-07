@@ -1,6 +1,6 @@
 #ifndef MENU_ITEMS_TACOBELL
 #define MENU_ITEMS_TACOBELL
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 
 class menu_items_tacobell : public menu_component
 {

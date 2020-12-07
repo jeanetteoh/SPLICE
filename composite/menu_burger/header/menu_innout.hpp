@@ -1,6 +1,6 @@
 #ifndef MENU_INNOUT
 #define MENU_INNOUT
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 #include <iostream>
 
 using namespace std;
