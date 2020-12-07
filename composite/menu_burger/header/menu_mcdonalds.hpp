@@ -2,6 +2,7 @@
 #define MENU_MCDONALDS
 #include "../../menu_component.hpp"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 class menu_mcdonalds : public menu_component
