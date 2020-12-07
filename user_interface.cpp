@@ -15,9 +15,9 @@ string splice_key(){
     cout << "Welcome to SPLICE! Get started with your order" << endl;
     cout << "What restaurant did you order at?" << endl << endl;
     cout << "     SPLICE KEY:     " << endl;
-    cout << "McDonalds - 'M' " << endl;
-    cout << "Chick-Fil-A - 'C' " << endl;
-    cout << "Taco Bell - 'T' " << endl;
+    cout << "McDonalds - '1' " << endl;
+    cout << "Chick-Fil-A - '2' " << endl;
+    cout << "Taco Bell - '3' " << endl;
     cout << "Quit - 'Q' " << endl;
     cin >> answer;
     cout << endl;

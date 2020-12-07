@@ -19,7 +19,7 @@ void modifyPartyMember(string partyMemberName){
     string newName;
     partyMemberName = newName;
 }
-void getPartyMemberName(){
+void getPartyMemberName(){s
     return PartyMemberName;
 }
 
