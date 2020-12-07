@@ -61,6 +61,7 @@ TEST(Party_Test, Remove_Party)
     m_party_1->remove(m_party_2);
     
     m_party_1->print();
+
     // EXPECT_EQ(m_party_1->print(), "Party of 3");
     // EXPECT_EQ(m_party_1->get_num_parties_users(), 2);
     // m_party_1->remove(m_party_2);
@@ -72,9 +73,9 @@ TEST(Party_Test, Remove_Party)
 
 TEST(Party_Test, Create_Party_User)
 {
-    party_component *m_party_1 = new party("Party of 1", 1);
-    EXPECT_EQ(m_party_1->get_name(), "Party of 1");
-    EXPECT_EQ(m_party_1->get_size(), 1);
+    party_component *m_party_1 = new party("Party of 3", 3);
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+    EXPECT_EQ(m_party_1->get_size(), 3);
     cout << endl;
     m_party_1->print();
 
@@ -104,7 +105,94 @@ TEST(Party_Test, Create_Party_User)
     m_party_1->print();
 }
 
-TEST(Party_Test, Remove_User)
+TEST(Party_Test, Remover_User_1)
+{
+    party_component *m_party_1 = new party("Party of 3", 3);
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+    EXPECT_EQ(m_party_1->get_size(), 3);
+    cout << endl;
+    m_party_1->print();
+
+    cout << endl;
+    party_component *user_1 = new user("Xin");
+    m_party_1->add(user_1);
+    cout << "EXPECTED USER NAME: " << user_1->get_name() << endl;
+    EXPECT_EQ(user_1->get_name(), "Xin");
+    user_1->print();
+
+    cout << endl;
+    party_component *user_2 = new user("Jeanette");
+    m_party_1->add(user_2);
+    cout << "EXPECTED USER NAME: " << user_2->get_name() << endl;
+    EXPECT_EQ(user_2->get_name(), "Jeanette");
+    user_2->print();
+
+    cout << endl;
+    party_component *user_3 = new user("Hongan");
+    m_party_1->add(user_3);
+    cout << "EXPECTED USER NAME: " << user_3->get_name() << endl;
+    EXPECT_EQ(user_3->get_name(), "Hongan");
+    user_3->print();
+
+    cout << endl
+         << endl;
+
+    cout << "BEFORE REMOVE: " << endl;
+
+    m_party_1->print();
+
+    m_party_1->remove(user_1);
+
+    cout << endl;
+
+    cout << "AFTER REMOVE: " << endl;
+    m_party_1->print();
+}
+
+TEST(Party_Test, Remover_User_2)
+{
+    party_component *m_party_1 = new party("Party of 3", 3);
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+    EXPECT_EQ(m_party_1->get_size(), 3);
+    cout << endl;
+    m_party_1->print();
+
+    cout << endl;
+    party_component *user_1 = new user("Xin");
+    m_party_1->add(user_1);
+    cout << "EXPECTED USER NAME: " << user_1->get_name() << endl;
+    EXPECT_EQ(user_1->get_name(), "Xin");
+    user_1->print();
+
+    cout << endl;
+    party_component *user_2 = new user("Jeanette");
+    m_party_1->add(user_2);
+    cout << "EXPECTED USER NAME: " << user_2->get_name() << endl;
+    EXPECT_EQ(user_2->get_name(), "Jeanette");
+    user_2->print();
+
+    cout << endl;
+    party_component *user_3 = new user("Hongan");
+    m_party_1->add(user_3);
+    cout << "EXPECTED USER NAME: " << user_3->get_name() << endl;
+    EXPECT_EQ(user_3->get_name(), "Hongan");
+    user_3->print();
+
+    cout << endl
+         << endl;
+    
+    cout << "BEFORE REMOVE: " << endl;
+    m_party_1->print();
+
+    m_party_1->remove(user_2);
+
+    cout << endl;
+
+    cout << "AFTER REMOVE: " << endl;
+    m_party_1->print();
+}
+
+TEST(Party_Test, Remover_User_3)
 {
     party_component *m_party_1 = new party("Party of 1", 1);
     EXPECT_EQ(m_party_1->get_name(), "Party of 1");
@@ -135,8 +223,15 @@ TEST(Party_Test, Remove_User)
 
     cout << endl
          << endl;
+    
+    cout << "BEFORE REMOVE: " << endl;
+    m_party_1->print();
 
-    m_party_1->remove(user_1);
+    m_party_1->remove(user_3);
+
+    cout << endl;
+
+    cout << "AFTER REMOVE: " << endl;
     m_party_1->print();
 }
 
