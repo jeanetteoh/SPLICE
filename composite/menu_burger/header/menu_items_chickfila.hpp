@@ -1,6 +1,6 @@
 #ifndef MENU_ITEMS_CHICKFILA
 #define MENU_ITEMS_CHICKFILA
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 
 class menu_items_chickfila : public menu_component
 {

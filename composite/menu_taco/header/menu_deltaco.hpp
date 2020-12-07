@@ -1,6 +1,6 @@
 #ifndef MENU_DELTACO
 #define MENU_DELTACO
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 #include <iostream>
 
 using namespace std;

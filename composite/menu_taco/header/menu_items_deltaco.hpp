@@ -1,6 +1,6 @@
 #ifndef MENU_ITEMS_DELTACO
 #define MENU_ITEMS_DELTACO
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 
 class menu_items_deltaco : public menu_component
 {

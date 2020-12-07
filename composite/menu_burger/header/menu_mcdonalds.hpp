@@ -1,10 +1,9 @@
 #ifndef MENU_MCDONALDS
 #define MENU_MCDONALDS
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 #include <iostream>
 
 using namespace std;
-
 class menu_mcdonalds : public menu_component
 {
 protected:

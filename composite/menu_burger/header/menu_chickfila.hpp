@@ -1,6 +1,6 @@
 #ifndef MENU_CHICKFILA
 #define MENU_CHICKFILA
-#include "../../composite/menu_component.hpp"
+#include "../../menu_component.hpp"
 #include <iostream>
 
 using namespace std;

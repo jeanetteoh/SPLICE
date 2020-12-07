@@ -53,6 +53,16 @@ void FastFood_Display::display_burger_places()
      FastFood_Client BurgerPlaces;
      BurgerPlaces.fastfood_burger_run();
      cout << endl;
+
+     cout << "Please Select a Burger Place: " << endl << endl;
+     int choice;
+     cin >> choice;
+     switch (choice)
+     {
+          case 1:
+          menu_mcdonalds_display m_1;
+          m_1.display_mcdonalds_customer_favorites();
+     }
 }
 
 void FastFood_Display::display_taco_places()
