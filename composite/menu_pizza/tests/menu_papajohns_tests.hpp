@@ -1,9 +1,9 @@
 #ifndef MENU_PAPAJOHNS_TESTS
 #define MENU_PAPAJOHNS_TESTS
 #include "gtest/gtest.h"
-#include "../menu_composite/composite/menu_component.hpp"
-#include "../menu_composite/composite/menu_pizza/header/menu_items_papajohns.hpp"
-#include "../menu_composite/composite/menu_pizza/header/menu_papajohns.hpp"
+#include "../../composite/menu_component.hpp"
+#include "../../composite/menu_pizza/header/menu_items_papajohns.hpp"
+#include "../../composite/menu_pizza/header/menu_papajohns.hpp"
 #include <iostream>
 
 using namespace std;

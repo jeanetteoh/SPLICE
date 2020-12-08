@@ -1,9 +1,9 @@
 #ifndef MENU_DOMIMOS_TESTS
 #define MENU_DOMIMOS_TESTS
 #include "gtest/gtest.h"
-#include "../menu_composite/composite/menu_component.hpp"
-#include "../menu_composite/composite/menu_pizza/header/menu_items_dominos.hpp"
-#include "../menu_composite/composite/menu_pizza/header/menu_dominos.hpp"
+#include "../../composite/menu_component.hpp"
+#include "../../composite/menu_pizza/header/menu_items_dominos.hpp"
+#include "../../composite/menu_pizza/header/menu_dominos.hpp"
 #include <iostream>
 
 using namespace std;

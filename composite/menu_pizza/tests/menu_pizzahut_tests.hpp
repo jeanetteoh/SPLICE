@@ -1,9 +1,9 @@
 #ifndef MENU_PIZZAHUT_TESTS
 #define MENU_PIZZAHUT_TESTS
 #include "gtest/gtest.h"
-#include "../menu_composite/composite/menu_component.hpp"
-#include "../menu_composite/composite/menu_pizza/header/menu_items_pizzahut.hpp"
-#include "../menu_composite/composite/menu_pizza/header/menu_pizzahut.hpp"
+#include "../../composite/menu_component.hpp"
+#include "../../composite/menu_pizza/header/menu_items_pizzahut.hpp"
+#include "../../composite/menu_pizza/header/menu_pizzahut.hpp"
 #include <iostream>
 
 using namespace std;

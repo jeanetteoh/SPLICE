@@ -5,13 +5,11 @@
 
 using namespace std;
 
-class menu_component;
 class user : public party_component
 {
 private:
     int num_users;
     string user_name;
-    vector<menu_component*> v_cart;
 
 public:
     user(const string &user_name) : party_component()
@@ -47,7 +45,7 @@ public:
 
     virtual ~user()
     {
-
+        
     }
 };
 
