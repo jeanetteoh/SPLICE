@@ -12,10 +12,10 @@ protected:
     string menu_description_pizzahut;
     vector<menu_component*> v_menu_pizzahut;
 public:
-    menu_mcdonalds(string menu_name_pizzahut, string menu_description_pizzahut) : menu_component()
+    menu_pizzahut(string menu_name_pizzahut, string menu_description_pizzahut) : menu_component()
     {
-        this->menu_name_mcdonalds = menu_name_pizzahut;
-        this->menu_description_mcdonalds = menu_description_pizzahut;
+        this->menu_name_pizzahut = menu_name_pizzahut;
+        this->menu_description_pizzahut = menu_description_pizzahut;
     }
 
     string get_name()
