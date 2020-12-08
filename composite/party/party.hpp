@@ -7,15 +7,12 @@
 
 using namespace std;
 
-class menu_component;
-
 class party : public party_component
 {
 private:
     int party_size;
     string party_name;
     vector<party_component *> v_parties;
-    // vector<party_component *> v_cart;
 
 public:
     party(const string &party_name, const int &party_size) : party_component()
@@ -76,20 +73,6 @@ public:
             cout << endl;
         }
     }
-
-    // void add_to_cart(cart *m_cart, menu_component *item)
-    // {
-    //     vector<party_component *>::iterator it = v_parties.begin();
-    //     while (it != v_parties.end())
-    //     {
-    //         if (*it == m_party_component)
-    //         {
-    //             v_cart.push_back(new item());
-    //             break;
-    //         }
-    //         ++it;
-    //     }
-    // }
 };
 
 #endif /* PARTY */
