@@ -9,7 +9,7 @@ class menu_chickfilas_display
 public:
     void display_chickfilas_customer_favorites()
     {
-        menu_component *chickfila_menu_customer_favorites = new menu_chickfila("Chick-Fil-A's Menu, Customer Favorites", "Following Options are the Most Popular Items at Chick-Fil-A's");
+        menu_component *chickfila_menu_customer_favorites = new menu_chickfila("Chick-Fil-A's Menu, Customer Favorites", "Following Options are the Most Popular Items at Chick-Fil-A");
         // REGULAR CHICKEN SANDWICH ENTREE
         menu_component *chicken_sandwhich = new menu_items_chickfila(1, "Chicken Sandwich", "A boneless breast of chicken seasoned to perfection, hand-breaded, pressure cooked in 100% refined peanut oil and served on a toasted, buttered bun with dill pickle chips. Gluten-free bun or multigrain bun also available at an additional cost.", 4.29);
         //SPICY CHICKEN SANDWICH ENTREE
