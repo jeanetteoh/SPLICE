@@ -12,8 +12,10 @@ private:
 public:
     virtual void add(cart_component *cc) = 0;
     virtual void add_to_cart(menu_component *mc) = 0;
-    virtual string get_name() = 0;
     virtual void display() = 0;
+    virtual string get_name() = 0;
+    virtual int get_size() = 0;
+    virtual double cart_price() = 0;
 };
 
 #endif /* CART */
