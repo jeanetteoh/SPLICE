@@ -49,16 +49,6 @@ public:
     {
 
     }
-
-    void add_to_cart(menu_component *item)
-    {
-        v_cart.emplace_back(item);
-    }
-
-    // void add_to_cart(menu_component *item)
-    // {
-    //     cout << "Error, cannot add menu item to party" << endl;
-    // }
 };
 
 #endif /* USER */

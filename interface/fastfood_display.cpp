@@ -2,14 +2,6 @@
 
 void FastFood_Display::display_interface()
 {
-     cout << "Welcome to SPLICE. Please Select a Restaurant Category: \n";
-     cout << "----------------------------------------------------------";
-     cout << endl;
-     cout << "Press 'Q' to Quit Anytime" << endl
-          << endl;
-
-     cout << "Please Select a Restaurant Category\n1. Burger Places\n2. Taco Places\n3. Pizza Places" << endl;
-     
      bool check = true;
      while (check)
      {    
@@ -47,14 +39,12 @@ void FastFood_Display::display_interface()
 
 void FastFood_Display::display_burger_places()
 {
-     cout << endl;
-     cout << "Burger Places" << endl;
-     cout << "------------------------" << endl;
+     cout << "\nBurger Places\n==================" << endl;
      FastFood_Client BurgerPlaces;
      BurgerPlaces.fastfood_burger_run();
      cout << endl;
 
-     cout << "Please Select a Burger Place: " << endl << endl;
+     cout << "Chose a burger restaurant from the selection below!" << endl;
      int choice;
      cin >> choice;
      switch (choice)
