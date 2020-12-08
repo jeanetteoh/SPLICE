@@ -1,52 +1,52 @@
-#ifndef MENU_ITEMS_PIZZAHUT
-#define MENU_ITEMS_PIZZAHUT
+#ifndef MENU_ITEMS_DOMINOS
+#define MENU_ITEMS_DOMINOS
 #include "../../menu_component.hpp"
 
-class menu_items_pizzahut : public menu_component
+class menu_items_dominos : public menu_component
 {
 private:
-    string item_name_pizzahut;
-    string item_description_pizzahut;
-    double item_price_pizzahut;
-    int item_number_pizzahut;
+    string item_name_dominos;
+    string item_description_dominos;
+    double item_price_dominos;
+    int item_number_dominos;
 
 public:
-    menu_items_pizzahut(int item_number_pizzahut, string item_name_pizzahut, string item_description_pizzahut, double item_price_pizzahut) : menu_component()
+    menu_items_dominos(int item_number_dominos, string item_name_dominos, string item_description_dominos, double item_price_dominos) : menu_component()
     {
-        this->item_number_pizzahut = item_number_pizzahut;
-        this->item_name_pizzahut = item_name_pizzahut;
-        this->item_description_pizzahut = item_description_pizzahut;
-        this->item_price_pizzahut = item_price_pizzahut;
+        this->item_number_dominos = item_number_dominos;
+        this->item_name_dominos = item_name_dominos;
+        this->item_description_dominos = item_description_dominos;
+        this->item_price_dominos = item_price_dominos;
     }
 
     string get_name()
     {
-        return this->item_name_pizzahut;
+        return this->item_name_dominos;
     }
 
     string get_description()
     {
-        return this->item_description_pizzahut;
+        return this->item_description_dominos;
     }
 
     double get_item_price()
     {
-        return this->item_price_pizzahut;
+        return this->item_price_dominos;
     }
 
     int get_item_number()
     {
-        return this->item_number_pizzahut;
+        return this->item_number_dominos;
     }
 
     void print()
     {
-        cout << "Item Number: " << this->item_number_pizzahut << endl
-             << "Item Name: " << this->item_name_pizzahut << endl
-             << "Item Description: " << this->item_description_pizzahut << endl
-             << "Item Price: " << this->item_price_pizzahut << endl
+        cout << "Item Number: " << this->item_number_dominos << endl
+             << "Item Name: " << this->item_name_dominos << endl
+             << "Item Description: " << this->item_description_dominos << endl
+             << "Item Price: " << this->item_price_dominos << endl
              << endl;
     }
 };
 
-#endif /* MENU_ITEMS_PIZZAHUT */
+#endif /* MENU_ITEMS_DOMINOS */
