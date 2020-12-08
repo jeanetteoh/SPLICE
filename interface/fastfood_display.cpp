@@ -1,42 +1,5 @@
 #include "../interface/fastfood_display.hpp"
 
-void FastFood_Display::display_interface()
-{
-     bool check = true;
-     while (check)
-     {    
-          string base_user_option;
-          cin >> base_user_option;
-
-          if (base_user_option == "q" || base_user_option == "Q")
-          {
-               cout << "\nThank You for Using SPLICE" << endl;
-               check = false;
-               break;
-          }
-          else
-          {
-               if (base_user_option == "1")
-               {
-                    display_burger_places();
-               }
-               else if (base_user_option == "2")
-               {
-                    display_taco_places();
-               }
-               else if (base_user_option == "3")
-               {
-                    display_pizza_places();
-               }
-               else
-               {
-                    cout << "Invalid Input" << endl;
-               }
-               
-          }
-     }
-}
-
 void FastFood_Display::display_burger_places()
 {
      cout << "\nBurger Places\n==================" << endl;

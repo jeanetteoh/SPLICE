@@ -2,11 +2,12 @@
 
 using namespace std;
 
-void fastfood_display()
+int fastfood_display()
 {
     bool condition = true;
     string user_option = "";
     int user_fastfood_option = 0;
+    int user_fastfood_option_choice = 0;
 
     cout << "\nDid your party eat at...\n1. Burger Places\n2. Taco Places\n3. Pizza Places" << endl;
     cin >> user_fastfood_option;
@@ -26,22 +27,189 @@ void fastfood_display()
             case 1:
                 FastFood_Display i_burger_places;
                 i_burger_places.display_burger_places();
+                
+                cout << "Choose a selection from the above restaurants!" << endl;
+                
+                if(user_fastfood_option_choice == 1)
+                {
+
+                }
+                else if(user_fastfood_option_choice == 2)
+                {
+
+                }
+                else if(user_fastfood_option == 3)
+                {
+
+                }
+                else
+                {
+
+                }
+
+                return 1;
             case 2:
                 FastFood_Display i_taco_places;
                 i_taco_places.display_taco_places();
+                return 2;
             case 3:
                 FastFood_Display i_pizza_places;
                 i_pizza_places.display_pizza_places();
+                return 3;
             }
         }
     }
+}
+
+void setup_party_of_1(party_component *i_party_component)
+{
+    string user1 = "";
+
+    cout << "Give User #1 a name!" << endl;
+    cin >> user1;
+    party_component *i_user1 = new user(user1);
+
+    i_party_component->add(i_user1);
+
+    cout << "\nParty Details" << endl;
+    cout << "================" << endl;
+    i_party_component->print();
+
+    fastfood_display();
+}
+
+void setup_party_of_2(party_component *i_party_component)
+{
+    string user1 = "";
+    string user2 = "";
+
+    cout << "Give User #1 a name!" << endl;
+    cin >> user1;
+    party_component *i_user1 = new user(user1);
+
+    cout << "Give User #2 a name!" << endl;
+    cin >> user2;
+    party_component *i_user2 = new user(user2);
+
+    i_party_component->add(i_user1);
+    i_party_component->add(i_user2);
+
+    cout << "\nParty Details" << endl;
+    cout << "================" << endl;
+    i_party_component->print();
+
+    fastfood_display();
+}
+
+void setup_party_of_3(party_component *i_party_component)
+{
+    string user1 = "";
+    string user2 = "";
+    string user3 = "";
+
+    cout << "Give User #1 a name!" << endl;
+    cin >> user1;
+    party_component *i_user1 = new user(user1);
+
+    cout << "Give User #2 a name!" << endl;
+    cin >> user2;
+    party_component *i_user2 = new user(user2);
+
+    cout << "Give User #3 a name!" << endl;
+    cin >> user3;
+    party_component *i_user3 = new user(user3);
+
+    i_party_component->add(i_user1);
+    i_party_component->add(i_user2);
+    i_party_component->add(i_user3);
+
+    cout << "\nParty Details" << endl;
+    cout << "================" << endl;
+    i_party_component->print();
+
+    fastfood_display();
+}
+
+void setup_party_of_4(party_component *i_party_component)
+{
+    string user1 = "";
+    string user2 = "";
+    string user3 = "";
+    string user4 = "";
+
+    cout << "Give User #1 a name!" << endl;
+    cin >> user1;
+    party_component *i_user1 = new user(user1);
+
+    cout << "Give User #2 a name!" << endl;
+    cin >> user2;
+    party_component *i_user2 = new user(user2);
+
+    cout << "Give User #3 a name!" << endl;
+    cin >> user3;
+    party_component *i_user3 = new user(user3);
+
+    cout << "Give User #4 a name!" << endl;
+    cin >> user4;
+    party_component *i_user4 = new user(user4);
+
+    i_party_component->add(i_user1);
+    i_party_component->add(i_user2);
+    i_party_component->add(i_user3);
+    i_party_component->add(i_user4);
+
+    cout << "\nParty Details" << endl;
+    cout << "================" << endl;
+    i_party_component->print();
+
+    fastfood_display();
+}
+
+void setup_party_of_5(party_component *i_party_component)
+{
+    string user1 = "";
+    string user2 = "";
+    string user3 = "";
+    string user4 = "";
+    string user5 = "";
+
+    cout << "Give User #1 a name!" << endl;
+    cin >> user1;
+    party_component *i_user1 = new user(user1);
+
+    cout << "Give User #2 a name!" << endl;
+    cin >> user2;
+    party_component *i_user2 = new user(user2);
+
+    cout << "Give User #3 a name!" << endl;
+    cin >> user3;
+    party_component *i_user3 = new user(user3);
+
+    cout << "Give User #4 a name!" << endl;
+    cin >> user4;
+    party_component *i_user4 = new user(user4);
+
+    cout << "Give User #5 a name!" << endl;
+    cin >> user5;
+    party_component *i_user5 = new user(user5);
+
+    i_party_component->add(i_user1);
+    i_party_component->add(i_user2);
+    i_party_component->add(i_user3);
+    i_party_component->add(i_user4);
+    i_party_component->add(i_user5);
+
+    cout << "\nParty Details" << endl;
+    cout << "================" << endl;
+    i_party_component->print();
+
+    fastfood_display();
 }
 
 int main()
 {
     bool party_condition = true;
     string i_party_name = "";
-    string user1 = "";
     string user2 = "";
     string user3 = "";
     string user4 = "";
@@ -71,136 +239,31 @@ int main()
     {
         if (i_party_size == 1)
         {
-            cout << "Give User #1 a name!" << endl;
-            cin >> user1;
-            party_component *i_user1 = new user(user1);
-
-            i_party->add(i_user1);
-            
-            cout << "\nParty Details" << endl;
-            cout << "================" << endl;
-            i_party->print();
-
-            fastfood_display();
-
+            setup_party_of_1(i_party);
             party_condition = false;
             break;
         }
         else if (i_party_size == 2)
         {
-            cout << "Give User #1 a name!" << endl;
-            cin >> user1;
-            party_component *i_user1 = new user(user1);
-
-            cout << "Give User #2 a name!" << endl;
-            cin >> user2;
-            party_component *i_user2 = new user(user2);
-
-            i_party->add(i_user1);
-            i_party->add(i_user2);
-
-            cout << "\nParty Details" << endl;
-            cout << "================" << endl;
-            i_party->print();
-
-            fastfood_display();
-
+            setup_party_of_2(i_party);
             party_condition = false;
             break;
         }
         else if (i_party_size == 3)
         {
-            cout << "Give User #1 a name!" << endl;
-            cin >> user1;
-            party_component *i_user1 = new user(user1);
-
-            cout << "Give User #2 a name!" << endl;
-            cin >> user2;
-            party_component *i_user2 = new user(user2);
-
-            cout << "Give User #3 a name!" << endl;
-            cin >> user3;
-            party_component *i_user3 = new user(user3);
-
-            i_party->add(i_user1);
-            i_party->add(i_user2);
-            i_party->add(i_user3);
-
-            cout << "\nParty Details" << endl;
-            cout << "================" << endl;
-            i_party->print();
-
-            fastfood_display();
-
+            setup_party_of_3(i_party);
             party_condition = false;
             break;
         }
         else if (i_party_size == 4)
         {
-            cout << "Give User #1 a name!" << endl;
-            cin >> user1;
-            party_component *i_user1 = new user(user1);
-
-            cout << "Give User #2 a name!" << endl;
-            cin >> user2;
-            party_component *i_user2 = new user(user2);
-
-            cout << "Give User #3 a name!" << endl;
-            cin >> user3;
-            party_component *i_user3 = new user(user3);
-
-            cout << "Give User #4 a name!" << endl;
-            cin >> user4;
-            party_component *i_user4 = new user(user4);
-
-            i_party->add(i_user1);
-            i_party->add(i_user2);
-            i_party->add(i_user3);
-            i_party->add(i_user4);
-
-            cout << "\nParty Details" << endl;
-            cout << "================" << endl;
-            i_party->print();
-
-            fastfood_display();
-
+            setup_party_of_4(i_party);
             party_condition = false;
             break;
         }
         else if (i_party_size == 5)
         {
-            cout << "Give User #1 a name!" << endl;
-            cin >> user1;
-            party_component *i_user1 = new user(user1);
-
-            cout << "Give User #2 a name!" << endl;
-            cin >> user2;
-            party_component *i_user2 = new user(user2);
-
-            cout << "Give User #3 a name!" << endl;
-            cin >> user3;
-            party_component *i_user3 = new user(user3);
-
-            cout << "Give User #4 a name!" << endl;
-            cin >> user4;
-            party_component *i_user4 = new user(user4);
-
-            cout << "Give User #5 a name!" << endl;
-            cin >> user5;
-            party_component *i_user5 = new user(user5);
-
-            i_party->add(i_user1);
-            i_party->add(i_user2);
-            i_party->add(i_user3);
-            i_party->add(i_user4);
-            i_party->add(i_user5);
-
-            cout << "\nParty Details" << endl;
-            cout << "================" << endl;
-            i_party->print();
-
-            fastfood_display();
-
+            setup_party_of_5(i_party);
             party_condition = false;
             break;
         }
