@@ -9,7 +9,7 @@ class menu_innouts_display
 public:
     void display_innouts_customer_favorites()
     {
-        menu_component *innouts_menu_customer_favorites = new menu_innout("In-N-Out's Menu, Customer Favorites", "Following Options are the Most Popular Items at In-N-Out's");
+        menu_component *innouts_menu_customer_favorites = new menu_innout("In-N-Out's Menu, Customer Favorites", "Following Options are the Most Popular Items at In-N-Out");
         // DOUBLE DOUBLE
         menu_component *double_double_burger = new menu_items_innout(1, "Double Double", "Two 100% pure beef patties, hand lettuce, tomato, spread, two slices of american cheese, with or without onions, stacked high on a freshly baked bun.", 3.45);
         // CHEESEBURGER
