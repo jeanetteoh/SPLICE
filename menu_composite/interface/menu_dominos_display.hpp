@@ -15,7 +15,7 @@ public:
         // MEATZZA
         menu_component *meatzza_pizza = new menu_items_dominos(2, "MeatZZa (Large)", "The MeatZZa includes pepperoni, ham, Italian sausage and beef, all sandwiched between two layers of cheese made with 100% real mozzarella.", 19.99);
         //PACIFIC VEGGIE
-        menu_component *pacific_veggie_pizza = new menu_items_dominos(3, "Pacific Veggie (Large)", "The Pacific Veggie includes roasted red peppers, fresh baby spinach, fresh onions, fresh mushrooms, tomatoes, black olives, feta, provolone, cheese made with 100% real mozzarella and sprinkled with a garlic herb seasoning.", 19.999);
+        menu_component *pacific_veggie_pizza = new menu_items_dominos(3, "Pacific Veggie (Large)", "The Pacific Veggie includes roasted red peppers, fresh baby spinach, fresh onions, fresh mushrooms, tomatoes, black olives, feta, provolone, cheese made with 100% real mozzarella and sprinkled with a garlic herb seasoning.", 19.99);
         // HONOLULU HAWAIIAN
         menu_component *honolulu_hawaiian_pizza = new menu_items_dominos(4, "Honolulu Hawaiian (Large)", "The Honolulu Hawaiian includes sliced ham, smoked bacon, pineapple, roasted red peppers, provolone and cheese made with 100% real mozzarella.", 19.99);
         //DELUXE
