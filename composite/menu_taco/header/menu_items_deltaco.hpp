@@ -45,7 +45,7 @@ public:
         cout << "Item Number: " << this->item_number_deltaco << endl
              << "Item Name: " << this->item_name_deltaco << endl
              << "Item Description: " << this->item_description_deltaco << endl
-             << "Item Price: " << this->item_price_deltaco << endl
+             << "Item Price: $ " << this->item_price_deltaco << endl
              << endl;
     }
 };

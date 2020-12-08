@@ -1,5 +1,6 @@
 #ifndef PARTY_COMPONENT
 #define PARTY_COMPONENT
+// #include "../menu_component.hpp"
 #include <string>
 
 using namespace std;
@@ -12,9 +13,10 @@ public:
     virtual string get_name() = 0;
     virtual int get_size() = 0;
     virtual void print() = 0;
+    // virtual void add_to_cart(menu_component *item) = 0;
     virtual ~party_component()
     {
-        
+
     }
 };
 

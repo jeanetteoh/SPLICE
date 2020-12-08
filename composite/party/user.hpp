@@ -5,11 +5,13 @@
 
 using namespace std;
 
+class menu_component;
 class user : public party_component
 {
 private:
     int num_users;
     string user_name;
+    vector<menu_component*> v_cart;
 
 public:
     user(const string &user_name) : party_component()
@@ -45,8 +47,18 @@ public:
 
     virtual ~user()
     {
-        
+
     }
+
+    void add_to_cart(menu_component *item)
+    {
+        v_cart.emplace_back(item);
+    }
+
+    // void add_to_cart(menu_component *item)
+    // {
+    //     cout << "Error, cannot add menu item to party" << endl;
+    // }
 };
 
 #endif /* USER */
