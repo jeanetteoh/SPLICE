@@ -19,7 +19,7 @@ public:
         //PAPA JOHNS THE WORKS
         menu_component *papajohns_the_works = new menu_items_papajohns(4, "The Works", "It’s everything you want on a pizza – and then some. A heaping helping of pepperoni, julienne-cut Canadian bacon, spicy Italian sausage, fresh-cut onions, crisp green peppers, mushrooms, ripe black olives, and real cheese made from mozzarella. When you’re hungry for a hearty pizza, the Works always works.", 17.99);
         //PAPA JOHNS THE MEATS
-        menu_component *papajohns_the_meats = new menu_items_papajohns(5, "The Meats", "A masterpiece of hearty, high-quality meats including pepperoni, savory sausage, real beef, hickory-smoked bacon, and julienne-cut Canadian bacon, all topped with real cheese made from mozzarella.",17.99);
+        menu_component *papajohns_the_meats = new menu_items_papajohns(5, "The Meats", "A masterpiece of hearty, high-quality meats including pepperoni, savory sausage, real beef, hickory-smoked bacon, and julienne-cut Canadian bacon, all topped with real cheese made from mozzarella.", 17.99);
         //PAPA JOHNS MEATBALL PEPPERONI
         menu_component *papajohns_meatball_pepperoni = new menu_items_papajohns(6, "Meatball Pepperoni", "Savory meatballs and pepperoni make for a tasty combination, especially when we add a three-cheese blend, and real cheese made from mozzarella on our original crust, then sprinkle it all with classic Italian seasoning for an extra dash of flavor.", 17.99);
         //PAPA JOHNS SUPER HAWAIIAN
