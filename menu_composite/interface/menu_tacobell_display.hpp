@@ -9,7 +9,7 @@ class menu_deltacos_display
 public:
     void display_tacobells_customer_favorites()
     {
-        menu_component *tacobells_menu_customer_favorites = new menu_tacobell("Taco Bell's Menu, Customer Favorites", "Following Options are the Most Popular Items at Taco Bell's");
+        menu_component *tacobells_menu_customer_favorites = new menu_tacobell("Taco Bell's Menu, Customer Favorites", "Following Options are the Most Popular Items at Taco Bell");
         // SOFT TACO
         menu_component *soft_taco = new menu_items_tacobell(1, "Soft Taco", "Soft Taco has a warm, flour tortilla with seasoned beef, lettuce, and real cheddar cheese", 1.29);
         // CRUNCHY TACO
