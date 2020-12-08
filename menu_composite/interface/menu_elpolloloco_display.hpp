@@ -9,7 +9,7 @@ class menu_elpollolocos_display
 public:
     void display_elpollolocos_customer_favorites()
     {
-        menu_component *elpollolocos_menu_customer_favorites = new menu_elpolloloco("El Pollo Loco's Menu, Customer Favorites", "Following Options are the Most Popular Items at El Pollo Loco's");
+        menu_component *elpollolocos_menu_customer_favorites = new menu_elpolloloco("El Pollo Loco's Menu, Customer Favorites", "Following Options are the Most Popular Items at El Pollo Loco");
         // CHICKEN AVOCADO TACO
         menu_component *chicken_avocado_taco = new menu_items_elpolloloco(1, "Chicken Avocado Taco", "Fire-grilled chicken, avocado, shredded lettuce, queso fresco, and pico on a handcrafted tortilla and finished with creamy cilantro dressing.", 2.99);
         // CHICKENLESS POLLO TACO
