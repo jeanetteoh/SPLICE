@@ -25,6 +25,10 @@ add_executable(menu_taco_test
     composite/menu_taco/tests/menu_taco_tests.cpp
 )
 
+add_executable(menu_pizza_test
+    composite/menu_pizza/tests/menu_pizza_tests.cpp
+)
+
 add_executable(c_party_test
     composite/party_tests/party_test.cpp
 )
@@ -44,6 +48,7 @@ add_executable(main
     prototype/src/fastfood_restaurant.cpp
     interface/fastfood_display.cpp
 )
+
 target_link_libraries(fastfood_test gtest)
 target_compile_definitions(fastfood_test PRIVATE gtest_disable_pthreads=ON)
 
@@ -52,6 +57,9 @@ target_compile_definitions(menu_burger_test PRIVATE gtest_disable_pthreads=ON)
 
 target_link_libraries(menu_taco_test gtest)
 target_compile_definitions(menu_taco_test PRIVATE gtest_disable_pthreads=ON)
+
+target_link_libraries(menu_pizza_test gtest)
+target_compile_definitions(menu_pizza_test PRIVATE gtest_disable_pthreads=ON)
 
 target_link_libraries(c_party_test gtest)
 target_compile_definitions(c_party_test PRIVATE gtest_disable_pthreads=ON)
