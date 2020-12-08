@@ -9,37 +9,40 @@ class menu_dominos_display
 public:
     void display_dominos_customer_favorites()
     {
-        menu_component *dominos_menu_customer_favorites = new menu_dominos("Taco Bell's Menu, Customer Favorites", "Following Options are the Most Popular Items at Taco Bell's");
-        // CHICKEN AVOCADO TACO
-        menu_component *chicken_avocado_taco = new menu_items_dominos(1, "", "", 2.99);
-        // CHICKENLESS POLLO TACO
-        menu_component *chickenless_pollo_taco = new menu_items_dominos(2, "", "", 2.99);
-        //CALIFORNIA QUESO BURRITO
-        menu_component *california_queso_burrito = new menu_items_dominos(3, "", "", 6.99);
-        // CHICKEN TINGA BURRITO
-        menu_component *chicken_tinga_burrito = new menu_items_dominos(4, "", "", 7.19);
-        //ORIGINAL POLLO BOWL
-        menu_component *original_pollo_bowl = new menu_items_dominos(5, "", "", 4.99);
-        //DOUBLE CHICKEN BOWL
-        menu_component *double_chicken_bowl = new menu_items_dominos(6, "", "", 1.99);
-        menu_component *chips_and_guacamole_small = new menu_items_dominos(7, "", "", 2.49);
-        menu_component *chips_and_guacamole_regular = new menu_items_dominos(8, "", "", 3.99);
-        //DRINKS
-        menu_component *drink_regular = new menu_items_dominos(9, "", "", 2.19);
-        menu_component *drink_large = new menu_items_dominos(10, "", "", 2.39);
+        menu_component *dominos_menu_customer_favorites = new menu_dominos("Dominos' Menu, Customer Favorites", "Following Options are the Most Popular Items at Dominos");
+        // EXTRAVAGANZZA
+        menu_component *extravaganzza_pizza = new menu_items_dominos(1, "ExtravaganZZa (Large)", "The ExtravaganZZa includes pepperoni, ham, Italian sausage, beef, fresh onions, fresh green peppers, fresh mushrooms and black olives, all sandwiched between two layers of cheese made with 100% real mozzarella.", 19.99);
+        // MEATZZA
+        menu_component *meatzza_pizza = new menu_items_dominos(2, "MeatZZa (Large)", "The MeatZZa includes pepperoni, ham, Italian sausage and beef, all sandwiched between two layers of cheese made with 100% real mozzarella.", 19.99);
+        //PACIFIC VEGGIE
+        menu_component *pacific_veggie_pizza = new menu_items_dominos(3, "Pacific Veggie (Large)", "The Pacific Veggie includes roasted red peppers, fresh baby spinach, fresh onions, fresh mushrooms, tomatoes, black olives, feta, provolone, cheese made with 100% real mozzarella and sprinkled with a garlic herb seasoning.", 19.999);
+        // HONOLULU HAWAIIAN
+        menu_component *honolulu_hawaiian_pizza = new menu_items_dominos(4, "Honolulu Hawaiian (Large)", "The Honolulu Hawaiian includes sliced ham, smoked bacon, pineapple, roasted red peppers, provolone and cheese made with 100% real mozzarella.", 19.99);
+        //DELUXE
+        menu_component *deluxe_pizza = new menu_items_dominos(5, "Deluxe (Large)", "The Deluxe pizza includes pepperoni, Italian sausage, fresh green peppers, fresh mushrooms, fresh onions and cheese made with 100% real mozzarella.", 19.99);
+        //BUFFALO CHICKEN
+        menu_component *buffalo_chicken_pizza = new menu_items_dominos(6, "Buffalo Chicken (Large)", "The Buffalo Chicken includes grilled chicken breast, fresh onions, provolone, American cheese, cheddar, cheese made with 100% real mozzarella and drizzled with a hot buffalo sauce.", 19.99);
+        //ULTIMATE PEPPERONI
+        menu_component *ultimate_pepperoni_pizza = new menu_items_dominos(7, "Ultimate Pepperoni (Large)", "The Ultimate Pepperoni includes two layers of pepperoni sandwiched between provolone, Parmesan-Asiago and cheese made with 100% real mozzarella then sprinkled with oregano.", 19.99);
+        //MEMPHIIS BBQ CHICKEN
+        menu_component *memphis_bbq_chicken_pizza = new menu_items_dominos(8, "Memphis BBQ Chicken (Large)", "The Memphis BBQ Chicken includes grilled chicken breast, honey BBQ sauce, fresh onions, cheddar, provolone and cheese made with 100% real mozzarella.", 19.99);
+        //SPINACH AND FETA
+        menu_component *spinach_and_feta_pizza = new menu_items_dominos(9, "Spinach and Feta (Large)", "The Spinach and feta pizza includes creamy Alfredo sauce, fresh spinach, fresh onions, feta, Parmesan-Asiago, provolone and cheese made with 100% real mozzarella.", 19.99);
+        //CHEESEBURGER PIZZA
+        menu_component *cheeseburger_pizza = new menu_items_dominos(10, "Cheeseburger Pizza (Large)", "The Cheeseburger pizza includes American cheese, ketchup-mustard sauce, beef, fresh onions, and diced tomatoes, topped with shredded provolone and cheddar cheeses.", 19.99);
 
-        dominos_menu_customer_favorites->add(chicken_avocado_taco);
+        dominos_menu_customer_favorites->add(extravaganzza_pizza);
 
-        dominos_menu_customer_favorites->add(chickenless_pollo_taco);
-        dominos_menu_customer_favorites->add(california_queso_burrito);
-        dominos_menu_customer_favorites->add(chicken_tinga_burrito);
-        dominos_menu_customer_favorites->add(original_pollo_bowl);
-        dominos_menu_customer_favorites->add(double_chicken_bowl);
+        dominos_menu_customer_favorites->add(meatzza_pizza);
+        dominos_menu_customer_favorites->add(pacific_veggie_pizza);
+        dominos_menu_customer_favorites->add(honolulu_hawaiian_pizza);
+        dominos_menu_customer_favorites->add(deluxe_pizza);
+        dominos_menu_customer_favorites->add(buffalo_chicken_pizza);
 
-        dominos_menu_customer_favorites->add(chips_and_guacamole_small);
-        dominos_menu_customer_favorites->add(chips_and_guacamole_regular);
-        dominos_menu_customer_favorites->add(drink_regular);
-        dominos_menu_customer_favorites->add(drink_large);
+        dominos_menu_customer_favorites->add(ultimate_pepperoni_pizza);
+        dominos_menu_customer_favorites->add(memphis_bbq_chicken_pizza);
+        dominos_menu_customer_favorites->add(spinach_and_feta_pizza);
+        dominos_menu_customer_favorites->add(cheeseburger_pizza);
 
         dominos_menu_customer_favorites->print();
     }
