@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "../../composite/menu_burger/tests/menu_mcdonalds_tests.hpp"
-#include "../../composite/menu_burger/tests/menu_chickfila_tests.hpp"
-#include "../../composite/menu_burger/tests/menu_innout_tests.hpp"
+#include "../menu_composite/composite/menu_burger/tests/menu_mcdonalds_tests.hpp"
+#include "../menu_composite/composite/menu_burger/tests/menu_chickfila_tests.hpp"
+#include "../menu_composite/composite/menu_burger/tests/menu_innout_tests.hpp"
 
 int main(int argc, char **argv)
 {
