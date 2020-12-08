@@ -10,10 +10,10 @@ using namespace std;
 
 TEST(MenuTest, pizzahut_Customer_Favorites)
 {
-    menu_component *m_pizzahut_customer_favorites = new menu_pizzahut("Customer Favorites", "Following Options are the Most Popular Items at Papa John's");
+    menu_component *m_pizzahut_customer_favorites = new menu_pizzahut("Customer Favorites", "Following Options are the Most Popular Items at Pizza Hut");
 
     EXPECT_EQ(m_pizzahut_customer_favorites->get_name(), "Customer Favorites");
-    EXPECT_EQ(m_pizzahut_customer_favorites->get_description(), "Following Options are the Most Popular Items at Papa John's");
+    EXPECT_EQ(m_pizzahut_customer_favorites->get_description(), "Following Options are the Most Popular Items at Pizza Hut");
     menu_component *cheese_pizza = new menu_items_pizzahut(1, "Cheese Pizza", "Your favorite cheese pizza, with your choice of crust covered in classic marinara sauce and topped with gooey mozzarella cheese. It's anything but 'plain'.",13.99);
     m_pizzahut_customer_favorites->add(cheese_pizza);
     cout << "EXPECTED ITEM NUMBER: 1"
