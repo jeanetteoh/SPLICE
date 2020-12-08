@@ -13,5 +13,7 @@ main
 fastfood_test
 menu_burger_test
 menu_taco_test
+menu_pizza_test
 c_party_test
 c_cart_test
+bin/
