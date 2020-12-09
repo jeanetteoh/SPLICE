@@ -20,16 +20,6 @@ void FastFood_Client::fastfood_burger_run()
     InNOut->set_fastfood_store_price("$");
     m_Burger.push_back(InNOut);
 
-    auto BurgerKing = m_Burger[0]->clone();
-    BurgerKing->set_fastfood_store_name("Burger King");
-    BurgerKing->set_fastfood_store_price("$");
-    m_Burger.push_back(BurgerKing);
-
-    auto CarlsJr = m_Burger[0]->clone();
-    CarlsJr->set_fastfood_store_name("Carl's Jr");
-    CarlsJr->set_fastfood_store_price("$");
-    m_Burger.push_back(CarlsJr);
-
     int listBurger = 1;
     while(burgerCount != 0)
     {
@@ -82,6 +72,11 @@ void FastFood_Client::fastfood_taco_run()
     DelTaco->set_fastfood_store_name("Del Taco");
     DelTaco->set_fastfood_store_price("$");
     m_Taco.push_back(DelTaco);
+
+    auto ElPolloLoco = m_Taco[0]->clone();
+    ElPolloLoco->set_fastfood_store_name("El Pollo Loco");
+    ElPolloLoco->set_fastfood_store_price("$");
+    m_Taco.push_back(ElPolloLoco);
 
     int listTaco = 1;
     while (tacoCount != 0)
