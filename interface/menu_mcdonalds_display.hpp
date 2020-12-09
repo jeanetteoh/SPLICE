@@ -28,7 +28,7 @@ public:
 
         mcdonalds_menu_customer_favorites->add(mcnuggets_4_piece);
         mcdonalds_menu_customer_favorites->add(mcnuggets_10_piece);
-        
+
         mcdonalds_menu_customer_favorites->add(iced_coffee_small);
         mcdonalds_menu_customer_favorites->add(iced_coffee_medium);
         mcdonalds_menu_customer_favorites->add(iced_coffee_large);
@@ -36,7 +36,7 @@ public:
         mcdonalds_menu_customer_favorites->add(fries_small);
         mcdonalds_menu_customer_favorites->add(fries_medium);
         mcdonalds_menu_customer_favorites->add(fries_large);
-        
+
         mcdonalds_menu_customer_favorites->print();
     }
 };

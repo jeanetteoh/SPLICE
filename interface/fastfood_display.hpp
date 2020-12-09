@@ -21,10 +21,10 @@ using namespace std;
 class FastFood_Display
 {
 public:
-    void display_interface();
     void display_burger_places();
     void display_taco_places();
     void display_pizza_places();
+    // menu_component *menu_mcdonalds_display_add_to_cart();
 };
 
 

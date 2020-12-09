@@ -2,7 +2,65 @@
 
 using namespace std;
 
-int fastfood_display()
+
+void display_burger_places()
+{
+    cout << "\nBurger Places\n===============" << endl;
+    FastFood_Client i_burger_places;
+    i_burger_places.fastfood_burger_run();
+    cout << endl;
+
+    cout << "Choose a selection from the above restaurants!" << endl;
+
+    int choice = 0;
+    cin >> choice;
+    int burger_choice = 0;
+    if (choice == 1)
+    {
+        menu_mcdonalds_display i_mcdonalds;
+        i_mcdonalds.display_mcdonalds_customer_favorites();
+        
+        // burger_choice = 1;
+    }
+    else if (choice == 2)
+    {
+        menu_chickfilas_display i_chickfila;
+        i_chickfila.display_chickfilas_customer_favorites();
+        // burger_choice = 2;
+    }
+    else if (choice == 3)
+    {
+        menu_innouts_display i_innout;
+        i_innout.display_innouts_customer_favorites();
+        // burger_choice = 3;
+    }
+    else
+    {
+        cout << "Invalid Input!" << endl;
+    }
+}
+
+void display_taco_places()
+{
+    cout << endl;
+    cout << "Taco Places" << endl;
+    cout << "------------------------" << endl;
+    FastFood_Client TacoPlaces;
+    TacoPlaces.fastfood_taco_run();
+    cout << endl;
+}
+
+void display_pizza_places()
+{
+    cout << endl;
+    cout << "Pizza Places" << endl;
+    cout << "------------------------" << endl;
+    FastFood_Client PizzaPlaces;
+    PizzaPlaces.fastfood_pizza_run();
+    cout << endl;
+}
+
+void fastfood_display()
 {
     bool condition = true;
     string user_option = "";
@@ -22,46 +80,41 @@ int fastfood_display()
         }
         else
         {
-            switch (user_fastfood_option)
+            if (user_fastfood_option == 1) // BURGER SELECTED
             {
-            case 1:
-                FastFood_Display i_burger_places;
-                i_burger_places.display_burger_places();
-
-                if(user_fastfood_option_choice == 1)
-                {
-                    
-                }
-                else if(user_fastfood_option_choice == 2)
-                {
-                    
-                }
-                else if(user_fastfood_option == 3)
-                {
-                    
-                }
-                else
-                {
-
-                }
-
-                return user_fastfood_option_choice;
-            case 2:
-                FastFood_Display i_taco_places;
-                i_taco_places.display_taco_places();
-                return 2;
-            case 3:
-                FastFood_Display i_pizza_places;
-                i_pizza_places.display_pizza_places();
-                return 3;
+                display_burger_places();
+                break;
             }
+            else if (user_fastfood_option == 2) // TACO SELECTED
+            {
+                display_taco_places();
+                break;
+            }
+            else if (user_fastfood_option == 3) // PIZZA SELECTED
+            {
+                display_pizza_places();
+                break;
+            }
+            else
+            {
+                cout << "Invalid Input!" << endl;
+                condition = false;
+                break;
+            }
+            
         }
     }
+}
+
+void i_add_to_cart(user_cart* i_uc, int item_number)
+{
+
 }
 
 void setup_party_of_1(party_component *i_party_component)
 {
     string user1 = "";
+    int num_users = 1;
 
     cout << "Give User #1 a name!" << endl;
     cin >> user1;
@@ -74,6 +127,15 @@ void setup_party_of_1(party_component *i_party_component)
     i_party_component->print();
 
     fastfood_display();
+
+    cout << "For " << user1 << ", what would you like to add to their cart?" << endl;
+    cout << "Please enter the item number from the restaurant you have selected." << endl;
+    
+    user_cart *i_user1_cart = new user_cart(i_user1);
+    
+    int item_number = 0;
+    cin >> item_number;
+
 }
 
 void setup_party_of_2(party_component *i_party_component)
@@ -213,23 +275,23 @@ int main()
     cout << "Hello! Welcome to SPLICE. Remember, you can press 'q' at anytime to quit!" << endl;
     cout << "Give your party a name! Press 'Enter' when you are done!" << endl;
     cin >> i_party_name;
-    if(i_party_name == "q" || i_party_name == "Q")
+    if (i_party_name == "q" || i_party_name == "Q")
     {
         return 0;
     }
 
     cout << "How many people are in your party? We can only support up to 5 people." << endl;
     cin >> i_party_size;
-    
-    if(i_party_size <= 0 || i_party_size > 5)
+
+    if (i_party_size <= 0 || i_party_size > 5)
     {
         cout << "Invalid input! Did you make sure your party is less than the size of 5?" << endl;
         return 0;
     }
-    
+
     party_component *i_party = new party(i_party_name, i_party_size);
-    
-    while(party_condition)
+
+    while (party_condition)
     {
         if (i_party_size == 1)
         {
@@ -261,6 +323,6 @@ int main()
             party_condition = false;
             break;
         }
-    }    
+    }
     return 0;
 }
