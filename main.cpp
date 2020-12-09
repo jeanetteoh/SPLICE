@@ -27,27 +27,25 @@ int fastfood_display()
             case 1:
                 FastFood_Display i_burger_places;
                 i_burger_places.display_burger_places();
-                
-                cout << "Choose a selection from the above restaurants!" << endl;
-                
+
                 if(user_fastfood_option_choice == 1)
                 {
-
+                    
                 }
                 else if(user_fastfood_option_choice == 2)
                 {
-
+                    
                 }
                 else if(user_fastfood_option == 3)
                 {
-
+                    
                 }
                 else
                 {
 
                 }
 
-                return 1;
+                return user_fastfood_option_choice;
             case 2:
                 FastFood_Display i_taco_places;
                 i_taco_places.display_taco_places();
@@ -210,13 +208,9 @@ int main()
 {
     bool party_condition = true;
     string i_party_name = "";
-    string user2 = "";
-    string user3 = "";
-    string user4 = "";
-    string user5 = "";
     int i_party_size = 0;
 
-    cout << "Hello! Welcome to SPLICE.\nRemember, you can press 'q' at anytime to quit!" << endl;
+    cout << "Hello! Welcome to SPLICE. Remember, you can press 'q' at anytime to quit!" << endl;
     cout << "Give your party a name! Press 'Enter' when you are done!" << endl;
     cin >> i_party_name;
     if(i_party_name == "q" || i_party_name == "Q")
@@ -230,7 +224,7 @@ int main()
     if(i_party_size <= 0 || i_party_size > 5)
     {
         cout << "Invalid input! Did you make sure your party is less than the size of 5?" << endl;
-        cin >> i_party_size;
+        return 0;
     }
     
     party_component *i_party = new party(i_party_name, i_party_size);

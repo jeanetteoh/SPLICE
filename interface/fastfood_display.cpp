@@ -3,19 +3,34 @@
 void FastFood_Display::display_burger_places()
 {
      cout << "\nBurger Places\n==================" << endl;
-     FastFood_Client BurgerPlaces;
-     BurgerPlaces.fastfood_burger_run();
+     FastFood_Client i_burger_places;
+     i_burger_places.fastfood_burger_run();
      cout << endl;
 
-     cout << "Chose a burger restaurant from the selection below!" << endl;
+     cout << "Choose a selection from the above restaurants!" << endl;
+     
      int choice;
      cin >> choice;
-     switch (choice)
+     if(choice == 1)
      {
-          case 1:
-          menu_mcdonalds_display m_1;
-          m_1.display_mcdonalds_customer_favorites();
+          menu_mcdonalds_display i_mcdonalds;
+          i_mcdonalds.display_mcdonalds_customer_favorites();
      }
+     else if(choice == 2)
+     {
+          menu_chickfilas_display i_chickfila;
+          i_chickfila.display_chickfilas_customer_favorites();
+     }
+     else if(choice == 3)
+     {
+          menu_innouts_display i_innout;
+          i_innout.display_innouts_customer_favorites();
+     }
+     else
+     {
+          cout << "Invalid Input!" << endl;
+     }
+     
 }
 
 void FastFood_Display::display_taco_places()
