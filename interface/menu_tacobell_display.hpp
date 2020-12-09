@@ -4,7 +4,7 @@
 #include "../composite/menu_taco/header/menu_items_tacobell.hpp"
 #include "../composite/menu_taco/header/menu_tacobell.hpp"
 
-class menu_deltacos_display
+class menu_tacobell_display
 {
 public:
     void display_tacobells_customer_favorites()
