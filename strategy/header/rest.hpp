@@ -15,7 +15,7 @@ class Rest {
 public:
     Rest() = default;
     const string& get_name() const;
-    void set_name(const string& rest_name);
+    void set_name(const string& r_name);
 
     const float& get_price() const;
     void set_price(const string& food_price);

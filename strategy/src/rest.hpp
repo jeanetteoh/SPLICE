@@ -1,4 +1,5 @@
-#include "../header/rest.hpp"
+
+#include "../strategy/header/rest.hpp"
 
 
 Rest::Rest(string& r_name, float& food_price)
@@ -12,7 +13,7 @@ const string& Rest::get_name() const
     return this->r_name;
 }
 
-void Rest::set_name(const string& rest_name)
+void Rest::set_name(const string& r_name)
 {
     this->r_name = r_name;
 }
