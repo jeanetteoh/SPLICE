@@ -24,15 +24,25 @@ Incorporating the prototype design pattern within our project would entail creat
 
 As the composite design pattern would allow us to treat individual objects in an uniformed manner. We have utilized this pattern for constructing the menu and its menu items, the parties and the party members, and lastly, linking the party members with their respective carts.
 
-> ##### 2a. Constructing the menu and the menu items for different restaurants
+> #### 2a. Constructing the menu and the menu items for different restaurants
 As all ```menus (container)``` contain different ```menu items (leaf)```, the ```menu component (interface)``` will provide common specific operations that will delegate the work to the respective location in the hierarchy. For example, when constructing the menu and its items, the ```menu_component``` should successfully recognize the difference between what is a menu versus what is a menu item in our client. 
 
 ```c++
 menu_component *mcdonalds_menu_customer_favorites = new menu_mcdonalds("McDonald's Menu, Customer Favorites", "Following Options are the Most Popular Items at McDonald's");
 menu_component *big_mac = new menu_items_mcdonalds(1, "Big Mac", "Mouthwatering perfection starts with two 100% pure beef patties and Big Mac sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and American cheese.", 3.99);
 ```
+This should yield the output:
+```
+Menu Name: McDonald's Menu, Customer Favorites
+Menu Description: Following Options are the Most Popular Items at McDonald's
 
-> ##### 2b. Constructing the parties and the party members
+Item Number: 1
+Item Name: Big Mac
+Item Description: Mouthwatering perfection starts with two 100% pure beef patties and Big Mac sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and American cheese.
+Item Price: 3.99
+```
+
+> #### 2b. Constructing the parties and the party members
 By utilizing the composite pattern to construct the ```parties (container)```, and the ```party members (leaves)``` - we have constructed the ```party_component (interface)``` to successfully recognize whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
 
 ```c++
@@ -52,7 +62,7 @@ User 2: Jeanette
 User 3: Hongan
 ```
 
-> ##### 2c. Constructing the users and their respective carts
+> #### 2c. Constructing the users and their respective carts
 We had a bit of a difficulty implementing this without any redundancy as the terms users and party members are synonymous within this project. However, we were still able to utilize this in the way we originally intended. All ```users (container)``` will take in a ```party_component *``` as a parameter to recognize the user, and each user will have their individual ```cart items (leaves)``` which takes in a parameter of ```menu_component *``` to recognize the menu items. The ```cart component (interface)``` will manage the necessary operations to successfuly delegate work based on the parameter. The purpose of utilizing this composite function is for it to successfully recognize the individuality between different users and output their respective cart items based on the menu items they have selected. This composite pattern also successfuly provides a linkage to the previous two patterns. An example of how it is utilized in our client is:
 
 ```c++
