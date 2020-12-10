@@ -76,5 +76,3 @@ target_compile_definitions(c_party_test PRIVATE gtest_disable_pthreads=ON)
 
 target_link_libraries(c_cart_test gtest)
 target_compile_definitions(c_cart_test PRIVATE gtest_disable_pthreads=ON)
-
-
