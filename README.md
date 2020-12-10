@@ -168,7 +168,10 @@ As displayed above, the usage of this pattern makes the process of creating new 
 > The OMT Disgram above only demonstrates one of the many restaurants that utilize the ```menu_component``` base class. All the other restaurants we have chose to implement also comprises of a respective component and leaf class that replicates a similar OMT diagram.
 
 ###### Party & Party Members Composite Pattern
+![Party_Composite](composite/party_composite_pattern.png)
+
 ###### User & User Carts Composite Pattern
+![Cart_Composite](composite/cart_composite_pattern.png)
 
 
 
