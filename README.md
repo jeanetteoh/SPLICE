@@ -169,48 +169,42 @@ As displayed above, the usage of this pattern makes the process of creating new 
 For each restaurant, we added around 9-10 of their top 10 items. These can be found under ```interface/```, an example will be displayed below:
 
 ```c++
-class menu_deltacos_display
+class menu_mcdonalds_display
 {
 public:
-    void display_deltacos_customer_favorites()
+    void display_mcdonalds_customer_favorites()
     {
-        menu_component *deltacos_menu_customer_favorites = new menu_deltaco("Del Taco's Menu, Customer Favorites", "Following Options are the Most Popular Items at Del Taco");
-        // THE DEL TACO
-        menu_component *the_del_taco = new menu_items_deltaco(1, "The Del Taco", "The Del Taco is inspired by the original and loaded with more of everything you love, like more seasoned beef and more hand-grated cheddar cheese, plus crisp lettuce and chopped fresh tomatoes in a crunchy corn shell or warm flour tortilla.", 1.69);
-        // BEYOND TACO
-        menu_component *beyond_taco = new menu_items_deltaco(2, "Beyond Taco", "Layered with 100% plant-based Beyond Meat®, hand-grated cheddar cheese, crisp lettuce, and fresh diced tomatoes in a crunchy corn shell or soft flour tortilla.", 2.49);
-        //AL CARBON TACO
-        menu_component *al_carbon_taco = new menu_items_deltaco(3, "Al Carbon Taco", "Your choice of freshly grilled carne asada or freshly grilled marinated chicken, topped with diced onions, fresh cilantro, and drizzled with tangy green sauce, wrapped in two warm corn tortillas.", 1.00);
-        // BEER BATTERED FISH TACO
-        menu_component *beer_battered_fish_taco = new menu_items_deltaco(4, "Beer Battered Fish Taco", "Hand-cut Alaska Pollock fillet in a crispy beer batter, topped with crunchy cabbage, savory secret sauce, and handmade pico de gallo, wrapped in two warm corn tortillas and served with a fresh-cut lime wedge.", 2.89);
-        //EPIC CALI BACON BURRITO
-        menu_component *epic_cali_bacon_burrito = new menu_items_deltaco(5, "Epic Cali Bacon Burrito", "The Epic Cali Bacon Burrito combines all your favorite loaded baked potato flavors. We layer freshly grilled chicken, carne asada, or Beyond meat, Del Taco's famous Crinkle-Cut Fries, tangy chipotle sauce, crisp bacon, freshly grated cheddar cheese and cool sour cream.", 5.69);
-        //EPIC ORIGINAL MEX BURRITO
-        menu_component *epic_original_mex_burrito = new menu_items_deltaco(6, "Epic Original Mex Burrito", "This Epic Burrito is loaded with fresh grilled carne asada steak, chicken or Beyond Meat, slow-cooked beans made from scratch, fresca lime rice, fresh guacamole, and handmade pico de gallo salsa, all in a warm, oversized flour tortilla.", 5.49);
-        //EPIC LOADED QUESO BURRITO
-        menu_component *epic_loaded_queso_burrito = new menu_items_deltaco(7, "Epic Loaded Queso Burrito", "This Epic Burrito is loaded with fresh grilled chicken, carne asada steak or Beyond Meat, Del Taco’s famous Crinkle-Cut Fries, creamy Queso Blanco, hand-grated cheddar cheese, and handmade pico de gallo, wrapped in a warm oversized flour tortilla. A Cali burrito with epic queso flavor.", 5.29);
-        //EPIC FRESH AVOCADO BURRITO
-        menu_component *epic_fresh_avocado_burrito = new menu_items_deltaco(8, "Epic Fresh Avocado Burrito", "This Epic Burrito is loaded with fresh grilled carne asada steak, chicken or Beyond Meat, hand-sliced avocado, handmade pico de gallo, salsa casera, fresca lime rice, and seasoned black beans all in a warm, oversized flour tortilla. Made with fresh, premium ingredients for an Epic burrito experience.", 5.69);
-        //QUESO LOADED NACHOS
-        menu_component *queso_loaded_nachos = new menu_items_deltaco(9, "Queso Loaded Nachos", "Piled high and loaded with your choice of seasoned beef, fresh grilled chicken, or fresh grilled carne asada steak, house-made chips, slow-cooked beans made from scratch, and creamy Queso Blanco, all topped with sour cream, fresh diced tomatoes, and sliced jalapenos.", 3.99);
-        //CHIPS AND QUESO
-        menu_component *chips_and_queso = new menu_items_deltaco(10, "Chips & Queso", "Creamy Queso Blanco served with a large bag of fresh, house-made tortilla chips. Great for sharing!", 3.29);
+        menu_component *mcdonalds_menu_customer_favorites = new menu_mcdonalds("McDonald's Menu, Customer Favorites", "Following Options are the Most Popular Items at McDonald's");
+        // BIG MAC
+        menu_component *big_mac = new menu_items_mcdonalds(1, "Big Mac", "Mouthwatering perfection starts with two 100% pure beef patties and Big Mac sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and American cheese.", 3.99);
+        // MCNUGGETS 4 PIECE
+        menu_component *mcnuggets_4_piece = new menu_items_mcdonalds(2, "McNuggets 4 Piece", "Our tender, juicy Chicken McNuggets® are made with 100% white meat chicken and no artificial colors, flavors or preservatives.", 1.99);
+        menu_component *mcnuggets_10_piece = new menu_items_mcdonalds(3, "McNuggets 10 Piece", "Our tender, juicy Chicken McNuggets® are made with 100% white meat chicken and no artificial colors, flavors or preservatives.", 4.49);
+        // ICED COFFEE
+        menu_component *iced_coffee_small = new menu_items_mcdonalds(4, "Iced Coffee (Small)", "McCafe Iced Coffee is refreshingly cool and made with 100% Arabica beans, cream and your choice of flavored coffee syrup – caramel, hazelnut, French vanilla and sugar-free French vanilla.", 1.39);
+        menu_component *iced_coffee_medium = new menu_items_mcdonalds(5, "Iced Coffee (Medium)", "McCafe Iced Coffee is refreshingly cool and made with 100% Arabica beans, cream and your choice of flavored coffee syrup – caramel, hazelnut, French vanilla and sugar - free French vanilla.", 1.79);
+        menu_component *iced_coffee_large = new menu_items_mcdonalds(6, "Iced Coffee (Large)", "McCafe Iced Coffee is refreshingly cool and made with 100% Arabica beans, cream and your choice of flavored coffee syrup – caramel, hazelnut, French vanilla and sugar - free French vanilla.", 1.99);
+        //FRIES
+        menu_component *fries_small = new menu_items_mcdonalds(7, "Fries Small", "Our World Famous Fries® are made with premium potatoes such as the Russet Burbank and the Shepody. With 0g of trans fat per labeled serving, these epic fries are crispy and golden on the outside and fluffy on the inside.", 1.39);
+        menu_component *fries_medium = new menu_items_mcdonalds(8, "Fries Medium", "Our World Famous Fries® are made with premium potatoes such as the Russet Burbank and the Shepody. With 0g of trans fat per labeled serving, these epic fries are crispy and golden on the outside and fluffy on the inside.", 1.79);
+        menu_component *fries_large = new menu_items_mcdonalds(9, "Fries Large", "Our World Famous Fries® are made with premium potatoes such as the Russet Burbank and the Shepody. With 0g of trans fat per labeled serving, these epic fries are crispy and golden on the outside and fluffy on the inside.", 1.89);
 
-        deltacos_menu_customer_favorites->add(the_del_taco);
+        mcdonalds_menu_customer_favorites->add(big_mac);
 
-        deltacos_menu_customer_favorites->add(beyond_taco);
-        deltacos_menu_customer_favorites->add(al_carbon_taco);
-        deltacos_menu_customer_favorites->add(beer_battered_fish_taco);
-        deltacos_menu_customer_favorites->add(epic_cali_bacon_burrito);
-        deltacos_menu_customer_favorites->add(epic_original_mex_burrito);
+        mcdonalds_menu_customer_favorites->add(mcnuggets_4_piece);
+        mcdonalds_menu_customer_favorites->add(mcnuggets_10_piece);
 
-        deltacos_menu_customer_favorites->add(epic_loaded_queso_burrito);
-        deltacos_menu_customer_favorites->add(epic_fresh_avocado_burrito);
-        deltacos_menu_customer_favorites->add(queso_loaded_nachos);
-        deltacos_menu_customer_favorites->add(chips_and_queso);
+        mcdonalds_menu_customer_favorites->add(iced_coffee_small);
+        mcdonalds_menu_customer_favorites->add(iced_coffee_medium);
+        mcdonalds_menu_customer_favorites->add(iced_coffee_large);
 
-        deltacos_menu_customer_favorites->print();
+        mcdonalds_menu_customer_favorites->add(fries_small);
+        mcdonalds_menu_customer_favorites->add(fries_medium);
+        mcdonalds_menu_customer_favorites->add(fries_large);
+
+        mcdonalds_menu_customer_favorites->print();
     }
+};
 };
 ```
 
