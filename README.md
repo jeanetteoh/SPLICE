@@ -401,7 +401,7 @@ Total Cart Price (Including Tax): $11.3861
 ## Screenshots
 When ```main.cpp``` is executed, this input: CS100, 2, John, Pluto, 1, 3, 1, 5, 4, 0, 2, 3, 0
 
-```c+++
+```
 Hello! Welcome to SPLICE. Remember, you can press 'q' at anytime to quit!
 Give your party a name! Press 'Enter' when you are done!
 CS100
@@ -500,7 +500,7 @@ After all items have been added, press '0'.
 
 will yield the following output for user 1:
 
-```c++
+```
 Displaying John's Cart
 ---------------------------------
 Item Number: 1
@@ -528,7 +528,7 @@ Total Cart Price (Including Tax): $7.83
 
 and this output for user 2:
 
-```c++
+```
 For Pluto, what would you like to add to their cart?
 Please enter the item number from the restaurant you have selected.
 After all items have been added, press '0'.
