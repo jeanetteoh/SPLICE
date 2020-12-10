@@ -42,6 +42,8 @@ Item Price: 3.99
 ```
 
 ##### 2b. Constructing the parties and the party members
+> Note that the term "party member" is synonymous to the class ```party_component user```. The term party member is used within throughout the ```README``` for clarity. 
+
 By utilizing the composite pattern to create the ```parties (container)```, and the ```party members (leaves)``` - we have constructed a ```party_component (interface)``` that successfully recognizes whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
 
 ```c++
@@ -283,7 +285,6 @@ Item Price: 1.89
 
 ###### Party & Party Members Composite Pattern
 ![Party_Composite](composite/party_composite_pattern.png)
-> Note that the term "party member" is synonymous to class ```party_component user```. The term party member is used within throughout the README for clarity. 
 
 In addition to the usage shown in Phase 2/2b., another example of utilizing the party and party member composite pattern in our ```main.cpp``` would be the initial asking for a party name and their size. Depending on the size, we will instantiate a corresponding number of user carts. Note that the ```party_component *i_user1``` works hand in hand with ```cart_component *i_user1_cart```.
 
