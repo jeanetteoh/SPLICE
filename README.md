@@ -347,7 +347,7 @@ if(i_party_size == 1)
 }
 ```
 
-This process will repeat for the number of users.
+This process will repeat depending on the number of users.
 
 Let's say Xin ate at McDonald's and he had a *McNuggets 10 Piece, Iced Coffee (Large), and a Big Mac*, ```i_user1_cart``` will store all of those inputs through the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
 
