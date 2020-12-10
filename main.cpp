@@ -89,9 +89,7 @@ string display_taco_places()
 
 string display_pizza_places()
 {
-    cout << endl;
-    cout << "Pizza Places" << endl;
-    cout << "------------------------" << endl;
+    cout << "\nPizza Places\n===============" << endl;
     FastFood_Client PizzaPlaces;
     PizzaPlaces.fastfood_pizza_run();
     cout << endl;
