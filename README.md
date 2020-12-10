@@ -17,7 +17,7 @@ The inputs to our project will be the party name, party size, party member names
 ### What design patterns will we be incorporating?
 **1. Prototype**
 
-Incorporating the prototype design pattern within our project would entail creating multiple new types of restaurants that we can clone the template from. It would allow us to create copies of existing objects, and also modify it to our needs. As we are going to include numerous different restaurants, cloning each object would be more efficient and less expensive as opposed to creating new objects. For the purpose of this project, there will be no APIs utilized, and therefore we have decided to only implement 9 fastfood restaurants that fall into 3 categories: burgers, pizzas, and tacos. 
+Incorporating the prototype design pattern within our project would entail creating multiple new types of restaurants that we can clone the template from. It would allow us to create copies of existing objects, and also modify it to our needs. As we are going to include numerous different restaurants, cloning each object would be more efficient and less expensive as opposed to creating new objects. For the purpose of this project, there will be no APIs utilized, and therefore we have decided to only implement 9 fast food restaurants that fall into 3 categories: burgers, pizzas, and tacos. 
 
 **2. Composite**
 
@@ -106,6 +106,8 @@ Incorporating the strategy design pattern would allow us to sort the restaurants
 ![Restaurant_Prototype](prototype/prototype_pattern.png)
 
 As stated before, the use of this pattern allows for the clonining of different Restaurant categories. This allows for the client to easily copy any object that follows such prototype interface. The "Concrete Prototypes" will be the different categories of Fast Food places such as burgers, pizzas, and tacos. The way it is utilized through is demonstrated below:
+
+This file can be found in ```prototype/src/fastfood_creator.cpp```.
 
 ```c++
 FastFood *Create(const string &fastfood_store_name, const string &fastfood_store_price, string_view fastfood_type)
