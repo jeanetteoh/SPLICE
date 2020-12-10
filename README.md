@@ -105,7 +105,7 @@ Incorporating the strategy design pattern would allow us to sort the restaurants
 #### Restaurant Prototype Pattern
 ![Restaurant_Prototype](prototype/prototype_pattern.png)
 
-As stated before, the use of this pattern allows for the clonining of different Restaurant categories. This allows for the client to easily copy any object that follows such prototype interface. The "Concrete Prototypes" will be the different categories of Fast Food places such as burgers, pizzas, and tacos. The way it is utilized through is demonstrated below:
+As stated before, the use of this pattern allows for the cloning of different restaurants. This allows for the client to easily copy any object that follows such prototype interface. The "Concrete Prototypes" will be the different categories of Fast Food places such as burgers, pizzas, and tacos. The way it is utilized through is demonstrated below:
 
 This file can be found in ```prototype/src/fastfood_creator.cpp```.
 
