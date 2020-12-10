@@ -309,8 +309,73 @@ In addition to the usage shown in Phase 2/2b., an example of utilizing the party
 
 ###### User Cart & Cart Items Composite Pattern
 ![Cart_Composite](composite/cart_composite_pattern.png)
+> At this moment, we only support up to 3 users and storing their carts.
 
+If there is only 1 user, we will only instantiate 1 ```user_cart``` and 1 ```cart_items``` to store all of the menu items they selected.
+An example is shown below from ```main.cpp```:
 
+```c++
+        if(i_party_size == 1)
+        {
+            party_component *i_user1 = new user(user1);
+            cart_component *i_user1_cart = new user_cart(i_user1);
+            cout << "For " << user1 << ", what would you like to add to their cart?" << endl;
+            cout << "Please enter the item number from the restaurant you have selected." << endl;
+            cout << "After all items have been added, press '0'." << endl;
+
+            cin >> mcdonalds_item_number;
+            cart_component *i_user1_cart_items = new cart_items(i_mcdonalds_cart.at(mcdonalds_item_number - 1));
+
+            bool mcdonalds_condition = true;
+            while (mcdonalds_condition)
+            {
+                cin >> mcdonalds_item_number_1;
+                if (mcdonalds_item_number_1 == 0)
+                {
+                    mcdonalds_item_number_1 = false;
+                    break;
+                }
+                i_user1_cart_items->add_to_cart(i_mcdonalds_cart.at(mcdonalds_item_number_1 - 1));
+            }
+            i_user1_cart->add(i_user1_cart_items);
+            i_user1_cart->display();
+        }
+```
+
+This process will repeat for the number of users.
+
+Let's say Xin ate at McDonald's and he had a McNuggets 10 Piece, Iced Coffee (Large), and a Big Mac, ```i_user1_cart``` will store all of those inputs through the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
+
+```c++
+For Xin, what would you like to add to their cart?
+Please enter the item number from the restaurant you have selected.
+After all items have been added, press '0'.
+
+Displaying Xin's Cart
+---------------------------------
+Item Number: 6
+Item Name: Iced Coffee (Large)
+Item Description: McCafe Iced Coffee is refreshingly cool and made with 100% Arabica beans, cream and your choice of flavored coffee syrup – caramel, hazelnut, French vanilla and sugar - free French vanilla.
+Item Price: 1.99
+
+Item Number: 3
+Item Name: McNuggets 10 Piece
+Item Description: Our tender, juicy Chicken McNuggets® are made with 100% white meat chicken and no artificial colors, flavors or preservatives.
+Item Price: 4.49
+
+Item Number: 1
+Item Name: Big Mac
+Item Description: Mouthwatering perfection starts with two 100% pure beef patties and Big Mac sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and American cheese.
+Item Price: 3.99
+
+Price of Iced Coffee (Large) is: $1.99
+Price of McNuggets 10 Piece is: $4.49
+Price of Big Mac is: $3.99
+
+Total Cart Price is: $10.47
+Total Cart Price (Including Tax): $11.3861
+```
+> The input for to receive this result was 1, Xin, 1, 1, 6, 3, 1, 0
 
 #### Sort Strategy Pattern
 - RestaurantSort Strategy pattern, can let us to corresponding to sorting algorithm operation of the restaurant, such as the restaurant according to the price of ordering (from the highest price to the restaurant to the cheapest to the restaurant）, the restaurant can also be sorted in alphabetical order (from A to Z or from A to Z), algorithm can also be in accordance with the type of restaurant to restaurant for sorting (western food, Mexican food, Chinese food, etc.).
