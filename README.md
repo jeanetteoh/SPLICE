@@ -536,7 +536,7 @@ After all items have been added, press '0'.
 3
 0
 ```
-```c++
+```
 Displaying Pluto's Cart
 ---------------------------------
 Item Number: 2
