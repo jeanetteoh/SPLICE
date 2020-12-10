@@ -401,5 +401,17 @@ Total Cart Price (Including Tax): $11.3861
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application
+Despite the myriad of testing that we have gone through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable for a user interface. This is ran through prompting multiple questions that depends on user input. The user interactions were considered when developing the sequence of inputs before arriving at the output. 
+
+The sequence is as follows:
+###### 1. Ask for a party name
+###### 2. Ask for a party size
+###### 3. Ask for a party member name
+###### 4. Display the restaurant categories: burger, taco, pizza, and then ask for an input to select the restaurant category
+###### 5. Display the restaurants that fall under the category chosen, and then ask for an input to select the restaurant
+###### 6. Display the restaurant menu, ask for continuous inputs to add items into the user cart
+###### 7. Output cart items and total amount needed to pay
+> ###### Repeat steps 6 and 7 depending on the party size
+
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
