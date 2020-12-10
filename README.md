@@ -205,10 +205,9 @@ public:
         mcdonalds_menu_customer_favorites->print();
     }
 };
-};
 ```
 
-This is then utilized within our ```main.cpp``` (command line executable) from ```menu_mcdonalds_display i_mcdonalds``` and ```i_mcdonalds.display_mcdonalds_customer_favorites``` as shown below:
+This is then utilized within our ```main.cpp``` (command line executable) from instantiating a menu_mcdonalds_display object ```menu_mcdonalds_display i_mcdonalds``` and calling the display interface```i_mcdonalds.display_mcdonalds_customer_favorites``` as shown below:
 
 ```c++
 string display_burger_places()
@@ -231,6 +230,7 @@ string display_burger_places()
 ```
 
 Again, this would yield the output: 
+
 ```
 Menu Name: McDonald's Menu, Customer Favorites
 Menu Description: Following Options are the Most Popular Items at McDonald's
