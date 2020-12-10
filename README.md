@@ -214,16 +214,12 @@ public:
 };
 ```
 
-This is then utilized within our ```main.cpp``` (command line executable) as shown below:
+This is then utilized within our ```main.cpp``` (command line executable) from ```menu_mcdonalds_display i_mcdonalds``` and ```i_mcdonalds.display_mcdonalds_customer_favorites``` as shown below:
 
 ```c++
 string display_burger_places()
 {
-    cout << "\nBurger Places\n===============" << endl;
-    FastFood_Client i_burger_places;
-    i_burger_places.fastfood_burger_run();
-    cout << endl;
-
+    ...
     cout << "Choose a selection from the above restaurants!" << endl;
 
     int choice = 0;
@@ -238,6 +234,57 @@ string display_burger_places()
         return restaurant_name;
     }
     ...
+```
+
+Again, this would yield the output: 
+```
+Menu Name: McDonald's Menu, Customer Favorites
+Menu Description: Following Options are the Most Popular Items at McDonald's
+
+Item Number: 1
+Item Name: Big Mac
+Item Description: Mouthwatering perfection starts with two 100% pure beef patties and Big Mac sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and American cheese.
+Item Price: 3.99
+
+Item Number: 2
+Item Name: McNuggets 4 Piece
+Item Description: Our tender, juicy Chicken McNuggets® are made with 100% white meat chicken and no artificial colors, flavors or preservatives.
+Item Price: 1.99
+
+Item Number: 3
+Item Name: McNuggets 10 Piece
+Item Description: Our tender, juicy Chicken McNuggets® are made with 100% white meat chicken and no artificial colors, flavors or preservatives.
+Item Price: 4.49
+
+Item Number: 4
+Item Name: Iced Coffee (Small)
+Item Description: McCafe Iced Coffee is refreshingly cool and made with 100% Arabica beans, cream and your choice of flavored coffee syrup – caramel, hazelnut, French vanilla and sugar-free French vanilla.
+Item Price: 1.39
+
+Item Number: 5
+Item Name: Iced Coffee (Medium)
+Item Description: McCafe Iced Coffee is refreshingly cool and made with 100% Arabica beans, cream and your choice of flavored coffee syrup – caramel, hazelnut, French vanilla and sugar - free French vanilla.
+Item Price: 1.79
+
+Item Number: 6
+Item Name: Iced Coffee (Large)
+Item Description: McCafe Iced Coffee is refreshingly cool and made with 100% Arabica beans, cream and your choice of flavored coffee syrup – caramel, hazelnut, French vanilla and sugar - free French vanilla.
+Item Price: 1.99
+
+Item Number: 7
+Item Name: Fries Small
+Item Description: Our World Famous Fries® are made with premium potatoes such as the Russet Burbank and the Shepody. With 0g of trans fat per labeled serving, these epic fries are crispy and golden on the outside and fluffy on the inside.
+Item Price: 1.39
+
+Item Number: 8
+Item Name: Fries Medium
+Item Description: Our World Famous Fries® are made with premium potatoes such as the Russet Burbank and the Shepody. With 0g of trans fat per labeled serving, these epic fries are crispy and golden on the outside and fluffy on the inside.
+Item Price: 1.79
+
+Item Number: 9
+Item Name: Fries Large
+Item Description: Our World Famous Fries® are made with premium potatoes such as the Russet Burbank and the Shepody. With 0g of trans fat per labeled serving, these epic fries are crispy and golden on the outside and fluffy on the inside.
+Item Price: 1.89
 ```
 
 ###### Party & Party Members Composite Pattern
