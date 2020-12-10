@@ -21,8 +21,6 @@ string display_burger_places()
         i_mcdonalds.display_mcdonalds_customer_favorites();
         restaurant_name = "McDonalds";
         return restaurant_name;
-        // burger_choice = 1;
-
     }
     else if (choice == 2)
     {
@@ -30,7 +28,6 @@ string display_burger_places()
         i_chickfila.display_chickfilas_customer_favorites();
         restaurant_name = "Chick Fil A";
         return restaurant_name;
-        // burger_choice = 2;
     }
     else if (choice == 3)
     {
@@ -38,7 +35,6 @@ string display_burger_places()
         i_innout.display_innouts_customer_favorites();
         restaurant_name = "In N Out";
         return restaurant_name;
-        // burger_choice = 3;
     }
     else
     {
@@ -69,16 +65,16 @@ string display_taco_places()
     }
     else if (choice == 2)
     {
-        menu_elpollolocos_display i_elpolloloco;
-        i_elpolloloco.display_elpollolocos_customer_favorites();
-        restaurant_name = "El Pollo Loco";
+        menu_deltacos_display i_deltaco;
+        i_deltaco.display_deltacos_customer_favorites();
+        restaurant_name = "Del Taco";
         return restaurant_name;
     }
     else if (choice == 3)
     {
-        menu_deltacos_display i_deltaco;
-        i_deltaco.display_deltacos_customer_favorites();
-        restaurant_name = "Del Taco";
+        menu_elpollolocos_display i_elpolloloco;
+        i_elpolloloco.display_elpollolocos_customer_favorites();
+        restaurant_name = "El Pollo Loco";
         return restaurant_name;
     }
     else
@@ -89,9 +85,7 @@ string display_taco_places()
 
 string display_pizza_places()
 {
-    cout << endl;
-    cout << "Pizza Places" << endl;
-    cout << "------------------------" << endl;
+    cout << "\nPizza Places\n===============" << endl;
     FastFood_Client PizzaPlaces;
     PizzaPlaces.fastfood_pizza_run();
     cout << endl;
@@ -104,17 +98,16 @@ string display_pizza_places()
     
     if (choice == 1)
     {
-        menu_pizzahut_display i_pizzahut;
-        i_pizzahut.display_pizzahut_customer_favorites();
-        restaurant_name = "Pizza Hut";
-        return restaurant_name;
-
-    }
-    else if (choice == 2)
-    {
         menu_dominos_display i_dominos;
         i_dominos.display_dominos_customer_favorites();
         restaurant_name = "Dominos";
+        return restaurant_name;
+    }
+    else if (choice == 2)
+    {
+        menu_pizzahut_display i_pizzahut;
+        i_pizzahut.display_pizzahut_customer_favorites();
+        restaurant_name = "Pizza Hut";
         return restaurant_name;
     }
     else if (choice == 3)
@@ -143,8 +136,8 @@ int main()
     string i_party_name = "";
     int i_party_size = 0;
 
-    cout << "Hello! Welcome to SPLICE. Remember, you can press 'q' at anytime to quit!" << endl;
-    cout << "Give your party a name! Press 'Enter' when you are done!" << endl;
+    cout << "Hello! Welcome to SPLICE. Remember, you can press 'q' to quit!!" << endl;
+    cout << "Give your party a name (without spaces!).  Press 'Enter' when you are done!" << endl;
     cin >> i_party_name;
     if (i_party_name == "q" || i_party_name == "Q")
     {
@@ -252,7 +245,6 @@ int main()
 
         if(i_party_size == 1)
         {
-            
             party_component *i_user1 = new user(user1);
             cart_component *i_user1_cart = new user_cart(i_user1);
             cout << "For " << user1 << ", what would you like to add to their cart?" << endl;
