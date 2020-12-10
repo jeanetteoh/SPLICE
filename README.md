@@ -163,9 +163,82 @@ As displayed above, the usage of this pattern makes the process of creating new 
 #### Composite Patterns
 
 ###### Menu & Menu Items Composite Pattern
-
 ![Menu_Composite1](composite/menu_composite_pattern.png)
-> The OMT Disgram above only demonstrates one of the many restaurants that utilize the ```menu_component``` base class. All the other restaurants we have chose to implement also comprises of a respective component and leaf class that replicates a similar OMT diagram.
+> The OMT Disgram above only demonstrates one of the many restaurants that utilize the ```menu_component``` base class. All the other restaurants we have chose to implement also comprises of a respective component class and leaf class that replicates a similar OMT diagram. Such files can be found under ```composite/menu_burger/...```, ```composite/menu_pizza/...```, and ```composite/menu_taco/...```
+
+For each restaurant, we added around 9-10 of their top 10 items. These can be found under ```interface/```, an example will be displayed below:
+
+```c++
+class menu_deltacos_display
+{
+public:
+    void display_deltacos_customer_favorites()
+    {
+        menu_component *deltacos_menu_customer_favorites = new menu_deltaco("Del Taco's Menu, Customer Favorites", "Following Options are the Most Popular Items at Del Taco");
+        // THE DEL TACO
+        menu_component *the_del_taco = new menu_items_deltaco(1, "The Del Taco", "The Del Taco is inspired by the original and loaded with more of everything you love, like more seasoned beef and more hand-grated cheddar cheese, plus crisp lettuce and chopped fresh tomatoes in a crunchy corn shell or warm flour tortilla.", 1.69);
+        // BEYOND TACO
+        menu_component *beyond_taco = new menu_items_deltaco(2, "Beyond Taco", "Layered with 100% plant-based Beyond Meat®, hand-grated cheddar cheese, crisp lettuce, and fresh diced tomatoes in a crunchy corn shell or soft flour tortilla.", 2.49);
+        //AL CARBON TACO
+        menu_component *al_carbon_taco = new menu_items_deltaco(3, "Al Carbon Taco", "Your choice of freshly grilled carne asada or freshly grilled marinated chicken, topped with diced onions, fresh cilantro, and drizzled with tangy green sauce, wrapped in two warm corn tortillas.", 1.00);
+        // BEER BATTERED FISH TACO
+        menu_component *beer_battered_fish_taco = new menu_items_deltaco(4, "Beer Battered Fish Taco", "Hand-cut Alaska Pollock fillet in a crispy beer batter, topped with crunchy cabbage, savory secret sauce, and handmade pico de gallo, wrapped in two warm corn tortillas and served with a fresh-cut lime wedge.", 2.89);
+        //EPIC CALI BACON BURRITO
+        menu_component *epic_cali_bacon_burrito = new menu_items_deltaco(5, "Epic Cali Bacon Burrito", "The Epic Cali Bacon Burrito combines all your favorite loaded baked potato flavors. We layer freshly grilled chicken, carne asada, or Beyond meat, Del Taco's famous Crinkle-Cut Fries, tangy chipotle sauce, crisp bacon, freshly grated cheddar cheese and cool sour cream.", 5.69);
+        //EPIC ORIGINAL MEX BURRITO
+        menu_component *epic_original_mex_burrito = new menu_items_deltaco(6, "Epic Original Mex Burrito", "This Epic Burrito is loaded with fresh grilled carne asada steak, chicken or Beyond Meat, slow-cooked beans made from scratch, fresca lime rice, fresh guacamole, and handmade pico de gallo salsa, all in a warm, oversized flour tortilla.", 5.49);
+        //EPIC LOADED QUESO BURRITO
+        menu_component *epic_loaded_queso_burrito = new menu_items_deltaco(7, "Epic Loaded Queso Burrito", "This Epic Burrito is loaded with fresh grilled chicken, carne asada steak or Beyond Meat, Del Taco’s famous Crinkle-Cut Fries, creamy Queso Blanco, hand-grated cheddar cheese, and handmade pico de gallo, wrapped in a warm oversized flour tortilla. A Cali burrito with epic queso flavor.", 5.29);
+        //EPIC FRESH AVOCADO BURRITO
+        menu_component *epic_fresh_avocado_burrito = new menu_items_deltaco(8, "Epic Fresh Avocado Burrito", "This Epic Burrito is loaded with fresh grilled carne asada steak, chicken or Beyond Meat, hand-sliced avocado, handmade pico de gallo, salsa casera, fresca lime rice, and seasoned black beans all in a warm, oversized flour tortilla. Made with fresh, premium ingredients for an Epic burrito experience.", 5.69);
+        //QUESO LOADED NACHOS
+        menu_component *queso_loaded_nachos = new menu_items_deltaco(9, "Queso Loaded Nachos", "Piled high and loaded with your choice of seasoned beef, fresh grilled chicken, or fresh grilled carne asada steak, house-made chips, slow-cooked beans made from scratch, and creamy Queso Blanco, all topped with sour cream, fresh diced tomatoes, and sliced jalapenos.", 3.99);
+        //CHIPS AND QUESO
+        menu_component *chips_and_queso = new menu_items_deltaco(10, "Chips & Queso", "Creamy Queso Blanco served with a large bag of fresh, house-made tortilla chips. Great for sharing!", 3.29);
+
+        deltacos_menu_customer_favorites->add(the_del_taco);
+
+        deltacos_menu_customer_favorites->add(beyond_taco);
+        deltacos_menu_customer_favorites->add(al_carbon_taco);
+        deltacos_menu_customer_favorites->add(beer_battered_fish_taco);
+        deltacos_menu_customer_favorites->add(epic_cali_bacon_burrito);
+        deltacos_menu_customer_favorites->add(epic_original_mex_burrito);
+
+        deltacos_menu_customer_favorites->add(epic_loaded_queso_burrito);
+        deltacos_menu_customer_favorites->add(epic_fresh_avocado_burrito);
+        deltacos_menu_customer_favorites->add(queso_loaded_nachos);
+        deltacos_menu_customer_favorites->add(chips_and_queso);
+
+        deltacos_menu_customer_favorites->print();
+    }
+};
+```
+
+This is then utilized within our ```main.cpp``` (command line executable) as shown below:
+
+```c++
+string display_burger_places()
+{
+    cout << "\nBurger Places\n===============" << endl;
+    FastFood_Client i_burger_places;
+    i_burger_places.fastfood_burger_run();
+    cout << endl;
+
+    cout << "Choose a selection from the above restaurants!" << endl;
+
+    int choice = 0;
+    cin >> choice;
+    int burger_choice = 0;
+    string restaurant_name = "";
+    if (choice == 1)
+    {
+        menu_mcdonalds_display i_mcdonalds;
+        i_mcdonalds.display_mcdonalds_customer_favorites();
+        restaurant_name = "McDonalds";
+        return restaurant_name;
+    }
+    ...
+```
 
 ###### Party & Party Members Composite Pattern
 ![Party_Composite](composite/party_composite_pattern.png)
@@ -181,18 +254,8 @@ As displayed above, the usage of this pattern makes the process of creating new 
 ![Sort Strategy](https://user-images.githubusercontent.com/58233764/99926181-a44c3700-2cf5-11eb-889b-36309dfe1711.png)
 
 	
-## Phase III: Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
-**How effective your last sprint was (each member should talk about what they did)**
-> * Our sprint was not as successful as we had originally planned. During our meetings, most of the time were spent on explaining concepts and making sure everyone is on the right page. Not a lot of work was actually completed. 
-	
-**Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint**
-> * During the last sprint majority of our tasks were not finished but in progress. Since we are working as a team for this application we need to implement and work together to create a cohesive app. As we move further, we must communicate and look over one anothers code to ensure that nothing will conflict.
- 	
-**Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?**
-> * No bug has been identified so far. Only issue has been managing memory leaks.
- 
-**What tasks you are planning for this next sprint.**
-> * Our next tasks will be to finish implementing our main three patterns and being able to use them with one another. In more specifics, retrieving data, debugging, making sure to include the correct files with one another, and testing.
+## Phase III: Development, Testing, and Scrum Meeting
+###### Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
 	
 
 ## Final deliverable
