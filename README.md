@@ -346,7 +346,7 @@ This process will repeat for the number of users.
 
 Let's say Xin ate at McDonald's and he had a McNuggets 10 Piece, Iced Coffee (Large), and a Big Mac, ```i_user1_cart``` will store all of those inputs through the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
 
-```c++
+```
 For Xin, what would you like to add to their cart?
 Please enter the item number from the restaurant you have selected.
 After all items have been added, press '0'.
