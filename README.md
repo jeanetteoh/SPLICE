@@ -164,7 +164,7 @@ As displayed above, the usage of this pattern makes the process of creating new 
 
 ###### Menu & Menu Items Composite Pattern
 
-![Menu_Composite](composite/menu_composite_pattern.png)
+![Menu_Composite1](composite/menu_composite_pattern.png)
 > The OMT Disgram above only demonstrates one of the many restaurants that utilize the ```menu_component``` base class. All the other restaurants we have chose to implement also comprises of a respective component and leaf class that replicates a similar OMT diagram.
 
 ###### Party & Party Members Composite Pattern
