@@ -4,15 +4,12 @@
 ## Phase I: Project Description
 
 ### Why is this project interesting to us?
-
 SPLICE is a way of simplifying everyday experiences. Our group holds the idea of efficiency and convenience to a high level so we wanted to create an easy to use application that simplifies splitting the check with friends or family. It has always been an inconvenience to split a receipt and compute the intricate mathematics when trying to figure out which person needs to pay what amount. SPLICE attempts in providing a simpler way of denoting what was ordered, by who, and how much they need to pay.  
 
 ### What languages/tools/technologies do we plan to use?
-
 This project will be coded in C++. We understand that testing is an integral part of successfully compiling a project, therefore we will be incorporating the standard Google Unit Test Framework (gtest) in pursuance of holding our project in a higher standard of quality. In addition, by completing this project, we strive to learn the importance of teamwork through GitFlow - including branching, resolving merge conflicts, opening pull requests, discussing code, and deploying our project.
 
 ### What will be the input/output for our project?
-
 The inputs to our project will be the party name, party size, party member names, restaurant selection, and item selections in response to menu items from the restaurant that will be outputted. We will then create a unique cart for each party member that will serve as an intermediate step to our final output, which is the exact amount each consumer needs to pay per their specific carts. 
 
 ### What design patterns will we be incorporating?
@@ -96,7 +93,7 @@ Total Cart Price is: $10.3
 Total Cart Price (Including Tax): $11.2012
 ```
 
-#### 3. Strategy
+**3. Strategy**
 Incorporating the strategy design pattern would allow us to sort the restaurants based on the type and the name. 
 
 ## Phase II: OMT Diagrams
@@ -386,7 +383,7 @@ Total Cart Price (Including Tax): $11.3861
 	
 ## Phase III: Development, Testing, and Scrum Meeting
 ###### Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
-All unit test cases abide by the **Google Test Framework**
+All unit test cases abide by the **Google Test Framework**[https://github.com/google/googletest].
 ### Testing Restaurant Prototype Pattern
 Here is our unit test cases for our ```restaurant``` prototype pattern. This file can be found in ```prototype/tests/fastfood_tests.hpp```.
 
