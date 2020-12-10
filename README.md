@@ -3,7 +3,7 @@
 
 ## Phase I: Project Description
 ### Premise
-This ```README.md``` file will provide relevant information regarding the design patterns that were utilized and applied within this project; it will also serve as an in-depth insight into the overall implementation of how the project works. In an attempt to declutter the headers, there is an ```include.hpp``` file that contains all the necessary #include directives.
+This ```README.md``` file will provide relevant information regarding the design patterns that were utilized and applied within this project; it will also serve as an in-depth insight into the overall implementation of the project. In an attempt to declutter the headers, there is an ```include.hpp``` file that contains all the necessary #include directives.
 
 ### Why is this project interesting to us?
 SPLICE is a way of simplifying everyday experiences. Our group holds the idea of efficiency and convenience to a high level so we wanted to create an easy to use application that simplifies splitting the check with friends or family. It has always been an inconvenience to split a receipt and compute the intricate mathematics when trying to figure out which person needs to pay what amount. SPLICE attempts in providing a simpler way of denoting what was ordered, by who, and how much they need to pay.  
