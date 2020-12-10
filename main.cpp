@@ -21,8 +21,6 @@ string display_burger_places()
         i_mcdonalds.display_mcdonalds_customer_favorites();
         restaurant_name = "McDonalds";
         return restaurant_name;
-        // burger_choice = 1;
-
     }
     else if (choice == 2)
     {
@@ -30,7 +28,6 @@ string display_burger_places()
         i_chickfila.display_chickfilas_customer_favorites();
         restaurant_name = "Chick Fil A";
         return restaurant_name;
-        // burger_choice = 2;
     }
     else if (choice == 3)
     {
@@ -38,7 +35,6 @@ string display_burger_places()
         i_innout.display_innouts_customer_favorites();
         restaurant_name = "In N Out";
         return restaurant_name;
-        // burger_choice = 3;
     }
     else
     {
@@ -250,7 +246,6 @@ int main()
 
         if(i_party_size == 1)
         {
-            
             party_component *i_user1 = new user(user1);
             cart_component *i_user1_cart = new user_cart(i_user1);
             cout << "For " << user1 << ", what would you like to add to their cart?" << endl;
