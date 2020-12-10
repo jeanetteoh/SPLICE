@@ -309,7 +309,7 @@ In addition to the usage shown in Phase 2/2b., an example of utilizing the party
 
 ###### User Cart & Cart Items Composite Pattern
 ![Cart_Composite](composite/cart_composite_pattern.png)
-> At this moment, we only support up to 3 users and storing their carts.
+> At this moment, we only support up to 3 users.
 
 If there is only 1 user, we will only instantiate 1 ```user_cart``` and 1 ```cart_items``` to store all of the menu items they selected.
 An example is shown below from ```main.cpp```:
@@ -344,7 +344,7 @@ An example is shown below from ```main.cpp```:
 
 This process will repeat for the number of users.
 
-Let's say Xin ate at McDonald's and he had a McNuggets 10 Piece, Iced Coffee (Large), and a Big Mac, ```i_user1_cart``` will store all of those inputs through the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
+Let's say Xin ate at McDonald's and he had a *McNuggets 10 Piece, Iced Coffee (Large), and a Big Mac*, ```i_user1_cart``` will store all of those inputs through the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
 
 ```
 For Xin, what would you like to add to their cart?
