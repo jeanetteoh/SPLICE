@@ -389,7 +389,7 @@ Total Cart Price (Including Tax): $11.3861
 	
 ## Phase III: Development, Testing, and Scrum Meeting
 ###### Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
-All unit test cases abide by the **Google Test Framework**[https://github.com/google/googletest]. All test executables are run on our local machines for testing and then through Continuous Integration from GitHub Actions through our ```splice.yml``` file located in ```.github/workflows/splice.yml```. Print statements were utilized to display the output of a function call before ```main.cpp``` was coded. 
+All unit test cases abide by the [**Google Test Framework**](https://github.com/google/googletest). All test executables are run on our local machines for testing and then through Continuous Integration from GitHub Actions through our ```splice.yml``` file located in ```.github/workflows/splice.yml```. Print statements were utilized to display the output of a function call before ```main.cpp``` was coded. 
 ### Testing Restaurant Prototype Pattern
 Here is our unit test cases for our ```restaurant``` prototype pattern. This file can be found in ```prototype/tests/fastfood_tests.hpp```.
 
