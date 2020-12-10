@@ -46,31 +46,6 @@ TEST(Party_Test, Create_Parties)
     m_party_2->print();
 }
 
-TEST(Party_Test, Remove_Party)
-{
-    party_component *m_party_1 = new party("Party of 3", 3);
-    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
-    EXPECT_EQ(m_party_1->get_size(), 3);
-
-    party_component *m_party_2 = new party("Party of 8", 8);
-    EXPECT_EQ(m_party_2->get_name(), "Party of 8");
-    EXPECT_EQ(m_party_2->get_size(), 8);
-    cout << endl;
-
-    m_party_1->add(m_party_2);
-    m_party_1->remove(m_party_2);
-    
-    m_party_1->print();
-
-    // EXPECT_EQ(m_party_1->print(), "Party of 3");
-    // EXPECT_EQ(m_party_1->get_num_parties_users(), 2);
-    // m_party_1->remove(m_party_2);
-
-    // cout << "EXPECTED NUMBER OF PARTIES: 1" << '\n'
-    //      << "RECEIVED NUMBER OF PARTIES: " << m_party_1->get_num_parties_users() << endl;
-    // EXPECT_EQ(m_party_1->get_num_parties_users(), 1);
-}
-
 TEST(Party_Test, Create_Party_User)
 {
     party_component *m_party_1 = new party("Party of 3", 3);

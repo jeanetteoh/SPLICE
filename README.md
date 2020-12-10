@@ -388,6 +388,152 @@ Total Cart Price (Including Tax): $11.3861
 ### Testing Composite Patterns
 #### Testing Menu & Menu Items Composite Pattern
 #### Testing Party & Party Members Composite Pattern
+Abiding by the **Google Test Framework**, here is our unit test cases for our party & party member composite pattern. This file can be found in ```composite/party_tests/party_test.hpp```.
+Snippets of the test cases include:
+```c++
+TEST(Party_Test, Create_Party)
+{
+    party_component *m_party_1 = new party("Party of 3", 3);
+    cout << "EXPECTED PARTY NAME: Party of 3" << '\n'
+         << "RECEIVED PARTY NAME: " << m_party_1->get_name() << endl;
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+
+    cout << endl;
+
+    cout << "EXPECTED PARTY SIZE: 3" << '\n'
+         << "RECEIVED PARTY SIZE: " << m_party_1->get_size() << endl;
+    EXPECT_EQ(m_party_1->get_size(), 3);
+
+    m_party_1->print();
+}
+
+TEST(Party_Test, Create_Parties)
+{
+    party_component *m_party_1 = new party("Party of 3", 3);
+    cout << "EXPECTED PARTY NAME: Party of 3" << '\n'
+         << "RECEIVED PARTY NAME: " << m_party_1->get_name() << endl;
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+
+    cout << endl;
+
+    cout << "EXPECTED PARTY SIZE: 3" << '\n'
+         << "RECEIVED PARTY SIZE: " << m_party_1->get_size() << endl;
+    EXPECT_EQ(m_party_1->get_size(), 3);
+
+    party_component *m_party_2 = new party("Party of 8", 8);
+    cout << "EXPECTED PARTY NAME: Party of 8" << '\n'
+         << "RECEIVED PARTY NAME: " << m_party_2->get_name() << endl;
+    EXPECT_EQ(m_party_2->get_name(), "Party of 8");
+
+    cout << endl;
+
+    cout << "EXPECTED PARTY SIZE: 8" << '\n'
+         << "RECEIVED PARTY SIZE: " << m_party_2->get_size() << endl;
+    EXPECT_EQ(m_party_2->get_size(), 8);
+    m_party_2->print();
+}
+
+TEST(Party_Test, Remover_User_1)
+{
+    party_component *m_party_1 = new party("Party of 3", 3);
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+    EXPECT_EQ(m_party_1->get_size(), 3);
+    cout << endl;
+    m_party_1->print();
+
+    cout << endl;
+    party_component *user_1 = new user("Xin");
+    m_party_1->add(user_1);
+    cout << "EXPECTED USER NAME: " << user_1->get_name() << endl;
+    EXPECT_EQ(user_1->get_name(), "Xin");
+    user_1->print();
+
+    cout << endl;
+    party_component *user_2 = new user("Jeanette");
+    m_party_1->add(user_2);
+    cout << "EXPECTED USER NAME: " << user_2->get_name() << endl;
+    EXPECT_EQ(user_2->get_name(), "Jeanette");
+    user_2->print();
+
+    cout << endl;
+    party_component *user_3 = new user("Hongan");
+    m_party_1->add(user_3);
+    cout << "EXPECTED USER NAME: " << user_3->get_name() << endl;
+    EXPECT_EQ(user_3->get_name(), "Hongan");
+    user_3->print();
+
+    cout << endl
+         << endl;
+
+    cout << "BEFORE REMOVE: " << endl;
+
+    m_party_1->print();
+
+    m_party_1->remove(user_1);
+
+    cout << endl;
+
+    cout << "AFTER REMOVE: " << endl;
+    m_party_1->print();
+}
+```
+These 3 tests would yield the results:
+```
+[----------] 7 tests from Party_Test
+[ RUN      ] Party_Test.Create_Party
+EXPECTED PARTY NAME: Party of 3
+RECEIVED PARTY NAME: Party of 3
+
+EXPECTED PARTY SIZE: 3
+RECEIVED PARTY SIZE: 3
+Party Name: Party of 3
+Party Size: 3
+[       OK ] Party_Test.Create_Party (0 ms)
+```
+```
+[ RUN      ] Party_Test.Create_Parties
+EXPECTED PARTY NAME: Party of 3
+RECEIVED PARTY NAME: Party of 3
+
+EXPECTED PARTY SIZE: 3
+RECEIVED PARTY SIZE: 3
+EXPECTED PARTY NAME: Party of 8
+RECEIVED PARTY NAME: Party of 8
+
+EXPECTED PARTY SIZE: 8
+RECEIVED PARTY SIZE: 8
+Party Name: Party of 8
+Party Size: 8
+[       OK ] Party_Test.Create_Parties (0 ms)
+```
+```
+[ RUN      ] Party_Test.Remover_User_1
+
+Party Name: Party of 3
+Party Size: 3
+
+EXPECTED USER NAME: Xin
+Xin
+EXPECTED USER NAME: Jeanette
+Jeanette
+EXPECTED USER NAME: Hongan
+Hongan
+
+BEFORE REMOVE: 
+Party Name: Party of 3
+Party Size: 3
+User 1: Xin
+User 2: Jeanette
+User 3: Hongan
+
+AFTER REMOVE: 
+Party Name: Party of 3
+Party Size: 3
+User 1: Jeanette
+User 2: Hongan
+[       OK ] Party_Test.Remover_User_1 (0 ms)
+```
+
 #### Testinc User Cart & Cart Items Composite Pattern
 ### Testing Strategy Patterns
 	
@@ -560,7 +706,7 @@ Total Cart Price (Including Tax): $4.89375
 ![Screenshot_2](interface/input2.png)
 
 ## Installation/Usage
-To use this project, first clone our repository, configure cmake and CMakeLists.txt, and lastly, running ./main.
+To use this project, first clone our repository, then configure cmake and CMakeLists.txt, and lastly run ./main.
  
 Despite the myriad of testing that we have put our program through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable as a user interface. The sequence within ```main.cppp``` is solely depended on user input; the sequence is as follows:
 1. Ask for a party name
@@ -570,8 +716,7 @@ Despite the myriad of testing that we have put our program through, to ensure th
 5. Display the restaurants that fall under the category chosen, and then ask for an input to select the restaurant
 6. Display the restaurant menu, ask for continuous inputs to add items into the user cart
 7. Output cart items and total amount needed to pay
-
-*Repeat steps 6 and 7 depending on the party size*
+> *Repeat steps 6 and 7 depending on the party size*
 
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
