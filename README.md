@@ -2,6 +2,8 @@
 > Authors: [*Xin Wang*](https://github.com/xinwng), [*Jeanette Oh*](https://github.com/jeanetteoh), [*Hongan Zhang*](https://github.com/hongan-z)
 
 ## Phase I: Project Description
+### Premise
+This ```README.md``` file will provide relevant information regarding the design patterns that were utilized throughout this project as well as provide insight into the overall implementation. In an attempt to declutter the headers, there is an ```include.hpp``` file that contains all the necessary #include directives.
 
 ### Why is this project interesting to us?
 SPLICE is a way of simplifying everyday experiences. Our group holds the idea of efficiency and convenience to a high level so we wanted to create an easy to use application that simplifies splitting the check with friends or family. It has always been an inconvenience to split a receipt and compute the intricate mathematics when trying to figure out which person needs to pay what amount. SPLICE attempts in providing a simpler way of denoting what was ordered, by who, and how much they need to pay.  
@@ -383,7 +385,7 @@ Total Cart Price (Including Tax): $11.3861
 	
 ## Phase III: Development, Testing, and Scrum Meeting
 ###### Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
-All unit test cases abide by the **Google Test Framework**[https://github.com/google/googletest].
+All unit test cases abide by the **Google Test Framework**[https://github.com/google/googletest]. Print statements were utilized to display the output of a function call before ```main.cpp``` was coded. 
 ### Testing Restaurant Prototype Pattern
 Here is our unit test cases for our ```restaurant``` prototype pattern. This file can be found in ```prototype/tests/fastfood_tests.hpp```.
 
