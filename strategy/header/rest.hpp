@@ -9,7 +9,7 @@ using namespace std;
 class Rest {
 
     float food_price;
-    string rest_name;
+    string r_name;
     Rest* m_Rest;
 
 public:
