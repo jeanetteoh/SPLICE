@@ -1,11 +1,11 @@
 
-#ifndef _RESTAURANT_S_
-#define _RESTAURANT_S_
+#ifndef _REST_
+#define _REST_
 #include <iostream>
 #include <string>
 using namespace std;
 
-// Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype
+// create new objects 
 class Rest {
 
     float food_price;
