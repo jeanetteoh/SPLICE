@@ -348,9 +348,9 @@ if(i_party_size == 1)
     i_user1_cart->display();
 }
 ```
-> This process will repeat depending on the number of users.
+> This process will repeat depending on the number of users. 
 
-Let's say Xin ate at McDonald's and he had a *McNuggets 10 Piece, Iced Coffee (Large), and a Big Mac*, ```i_user1_cart``` will store all of those inputs by identifying the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
+To demonstrate the purpose of this code, let's envision a real scenario. Let's say a user, Xin, ate at McDonald's and he had a *McNuggets 10 Piece*, *Iced Coffee (Large)*, and a *Big Mac*, ```i_user1_cart``` will store all of those inputs by identifying the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
 
 ```
 For Xin, what would you like to add to their cart?
@@ -381,7 +381,7 @@ Price of Big Mac is: $3.99
 Total Cart Price is: $10.47
 Total Cart Price (Including Tax): $11.3861
 ```
-> The input for to receive this result was ```1, Xin, 1, 1, 6, 3, 1, 0```
+> The input for to receive this result was ```party_name, 1, Xin, 1, 1, 6, 3, 1, 0``` in ```main.cpp```
 
 #### Sort Strategy Pattern
 ![Sort Strategy](https://user-images.githubusercontent.com/58233764/99926181-a44c3700-2cf5-11eb-889b-36309dfe1711.png)
@@ -389,7 +389,6 @@ Total Cart Price (Including Tax): $11.3861
 
 	
 ## Phase III: Development, Testing, and Scrum Meeting
-
 ###### Scrum Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
 All unit test cases abide by the [**Google Test Framework**](https://github.com/google/googletest). All test executables are run on our local machines for testing and then through Continuous Integration from GitHub Actions through our ```splice.yml``` file located in ```.github/workflows/splice.yml```. Print statements were utilized to display the output of a function call before ```main.cpp``` was created.
 
@@ -636,7 +635,7 @@ Item Price: 1.89
 ```
 
 ### Testing Party & Party Members Composite Pattern
-Here is our unit test cases for our ```party``` and ```user``` composite pattern. This file can be found in ```composite/party_tests/party_test.hpp```.
+Here is our unit test cases for our ```party``` and```user``` composite pattern. This file can be found in ```composite/party_tests/party_test.hpp```.
 
 Some unit test cases include:
 
