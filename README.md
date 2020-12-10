@@ -24,7 +24,7 @@ Incorporating the prototype design pattern within our project would entail creat
 
 As the composite design pattern would allow us to treat individual objects in an uniformed manner. We have utilized this pattern for constructing the menu and its menu items, the parties and the party members, and lastly, linking the party members with their respective carts.
 
-##### 1. Constructing the menu and the menu items for different restaurants
+##### 2a. Constructing the menu and the menu items for different restaurants
 As all ```menus (container)``` contain different ```menu items (leaf)```, the ```menu component (interface)``` will provide common specific operations that will delegate the work to the respective location in the hierarchy. For example, when constructing the menu and its items, the ```menu_component``` should successfully recognize the difference between what is a menu versus what is a menu item in our client. 
 
 ```c++
@@ -32,7 +32,7 @@ menu_component *mcdonalds_menu_customer_favorites = new menu_mcdonalds("McDonald
 menu_component *big_mac = new menu_items_mcdonalds(1, "Big Mac", "Mouthwatering perfection starts with two 100% pure beef patties and Big Mac sauce sandwiched between a sesame seed bun. It’s topped off with pickles, crisp shredded lettuce, finely chopped onion and American cheese.", 3.99);
 ```
 
-##### 2. Constructing the parties and the party members
+##### 2b. Constructing the parties and the party members
 By utilizing the composite pattern to construct the ```parties (container)```, and the ```party members (leaves)``` - we have constructed the ```party_component (interface)``` to successfully recognize whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
 
 ```c++
@@ -52,7 +52,7 @@ User 2: Jeanette
 User 3: Hongan
 ```
 
-##### 3. Constructing the users and their respective carts
+##### 2c. Constructing the users and their respective carts
 We had a bit of a difficulty implementing this without any redundancy as the terms users and party members are synonymous within this project. However, we were still able to utilize this in the way we originally intended. All ```users (container)``` will take in a ```party_component *``` as a parameter to recognize the user, and each user will have their individual ```cart items (leaves)``` which takes in a parameter of ```menu_component *``` to recognize the menu items. The ```cart component (interface)``` will manage the necessary operations to successfuly delegate work based on the parameter. The purpose of utilizing this composite function is for it to successfully recognize the individuality between different users and output their respective cart items based on the menu items they have selected. This composite pattern also successfuly provides a linkage to the previous two patterns. An example of how it is utilized in our client is:
 
 ```c++
@@ -148,12 +148,19 @@ Restaurant Category: Fast Food
 Restaurant Price (from $ to $$$): $
 ```
 
-As displayed above, the usage of this pattern makes the process of creating new types of restaurants significantly more efficient. As each category burger, pizzas, and tacos contain a distinctive vector to store its information. Constructing new restaurants is as simple as cloning it from the previous restaurant and then setting the proper name and price for the new restaurant. 
+As displayed above, the usage of this pattern makes the process of creating new types of restaurants significantly more efficient. As each category: burger, pizzas, and tacos contain a distinctive vector to store its information. Constructing new restaurants is as simple as cloning it from the previous restaurant and then setting the proper name and price for the new restaurant. 
 	
-#### Menu Composite Pattern
-- The Menu composite pattern will represent a part-whole hierarchy of how we intend to implement the items on the menu and the menus for different restaurants. MenuItem will be our leaf component, and Menu will be our composite component.
+#### Composite Patterns
 
-![Menu Composite](https://user-images.githubusercontent.com/58233764/100003031-50cffc80-2d7a-11eb-87c7-3b6d78d19a6b.png)
+###### Menu & Menu Items Composite Pattern
+
+![Menu_Composite](composite/menu_composite_pattern.png)
+> The OMT Disgram above only demonstrates one of the many restaurants that utilize the ```menu_component``` base class. All the other restaurants we have chose to implement also comprises of a respective component and leaf class that replicates a similar OMT diagram.
+
+###### Party & Party Members Composite Pattern
+###### User & User Carts Composite Pattern
+
+
 
 #### Sort Strategy Pattern
 - RestaurantSort Strategy pattern, can let us to corresponding to sorting algorithm operation of the restaurant, such as the restaurant according to the price of ordering (from the highest price to the restaurant to the cheapest to the restaurant）, the restaurant can also be sorted in alphabetical order (from A to Z or from A to Z), algorithm can also be in accordance with the type of restaurant to restaurant for sorting (western food, Mexican food, Chinese food, etc.).
