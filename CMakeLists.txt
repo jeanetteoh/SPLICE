@@ -1,7 +1,7 @@
 # project(SPLICE)
 cmake_minimum_required(VERSION 2.8)
 add_subdirectory(googletest)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(fastfood_test
     prototype/tests/restaurant_unit_test.cpp
