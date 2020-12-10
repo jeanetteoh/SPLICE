@@ -951,7 +951,7 @@ Total Cart Price (Including Tax): $4.89375
 ## Installation/Usage
 To use this project, first clone our repository, then configure cmake and CMakeLists.txt, and lastly run ./main.
  
-Despite the myriad of testing that we have put our program through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable as a user interface. The sequence within ```main.cppp``` is solely depended on user input; the sequence is as follows:
+Despite the myriad of testing that we have put our program through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable as a user interface. The sequence within ```main.cpp``` is solely depended on user input; the sequence is as follows:
 1. Ask for a party name
 2. Ask for a party size
 3. Ask for a party member name
@@ -960,6 +960,3 @@ Despite the myriad of testing that we have put our program through, to ensure th
 6. Display the restaurant menu, ask for continuous inputs to add items into the user cart
 7. Output cart items and total amount needed to pay
 > *Repeat steps 6 and 7 depending on the party size*
-
- ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
