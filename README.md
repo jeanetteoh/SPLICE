@@ -168,7 +168,7 @@ As displayed above, the usage of this pattern makes the process of creating new 
 	
 #### Composite Patterns
 
-###### Menu & Menu Items Composite Pattern
+##### Menu & Menu Items Composite Pattern
 ![Menu_Composite1](composite/menu_composite_pattern.png)
 > The OMT Disgram above only demonstrates one of the many restaurants that utilize the ```menu_component``` base class. All the other restaurants we have chose to implement also comprises of a respective component class and leaf class that replicates a similar OMT diagram. Such files can be found under ```composite/menu_burger/...```, ```composite/menu_pizza/...```, and ```composite/menu_taco/...```
 
@@ -287,7 +287,7 @@ Item Description: Our World Famous Fries® are made with premium potatoes such a
 Item Price: 1.89
 ```
 
-###### Party & Party Members Composite Pattern
+##### Party & Party Members (User) Composite Pattern
 ![Party_Composite](composite/party_composite_pattern.png)
 
 In addition to the usage shown in Phase 2/2b., another example of utilizing the party and party member composite pattern in our ```main.cpp``` would be the initial asking for a party name and their size. Depending on the size, we will instantiate a corresponding number of user carts. Note that the ```party_component *i_user1``` works hand in hand with ```cart_component *i_user1_cart```.
@@ -312,7 +312,7 @@ In addition to the usage shown in Phase 2/2b., another example of utilizing the 
 ```
 
 
-###### User Cart & Cart Items Composite Pattern
+##### User Cart & Cart Items Composite Pattern
 ![Cart_Composite](composite/cart_composite_pattern.png)
 > At this moment, we only support up to 3 users.
 
