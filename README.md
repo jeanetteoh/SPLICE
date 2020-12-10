@@ -125,21 +125,23 @@ FastFood *Create(const string &fastfood_store_name, const string &fastfood_store
     return nullptr;
 }
 ```
-Based on the type of fast food category we want to implement, ```FastFood *Create(...)``` will return a new instance of the selected restaurant. The client interface is now displayed below:
+Based on the type of fast food category we want to implement, ```FastFood *Create(...)``` will return a new instance of the selected restaurant. An example of the ```FastFood_Client``` interface is displayed below:
+> This file can be found under ```prototype/fastfood_client.cpp```
 
 ```c++
-    m_Burger.push_back(Create("McDonald's", "$", "Burger"));
-    m_Burger.at(0)->set_fastfood_store_price("$");
+...
+m_Burger.push_back(Create("McDonald's", "$", "Burger"));
+m_Burger.at(0)->set_fastfood_store_price("$");
     
-    auto ChickFilA = m_Burger[0]->clone();
-    ChickFilA->set_fastfood_store_name("Chick-Fil-A");
-    ChickFilA->set_fastfood_store_price("$$");
-    m_Burger.push_back(ChickFilA);
+auto ChickFilA = m_Burger[0]->clone();
+ChickFilA->set_fastfood_store_name("Chick-Fil-A");
+ChickFilA->set_fastfood_store_price("$$");
+m_Burger.push_back(ChickFilA);
 
-    auto InNOut = m_Burger[0]->clone();
-    InNOut->set_fastfood_store_name("In-N-Out");
-    InNOut->set_fastfood_store_price("$");
-    m_Burger.push_back(InNOut);
+auto InNOut = m_Burger[0]->clone();
+InNOut->set_fastfood_store_name("In-N-Out");
+InNOut->set_fastfood_store_price("$");
+m_Burger.push_back(InNOut);
 ```
 
 This would yield an output of:
@@ -783,7 +785,7 @@ Total Cart Price (Including Tax): $12.0712
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
 
 ## Screenshots
-When ```main.cpp``` is executed, this input: CS100, 2, John, Pluto, 1, 3, 1, 5, 4, 0, 2, 3, 0
+When ```main.cpp``` is executed, the input, ```CS100, 2, John, Pluto, 1, 3, 1, 5, 4, 0, 2, 3, 0```...
 
 ```
 Hello! Welcome to SPLICE. Remember, you can press 'q' at anytime to quit!
