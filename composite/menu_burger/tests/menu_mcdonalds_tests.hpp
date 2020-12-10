@@ -77,8 +77,6 @@ TEST(MenuTest, McDonalds_CustomerFavorites)
           << "\nRECEIVIED: " << fries_large->get_item_number() << endl;   
      EXPECT_EQ(fries_large->get_item_number(), 9);
      m_mcdonalds_customer_favorites->print();
-
-
 }
 
 #endif /* MENU_MCDONALDS_TEST */
