@@ -42,7 +42,7 @@ Item Price: 3.99
 ```
 
 ##### 2b. Constructing the parties and the party members
-> Note that the term "party member" is synonymous to the class ```party_component user```. The term party member is used within throughout the ```README``` for clarity. 
+> Note that when discussing the ```parties and the party members composite pattern``` the term **party member** is synonymous to the class type ```party_component user```. The term party member is used throughout the ```README``` for clarity. 
 
 By utilizing the composite pattern to create the ```parties (container)```, and the ```party members (leaves)``` - we have constructed a ```party_component (interface)``` that successfully recognizes whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
 
