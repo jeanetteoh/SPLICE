@@ -49,6 +49,13 @@ add_executable(main
     interface/fastfood_display.cpp
 )
 
+add_executable(sort
+    strategy/src/sort.cpp
+    strategy/src/name_sort.cpp
+    strategy/src/price_sort.cpp
+
+)
+
 target_link_libraries(fastfood_test gtest)
 target_compile_definitions(fastfood_test PRIVATE gtest_disable_pthreads=ON)
 

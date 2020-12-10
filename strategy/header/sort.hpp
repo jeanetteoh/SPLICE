@@ -1,8 +1,8 @@
 #include "../strategy/header/rest.hpp"
 
-class Rest
 
-    class Sort
+
+class Sort
 {
 public:
     /* Constructors */
