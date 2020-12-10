@@ -775,7 +775,7 @@ Total Cart Price (Including Tax): $12.0712
 [       OK ] Cart_Test.Adding_Items_To_Multiple_Carts (0 ms)
 ```
 
-### Testing Strategy Patterns
+### Testing Strategy Pattern
 	
 
 ## Final deliverable
@@ -784,8 +784,8 @@ Total Cart Price (Including Tax): $12.0712
  > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
 
-## Screenshots
-When ```main.cpp``` is executed, the input, ```CS100, 2, John, Pluto, 1, 3, 1, 5, 4, 0, 2, 3, 0```...
+## Inputs, Outputs, and Screenshots
+When ```main.cpp``` is executed, the input: ```CS100, 2, John, Pluto, 1, 3, 1, 5, 4, 0, 2, 3, 0``` triggers the following prompts:
 
 ```
 Hello! Welcome to SPLICE. Remember, you can press 'q' at anytime to quit!
@@ -884,7 +884,7 @@ After all items have been added, press '0'.
 0
 ```
 
-will yield the following output for user 1:
+yielding the following output for user 1:
 
 ```
 Displaying John's Cart
@@ -912,7 +912,7 @@ Total Cart Price is: $7.2
 Total Cart Price (Including Tax): $7.83
 ```
 
-and this output for user 2:
+triggering the following prompts for user 2:
 
 ```
 For Pluto, what would you like to add to their cart?
@@ -922,6 +922,9 @@ After all items have been added, press '0'.
 3
 0
 ```
+
+and yielding the following output for user 2:
+
 ```
 Displaying Pluto's Cart
 ---------------------------------
