@@ -384,12 +384,86 @@ Total Cart Price (Including Tax): $11.3861
 	
 ## Phase III: Development, Testing, and Scrum Meeting
 ###### Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
+All unit test cases abide by the **Google Test Framework**
 ### Testing Restaurant Prototype Pattern
-### Testing Composite Patterns
-#### Testing Menu & Menu Items Composite Pattern
-#### Testing Party & Party Members Composite Pattern
-Abiding by the **Google Test Framework**, here is our unit test cases for our party & party member composite pattern. This file can be found in ```composite/party_tests/party_test.hpp```.
-Snippets of the test cases include:
+Here is our unit test cases for our ```restaurant``` prototype pattern. This file can be found in ```prototype/tests/fastfood_tests.hpp```.
+Some unit test cases include:
+```c++
+TEST(FastFood_Tests, SizeTest)
+{
+    vector<FastFood *> m_sizeTest;
+    m_sizeTest.push_back(new Pizza("Domino's Pizza"));
+    m_sizeTest.push_back(new Taco("Taco Bell"));
+    m_sizeTest.push_back(new Burger("McDonald's"));
+    ASSERT_EQ(m_sizeTest.size(), 3);
+}
+
+TEST(FastFood_Tests, StringTest)
+{
+    vector<FastFood *> m_stringTest;
+    m_stringTest.push_back(new Pizza("Domino's Pizza"));
+    m_stringTest.push_back(new Taco("Taco Bell"));
+    m_stringTest.push_back(new Burger("McDonald's"));
+    for (auto FastFood : m_stringTest)
+    {
+        EXPECT_EQ(m_stringTest.at(0)->get_fastfood_store_name(), "Domino's Pizza");
+        EXPECT_EQ(m_stringTest.at(1)->get_fastfood_store_name(), "Taco Bell");
+        EXPECT_EQ(m_stringTest.at(2)->get_fastfood_store_name(), "McDonald's");
+    }
+}
+
+TEST(FastFood_Tests, Clone_McDonalds_FiveGuys)
+{
+    vector<FastFood *> m_Burgers;
+    m_Burgers.push_back(new Burger("McDonald's")); //Clone this
+
+    cout << "Cloning from -> " << m_Burgers.at(0)->get_fastfood_store_name() << endl;
+    m_Burgers.at(0)->set_fastfood_store_price("$");
+    
+    auto FastFood = m_Burgers[0]->clone();
+    FastFood->set_fastfood_store_name("Five Guys");
+    FastFood->set_fastfood_store_price("$$");
+    m_Burgers.push_back(FastFood);
+    
+    cout << "Cloned object is: " << m_Burgers.at(1)->get_fastfood_store_name() << endl;
+    cout << endl;
+    
+    for(auto FastFood: m_Burgers)
+    {
+        FastFood->fastfood_display_store_info();
+    }
+
+    EXPECT_EQ(m_Burgers.at(0)->get_fastfood_store_name(), "McDonald's");
+    EXPECT_EQ(m_Burgers.at(1)->get_fastfood_store_name(), "Five Guys");
+}
+
+```
+These 3 tests would yield the results:
+
+```
+[ RUN      ] FastFood_Tests.SizeTest
+[       OK ] FastFood_Tests.SizeTest (0 ms)
+[ RUN      ] FastFood_Tests.StringTest
+[       OK ] FastFood_Tests.StringTest (0 ms)
+[ RUN      ] FastFood_Tests.Clone_McDonalds_FiveGuys
+Cloning from -> McDonald's
+Cloned object is: Five Guys
+
+Restaurant Name: McDonald's
+Restaurant Category: Fast Food
+Restaurant Price (from $ to $$$): $
+
+Restaurant Name: Five Guys
+Restaurant Category: Fast Food
+Restaurant Price (from $ to $$$): $$
+
+[       OK ] FastFood_Tests.Clone_McDonalds_FiveGuys (0 ms)
+```
+
+### Testing Menu & Menu Items Composite Pattern
+### Testing Party & Party Members Composite Pattern
+Here is our unit test cases for our ```party``` and ```user``` composite pattern. This file can be found in ```composite/party_tests/party_test.hpp```.
+Some unit test cases include:
 ```c++
 TEST(Party_Test, Create_Party)
 {
@@ -477,9 +551,10 @@ TEST(Party_Test, Remover_User_1)
     m_party_1->print();
 }
 ```
+
 These 3 tests would yield the results:
+
 ```
-[----------] 7 tests from Party_Test
 [ RUN      ] Party_Test.Create_Party
 EXPECTED PARTY NAME: Party of 3
 RECEIVED PARTY NAME: Party of 3
@@ -534,7 +609,161 @@ User 2: Hongan
 [       OK ] Party_Test.Remover_User_1 (0 ms)
 ```
 
-#### Testinc User Cart & Cart Items Composite Pattern
+### Testing User Cart & Cart Items Composite Pattern
+Here is our unit test cases for our ```user_cart``` and ```cart_items``` composite pattern. This file can be found in ```composite/cart/test/cart_test.hpp```.
+Some unit test cases include:
+```c++ 
+TEST(Cart_Test, Total_Price_Test)
+{
+    party_component *c_p = new party("Party1", 2);
+    party_component *c_user_xin = new user("Xin");
+    party_component *c_user_jeanette = new user("Jeanette");
+
+    c_p->add(c_user_xin);
+    c_p->add(c_user_jeanette);
+
+    menu_component *c_mcdonalds_test = new menu_mcdonalds("McDonalds Test", "\nDescription Test");
+    menu_component *test_1 = new menu_items_mcdonalds(1, "Test 1", "Description Test 1", 1200);
+    c_mcdonalds_test->add(test_1);
+    menu_component *test_2 = new menu_items_mcdonalds(2, "Test 2", "Description Test 2", 732.84);
+
+    cart_component *c_user_xin_cart_1 = new user_cart(c_user_xin);
+    cart_component *xin_cart_items_1 = new cart_items(test_1);
+    xin_cart_items_1->add_to_cart(test_2);
+    
+    c_user_xin_cart_1->add(xin_cart_items_1);
+
+    cout << endl
+         << endl;
+    cout << "EXPECTED TOTAL PRICE: $ 1932.84, RECEIVED TOTAL PRICE: " << xin_cart_items_1->cart_price() << endl
+         << endl;
+
+    c_user_xin_cart_1->display();
+    double m_absolute_error = 0.001;
+    EXPECT_NEAR(xin_cart_items_1->cart_price(), 1932.84, m_absolute_error);
+}
+
+TEST(Cart_Test, Adding_Items_To_Multiple_Carts)
+{
+     party_component *party_jeanette_xin = new party("Jeanette and Xin", 2);
+     party_component *user_xin = new user("Xin");
+     party_component *user_jeanette = new user("Jeanette");
+
+     party_jeanette_xin->add(user_xin);
+     party_jeanette_xin->add(user_jeanette);
+     party_jeanette_xin->print();
+
+     menu_component *c_mcdonalds_test = new menu_mcdonalds("McDonalds Test", "\nDescription Test");
+     menu_component *test_1 = new menu_items_mcdonalds(1, "Test 1", "Description Test 1", 6);
+     menu_component *test_2 = new menu_items_mcdonalds(2, "Test 2", "Description Test 2", 4.30);
+     menu_component *test_3 = new menu_items_mcdonalds(3, "Test 3", "Description Test 3", 2.5);
+
+     cart_component *cart_xin = new user_cart(user_xin);
+     cart_component *cart_jeanette = new user_cart(user_jeanette);
+
+     cart_component *cart_items_xin = new cart_items(test_1);
+     cart_items_xin->add_to_cart(test_3);
+     
+     cart_component *cart_items_jeanette = new cart_items(test_2);
+     cart_items_jeanette->add_to_cart(test_2);
+     cart_items_jeanette->add_to_cart(test_3);
+
+     cart_xin->add(cart_items_xin);
+     cart_jeanette->add(cart_items_jeanette);
+
+     cart_xin->display();
+     cout << endl
+          << endl;
+     cart_jeanette->display();
+
+
+     EXPECT_EQ(cart_items_xin->get_size(), 2);
+     EXPECT_EQ(cart_items_jeanette->get_size(), 3);
+     double m_absolute_error = 0.001; // 0.1% absolute error allowed for doubles
+     EXPECT_NEAR(cart_items_xin->cart_price(), 8.5, m_absolute_error);
+     EXPECT_NEAR(cart_items_jeanette->cart_price(), 11.1, m_absolute_error);
+}
+```
+
+These 2 tests would yield the results:
+
+```
+[ RUN      ] Cart_Test.Total_Price_Test
+
+
+EXPECTED TOTAL PRICE: $ 1932.84, RECEIVED TOTAL PRICE: 1932.84
+
+Displaying Xin's Cart
+---------------------------------
+Item Number: 1
+Item Name: Test 1
+Item Description: Description Test 1
+Item Price: 1200
+
+Item Number: 2
+Item Name: Test 2
+Item Description: Description Test 2
+Item Price: 732.84
+
+Price of Test 1 is: $1200
+Price of Test 2 is: $732.84
+
+Total Cart Price is: $1932.84
+Total Cart Price (Including Tax): $2101.96
+[       OK ] Cart_Test.Total_Price_Test (1 ms)
+```
+
+```
+[ RUN      ] Cart_Test.Adding_Items_To_Multiple_Carts
+Party Name: Jeanette and Xin
+Party Size: 2
+User 1: Xin
+User 2: Jeanette
+Displaying Xin's Cart
+---------------------------------
+Item Number: 1
+Item Name: Test 1
+Item Description: Description Test 1
+Item Price: 6
+
+Item Number: 3
+Item Name: Test 3
+Item Description: Description Test 3
+Item Price: 2.5
+
+Price of Test 1 is: $6
+Price of Test 3 is: $2.5
+
+Total Cart Price is: $8.5
+Total Cart Price (Including Tax): $9.24375
+
+
+Displaying Jeanette's Cart
+---------------------------------
+Item Number: 2
+Item Name: Test 2
+Item Description: Description Test 2
+Item Price: 4.3
+
+Item Number: 2
+Item Name: Test 2
+Item Description: Description Test 2
+Item Price: 4.3
+
+Item Number: 3
+Item Name: Test 3
+Item Description: Description Test 3
+Item Price: 2.5
+
+Price of Test 2 is: $4.3
+Price of Test 2 is: $4.3
+Price of Test 3 is: $2.5
+
+Total Cart Price is: $11.1
+Total Cart Price (Including Tax): $12.0712
+[       OK ] Cart_Test.Adding_Items_To_Multiple_Carts (0 ms)
+```
+
 ### Testing Strategy Patterns
 	
 
