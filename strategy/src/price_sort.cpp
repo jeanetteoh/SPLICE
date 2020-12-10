@@ -9,15 +9,18 @@
 using namespace std;
 
 //class Rest
- vector<string> priceSort::ssort(vector<Rest*> r_list)
+ 
+ //vector<string> priceSort::ssort(vector<Rest*> r_list)
+ 
+  vector<double> priceSort::psort(vector<Rest*> p_list)
 {
 
-    vector<string> pricelist;
-   
+     //vector<string> pricelist;
+     vector<double> pricelist;
 
-    for (int i = 0; i < r_list.size(); i++) {
+    for (int i = 0; i < p_list.size(); i++) {
 
-        Rest* addprice = r_list.at(i);
+        Rest* addprice = p_list.at(i);
         pricelist.push_back( addprice->get_fastfood_store_price());
           
           //atof( const addprice->get_fastfood_store_price() );

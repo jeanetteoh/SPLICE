@@ -14,8 +14,6 @@
         return a->get_fastfood_store_name().compare(b->get_fastfood_store_name()) < 0;
     };
 
-    
-
 
 
 vector<string> nameSort::ssort(vector<Rest*> r_list) {

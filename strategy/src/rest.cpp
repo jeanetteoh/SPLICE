@@ -21,13 +21,25 @@ Rest::~Rest()
     
 }
 
-
+/*
 void Rest::set_fastfood_store_price(const string &fastfood_store_price)
 {
     this->fastfood_store_price = fastfood_store_price;
 }
 
 const string &Rest::get_fastfood_store_price() const
+{
+    return this->fastfood_store_price;
+}
+
+*/
+
+void Rest::set_fastfood_store_price(const double &fastfood_store_price)
+{
+    this->fastfood_store_price = fastfood_store_price;
+}
+
+const double &Rest::get_fastfood_store_price() const
 {
     return this->fastfood_store_price;
 }

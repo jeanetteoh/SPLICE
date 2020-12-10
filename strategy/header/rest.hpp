@@ -8,7 +8,8 @@ using namespace std;
 class Rest
 {
 private:
-    string fastfood_store_price;
+    double fastfood_store_price;
+    //string fastfood_store_price;
     string fastfood_store_name;
     //Restaurant *m_Restaurant;
 
@@ -20,8 +21,11 @@ public:
     void set_fastfood_store_name(const string &fastfood_store_name);
     
   
-    const string &get_fastfood_store_price() const;
-    void set_fastfood_store_price(const string &fastfood_store_price);
+    const double &get_fastfood_store_price() const;
+    void set_fastfood_store_price(const double &fastfood_store_price);
+
+    //const string &get_fastfood_store_price() const;
+    //void set_fastfood_store_price(const string &fastfood_store_price);
 
     /* Rule of three */
     virtual ~Rest();
