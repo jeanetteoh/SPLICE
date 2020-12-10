@@ -1,29 +1,33 @@
-
 #include "../strategy/header/rest.hpp"
 
-
-Rest::Rest(string& r_name, float& food_price)
+Rest::Rest(const string &fastfood_store_name)
 {
-    this->r_name = r_name;
-    m_Rest = new Rest("Taco", 0);
+    this->fastfood_store_name = fastfood_store_name;
+   // m_Restaurant = new Restaurant("Fast Food");
 }
 
-const string& Rest::get_name() const
+const string &Rest::get_fastfood_store_name() const
 {
-    return this->r_name;
+    return this->fastfood_store_name;
 }
 
-void Rest::set_name(const string& r_name)
+void Rest::set_fastfood_store_name(const string &fastfood_store_name)
 {
-    this->r_name = r_name;
+    this->fastfood_store_name = fastfood_store_name;
 }
 
-void Rest::set_price(const float& food_price)
+Rest::~Rest()
 {
-    this->food_price = food_price;
+    
 }
 
-const float& Rest::get_price() const
+
+void Rest::set_fastfood_store_price(const string &fastfood_store_price)
 {
-    return this->food_price;
+    this->fastfood_store_price = fastfood_store_price;
+}
+
+const string &Rest::get_fastfood_store_price() const
+{
+    return this->fastfood_store_price;
 }

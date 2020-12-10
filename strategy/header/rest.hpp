@@ -5,20 +5,27 @@
 #include <string>
 using namespace std;
 
-// create new objects 
-class Rest {
-
-    float food_price;
-    string r_name;
-    Rest* m_Rest;
+class Rest
+{
+private:
+    string fastfood_store_price;
+    string fastfood_store_name;
+    //Restaurant *m_Restaurant;
 
 public:
-    Rest() = default;
-    const string& get_name() const;
-    void set_name(const string& r_name);
+    Rest(){};
+    Rest(const string &fastfood_store_name);
 
-    const float& get_price() const;
-    void set_price(const string& food_price);
+    const string &get_fastfood_store_name() const;
+    void set_fastfood_store_name(const string &fastfood_store_name);
+    
+  
+    const string &get_fastfood_store_price() const;
+    void set_fastfood_store_price(const string &fastfood_store_price);
+
+    /* Rule of three */
+    virtual ~Rest();
+ 
 };
 
-#endif /* RESTAURANT */  
+#endif //_REST_ 

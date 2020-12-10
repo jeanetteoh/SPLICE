@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../strategy/tests/sort_test.cpp"
+#include "../tests/sort_test.hpp"
 
 int main(int argc, char** argv)
 {

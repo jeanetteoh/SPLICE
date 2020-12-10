@@ -1,27 +1,46 @@
-#ifndef SORT_TESTS
-#define SORT_TESTS
+#ifndef _SORT_TESTS_
+#define _SORT_TESTS_
 #include "gtest/gtest.h"
-#include "../strategy/header/sort.hpp"
-#include "../strategy/header/name_sort.hpp"
-#include "../strategy/header/price_sort.hpp"
-#include "../strategy/header/rest.hpp"
+#include "../header/sort.hpp"
+#include "../header/name_sort.hpp"
+#include "../header/price_sort.hpp"
+#include "../header/rest.hpp"
 
 
 
 TEST(Sort_Tests, NameSortTest)
 {
 
-    vector<Rest*> n_Test;
-    n_Test.push_back(new Pizza("Domino"));
-    n_Test.push_back(new Taco("Taco"));
-    n_Test.push_back(new Burger("McDonald"));
+    vector<Rest*> name_Test;
+    name_Test.push_back(new Rest("Domino"));
+    name_Test.push_back(new Rest("Taco"));
+    name_Test.push_back(new Rest("McDonald"));
 
 
-    name_sort test = new name_sort();
-    vector<string*> save = test->sort(n_Test);
+    nameSort* test = new nameSort();
+    vector<string> save = test->sort(name_Test);
 
     EXPECT_EQ(save.at(0), "Domino");
     EXPECT_EQ(save.at(1), "McDonald");
     EXPECT_EQ(save.at(2), "Taco");
 
 }
+
+TEST(Sort_Tests, PriceSortTest)
+{
+    vector<Rest*> Price_Test;
+    Price_Test.push_back(new Rest("234.4"));
+    Price_Test.push_back(new Rest("34.5"));
+    Price_Test.push_back(new Rest("45"));
+
+    nameSort* test = new nameSort();
+   
+    vector<string> save = test->sort(Price_Test);
+
+    EXPECT_EQ(save.at(0), "234");
+    EXPECT_EQ(save.at(1), "45");
+    EXPECT_EQ(save.at(2), "34.5");
+
+}
+
+#endif _SORT_TESTS_ 

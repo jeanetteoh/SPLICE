@@ -1,7 +1,7 @@
 #ifndef __PRICE_SORT_HPP__
 #define __PRICE_SORT_HPP__
-#include "../header/rest.hpp"
-#include "../header/sort.hpp"
+#include "rest.hpp"
+#include "sort.hpp"
 #include <iostream>
 #include <vector>
 

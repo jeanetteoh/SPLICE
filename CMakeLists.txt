@@ -49,12 +49,15 @@ add_executable(main
     interface/fastfood_display.cpp
 )
 
-add_executable(sort
-    strategy/src/sort.cpp
-    strategy/src/name_sort.cpp
-    strategy/src/price_sort.cpp
-
+add_executable(sort_test2
+    
+    ../strategy/src/name_sort.cpp
+    ../strategy/src/price_sort.cpp
+    ../strategy/tests/sort_unit_tests.cpp
 )
+
+target_link_libraries(sort_test2 gtest)
+target_compile_definitions(sort_test2 PRIVATE gtest_disable_pthreads=ON)
 
 target_link_libraries(fastfood_test gtest)
 target_compile_definitions(fastfood_test PRIVATE gtest_disable_pthreads=ON)
@@ -73,3 +76,5 @@ target_compile_definitions(c_party_test PRIVATE gtest_disable_pthreads=ON)
 
 target_link_libraries(c_cart_test gtest)
 target_compile_definitions(c_cart_test PRIVATE gtest_disable_pthreads=ON)
+
+

@@ -2,37 +2,35 @@
 #include <algorithm>
 #include <vector>
 #include <string>
-#include "../strategy/header/rest.hpp"
-#include "../strategy/header/sort.hpp"
-#include "../strategy/header/price_sort.hpp"
+#include "../header/rest.hpp"
+#include "../header/sort.hpp"
+#include "../header/price_sort.hpp"
 
 using namespace std;
 
-class Rest
-    vector<string> priceSort::sort(vector<Rest*> r_list)
+//class Rest
+ vector<string> priceSort::sort(vector<Rest*> r_list)
 {
 
-    vector<float> pricelist = new vector<string>;
-    vector<string> namelist = new vector<string>;
+    vector<string> pricelist;
+   
 
-    Rest* getprice;
-    Rest* getname;
     for (int i = 0; i < r_list.size(); i++) {
 
-        Rest* getprice = r_list.at(i);
-        pricelist.push_back(getprice->get_price());
-        namelist.push_back(getprice->get_name());
+        Rest* addprice = r_list.at(i);
+        pricelist.push_back(addprice->get_fastfood_store_price());
+       
     }
 
-    pricelist
+                      
+    for (int i = 0; i <pricelist.size(); i++) {
+    for (int j = i; j < (pricelist.size()); j++) {
 
-        /*print */
-        vector<string >::iterator it = pricelist.begin();
-
-    for (; it != r_list.end(); ++it) {
-
-        pricelist.push_back(it->get_price());
-        cout << "The price is " << it->get_price() << endl;
-
+        if (pricelist.at(i) > pricelist.at(j)) {
+            std::swap(pricelist.at(i) , pricelist.at(j));
+        }
+    }
+}
+     
     }
     /*sort by price */
