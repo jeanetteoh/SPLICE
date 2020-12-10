@@ -397,9 +397,169 @@ Total Cart Price (Including Tax): $11.3861
  > Before the demo, you should do the following:
  > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
- ## Screenshots
- > Screenshots of the input/output after running your application
- ## Installation/Usage
+
+## Screenshots
+When ```main.cpp``` is executed, this input: CS100, 2, John, Pluto, 1, 3, 1, 5, 4, 0, 2, 3, 0
+
+```
+Hello! Welcome to SPLICE. Remember, you can press 'q' at anytime to quit!
+Give your party a name! Press 'Enter' when you are done!
+CS100
+How many people are in your party? We can only support up to 3 people.
+2
+Give User #1 a name!
+John 
+Give User 2 a name!
+Pluto
+
+Did your party eat at...
+1. Burger Places
+2. Taco Places
+3. Pizza Places
+1
+
+Burger Places
+===============
+1. Restaurant Name: McDonald's
+Restaurant Category: Fast Food
+Restaurant Price (from $ to $$$): $
+
+2. Restaurant Name: Chick-Fil-A
+Restaurant Category: Fast Food
+Restaurant Price (from $ to $$$): $$
+
+3. Restaurant Name: In-N-Out
+Restaurant Category: Fast Food
+Restaurant Price (from $ to $$$): $
+
+
+Choose a selection from the above restaurants!
+3
+
+Menu Name: In-N-Out's Menu, Customer Favorites
+Menu Description: Following Options are the Most Popular Items at In-N-Out
+
+Item Number: 1
+Item Name: Double Double
+Item Description: Two 100% pure beef patties, hand lettuce, tomato, spread, two slices of american cheese, with or without onions, stacked high on a freshly baked bun.
+Item Price: 3.45
+
+Item Number: 2
+Item Name: Cheeseburger
+Item Description: 100% Pure beef patty, lettuce, tomato, spread, one slice of american cheese, with or without onions, on a freshly baked bun.
+Item Price: 2.4
+
+Item Number: 3
+Item Name: Hamburger
+Item Description: 100% Pure patty, lettuce, tomato, spread, with or without onions, on a freshly baked bun.
+Item Price: 2.1
+
+Item Number: 4
+Item Name: French Fries
+Item Description: Fresh cut potatoes prepared in 100% vegetable oil.
+Item Price: 1.6
+
+Item Number: 5
+Item Name: Strawberry Shake
+Item Description: Strawberry Shake made with 100% real ice cream.
+Item Price: 2.15
+
+Item Number: 6
+Item Name: Chocolate Shake
+Item Description: Chocolate Shake made with 100% real ice cream.
+Item Price: 2.15
+
+Item Number: 7
+Item Name: Vanilla Shake
+Item Description: Vanilla Shake made with 100% real ice cream.
+Item Price: 2.15
+
+Item Number: 8
+Item Name: Coffee
+Item Description: Hot Brewed Coffee
+Item Price: 1.35
+
+Item Number: 9
+Item Name: Milk
+Item Description: Refreshing Milk
+Item Price: 0.99
+
+Item Number: 10
+Item Name: Soft Drink (Medium)
+Item Description: Refreshing selctions include Coca-Cola, Diet Coke, 7UP, Dr. Pepper, Root Beer, Lemonade, Minute Maid Light Lemonade, and Iced Tea 
+Item Price: 1.65
+
+For John, what would you like to add to their cart?
+Please enter the item number from the restaurant you have selected.
+After all items have been added, press '0'.
+1
+5
+4
+0
+```
+
+will yield the following output for user 1:
+
+```
+Displaying John's Cart
+---------------------------------
+Item Number: 1
+Item Name: Double Double
+Item Description: Two 100% pure beef patties, hand lettuce, tomato, spread, two slices of american cheese, with or without onions, stacked high on a freshly baked bun.
+Item Price: 3.45
+
+Item Number: 5
+Item Name: Strawberry Shake
+Item Description: Strawberry Shake made with 100% real ice cream.
+Item Price: 2.15
+
+Item Number: 4
+Item Name: French Fries
+Item Description: Fresh cut potatoes prepared in 100% vegetable oil.
+Item Price: 1.6
+
+Price of Double Double is: $3.45
+Price of Strawberry Shake is: $2.15
+Price of French Fries is: $1.6
+
+Total Cart Price is: $7.2
+Total Cart Price (Including Tax): $7.83
+```
+
+and this output for user 2:
+
+```
+For Pluto, what would you like to add to their cart?
+Please enter the item number from the restaurant you have selected.
+After all items have been added, press '0'.
+2
+3
+0
+```
+```c++
+Displaying Pluto's Cart
+---------------------------------
+Item Number: 2
+Item Name: Cheeseburger
+Item Description: 100% Pure beef patty, lettuce, tomato, spread, one slice of american cheese, with or without onions, on a freshly baked bun.
+Item Price: 2.4
+
+Item Number: 3
+Item Name: Hamburger
+Item Description: 100% Pure patty, lettuce, tomato, spread, with or without onions, on a freshly baked bun.
+Item Price: 2.1
+
+Price of Cheeseburger is: $2.4
+Price of Hamburger is: $2.1
+
+Total Cart Price is: $4.5
+Total Cart Price (Including Tax): $4.89375
+```
+
+![Screenshot_1](interface/input1.png)
+![Screenshot_2](interface/input2.png)
+
+## Installation/Usage
  > Instructions on installing and running your application
  
 Despite the myriad of testing that we have put our program through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable as a user interface. The sequence within ```main.cppp``` is solely depended on user input; the sequence is as follows:
