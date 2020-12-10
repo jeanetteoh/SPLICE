@@ -283,22 +283,27 @@ Item Price: 1.89
 
 ###### Party & Party Members Composite Pattern
 ![Party_Composite](composite/party_composite_pattern.png)
-> Note that the term "party member" is synonymous to class user. The term party member is used within the README for clarification purposes. 
+> Note that the term "party member" is synonymous to class ```party_component user```. The term party member is used within throughout the README for clarity. 
 
 In addition to the usage shown in Phase 2/2b., an example of utilizing the party and party member composite pattern in our ```main.cpp``` would be the initial asking for a party name and their size. Depending on the size, we will instantiate a corresponding number of user carts. The ```party_component *i_user1``` works hand in hand with ```cart_component *i_user1_cart```.
 
 ```c++
-	party_component *i_party = new party(i_party_name, i_party_size);
-	...
-	party_component *i_user1 = new user(user1);
-
-```c++
-	...
+...
+    cout << "Give your party a name! Press 'Enter' when you are done!" << endl;
+    cin >> i_party_name;
+    party_component *i_party = new party(i_party_name, i_party_size);
+	
+    ...
+    
+    cout << "How many people are in your party? We can only support up to 3 people." << endl;
+    cin >> i_party_size;
+    
+    party_component *i_user1 = new user(user1);
         if(i_party_size == 1)
         {
             party_component *i_user1 = new user(user1);
             cart_component *i_user1_cart = new user_cart(i_user1);
-	...
+	    ...
 ```
 
 
