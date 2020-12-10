@@ -29,7 +29,7 @@ vector<string> nameSort::ssort(vector<Rest*> r_list) {
 
     vector<string >::iterator it = namelist.begin();
 
-    /*sort by name */
+    /*sort by food name*/
 
     sort(namelist.begin(), namelist.end(), compareR_name); //
 
