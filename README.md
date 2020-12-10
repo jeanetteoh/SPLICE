@@ -2,17 +2,16 @@
 > Authors: [*Xin Wang*](https://github.com/xinwng), [*Jeanette Oh*](https://github.com/jeanetteoh), [*Hongan Zhang*](https://github.com/hongan-z)
 
 ## Phase I: Project Description
+### Premise
+This ```README.md``` file will provide relevant information regarding the design patterns that were utilized and applied within this project; it will also serve as an in-depth insight into the overall implementation of the project. In an attempt to declutter the headers, there is an ```include.hpp``` file that contains all the necessary #include directives.
 
 ### Why is this project interesting to us?
-
 SPLICE is a way of simplifying everyday experiences. Our group holds the idea of efficiency and convenience to a high level so we wanted to create an easy to use application that simplifies splitting the check with friends or family. It has always been an inconvenience to split a receipt and compute the intricate mathematics when trying to figure out which person needs to pay what amount. SPLICE attempts in providing a simpler way of denoting what was ordered, by who, and how much they need to pay.  
 
 ### What languages/tools/technologies do we plan to use?
-
 This project will be coded in C++. We understand that testing is an integral part of successfully compiling a project, therefore we will be incorporating the standard Google Unit Test Framework (gtest) in pursuance of holding our project in a higher standard of quality. In addition, by completing this project, we strive to learn the importance of teamwork through GitFlow - including branching, resolving merge conflicts, opening pull requests, discussing code, and deploying our project.
 
 ### What will be the input/output for our project?
-
 The inputs to our project will be the party name, party size, party member names, restaurant selection, and item selections in response to menu items from the restaurant that will be outputted. We will then create a unique cart for each party member that will serve as an intermediate step to our final output, which is the exact amount each consumer needs to pay per their specific carts. 
 
 ### What design patterns will we be incorporating?
@@ -24,7 +23,7 @@ Incorporating the prototype design pattern within our project would entail creat
 
 As the composite design pattern would allow us to treat individual objects in an uniformed manner. We have utilized this pattern for constructing the menu and its menu items, the parties and the party members, and lastly, linking the party members with their respective carts.
 
-###### 2a. Constructing the menu and the menu items for different restaurants
+##### 2a. Constructing the menu and the menu items for different restaurants
 As all ```menus (container)``` contain different ```menu items (leaf)```, the ```menu component (interface)``` will provide common specific operations that will delegate the work to the respective location in the hierarchy. For example, when constructing the menu and its items, the ```menu_component``` should successfully recognize the difference between what is a menu versus what is a menu item in our client. 
 
 ```c++
@@ -42,7 +41,9 @@ Item Description: Mouthwatering perfection starts with two 100% pure beef pattie
 Item Price: 3.99
 ```
 
-###### 2b. Constructing the parties and the party members
+##### 2b. Constructing the parties and the party members
+> Note that when discussing the ```parties and the party members composite pattern``` the term **party member** is synonymous to the class type ```party_component user```. The term party member is used throughout the ```README``` for clarity. 
+
 By utilizing the composite pattern to create the ```parties (container)```, and the ```party members (leaves)``` - we have constructed a ```party_component (interface)``` that successfully recognizes whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
 
 ```c++
@@ -62,7 +63,7 @@ User 2: Jeanette
 User 3: Hongan
 ```
 
-###### 2c. Constructing the user carts and their respective cart items
+##### 2c. Constructing the user carts and their respective cart items
 We had a bit of a difficulty implementing this without any redundancy as the terms users and party members are synonymous within this project. However, we were still able to utilize this in the way we originally intended. All ```users (container)``` will take in a ```party_component *``` as a parameter to recognize the user, and each user will have their individual ```cart items (leaves)``` which takes in a parameter of ```menu_component *``` to recognize the menu items. The ```cart component (interface)``` will manage the necessary operations to successfuly delegate work based on the parameter. The purpose of utilizing this composite function is for it to successfully recognize the individuality between different users and output their respective cart items based on the menu items they have selected. This composite pattern also successfuly provides a linkage to the previous two patterns. An example of how it is utilized in our client is:
 
 ```c++
@@ -96,7 +97,8 @@ Total Cart Price is: $10.3
 Total Cart Price (Including Tax): $11.2012
 ```
 
-#### 3. Strategy
+**3. Strategy**
+
 Incorporating the strategy design pattern would allow us to sort the restaurants based on the type and the name. 
 
 ## Phase II: OMT Diagrams
@@ -123,21 +125,23 @@ FastFood *Create(const string &fastfood_store_name, const string &fastfood_store
     return nullptr;
 }
 ```
-Based on the type of fast food category we want to implement, ```FastFood *Create(...)``` will return a new instance of the selected restaurant. The client interface is now displayed below:
+Based on the type of fast food category we want to implement, ```FastFood *Create(...)``` will return a new instance of the selected restaurant. An example of the ```FastFood_Client``` interface is displayed below:
+> This file can be found under ```prototype/fastfood_client.cpp```
 
 ```c++
-    m_Burger.push_back(Create("McDonald's", "$", "Burger"));
-    m_Burger.at(0)->set_fastfood_store_price("$");
+...
+m_Burger.push_back(Create("McDonald's", "$", "Burger"));
+m_Burger.at(0)->set_fastfood_store_price("$");
     
-    auto ChickFilA = m_Burger[0]->clone();
-    ChickFilA->set_fastfood_store_name("Chick-Fil-A");
-    ChickFilA->set_fastfood_store_price("$$");
-    m_Burger.push_back(ChickFilA);
+auto ChickFilA = m_Burger[0]->clone();
+ChickFilA->set_fastfood_store_name("Chick-Fil-A");
+ChickFilA->set_fastfood_store_price("$$");
+m_Burger.push_back(ChickFilA);
 
-    auto InNOut = m_Burger[0]->clone();
-    InNOut->set_fastfood_store_name("In-N-Out");
-    InNOut->set_fastfood_store_price("$");
-    m_Burger.push_back(InNOut);
+auto InNOut = m_Burger[0]->clone();
+InNOut->set_fastfood_store_name("In-N-Out");
+InNOut->set_fastfood_store_price("$");
+m_Burger.push_back(InNOut);
 ```
 
 This would yield an output of:
@@ -283,9 +287,8 @@ Item Price: 1.89
 
 ###### Party & Party Members Composite Pattern
 ![Party_Composite](composite/party_composite_pattern.png)
-> Note that the term "party member" is synonymous to class ```party_component user```. The term party member is used within throughout the README for clarity. 
 
-In addition to the usage shown in Phase 2/2b., an example of utilizing the party and party member composite pattern in our ```main.cpp``` would be the initial asking for a party name and their size. Depending on the size, we will instantiate a corresponding number of user carts. The ```party_component *i_user1``` works hand in hand with ```cart_component *i_user1_cart```.
+In addition to the usage shown in Phase 2/2b., another example of utilizing the party and party member composite pattern in our ```main.cpp``` would be the initial asking for a party name and their size. Depending on the size, we will instantiate a corresponding number of user carts. Note that the ```party_component *i_user1``` works hand in hand with ```cart_component *i_user1_cart```.
 
 ```c++
 ...
@@ -312,34 +315,36 @@ In addition to the usage shown in Phase 2/2b., an example of utilizing the party
 > At this moment, we only support up to 3 users.
 
 If there is only 1 user, we will only instantiate 1 ```user_cart``` and 1 ```cart_items``` to store all of the menu items they selected.
+
 An example is shown below from ```main.cpp```:
 
 ```c++
-        if(i_party_size == 1)
+...
+if(i_party_size == 1)
+{
+    party_component *i_user1 = new user(user1);
+    cart_component *i_user1_cart = new user_cart(i_user1);
+    cout << "For " << user1 << ", what would you like to add to their cart?" << endl;
+    cout << "Please enter the item number from the restaurant you have selected." << endl;
+    cout << "After all items have been added, press '0'." << endl;
+
+    cin >> mcdonalds_item_number;
+    cart_component *i_user1_cart_items = new cart_items(i_mcdonalds_cart.at(mcdonalds_item_number - 1));
+
+    bool mcdonalds_condition = true;
+    while (mcdonalds_condition)
+    {
+        cin >> mcdonalds_item_number_1;
+        if (mcdonalds_item_number_1 == 0)
         {
-            party_component *i_user1 = new user(user1);
-            cart_component *i_user1_cart = new user_cart(i_user1);
-            cout << "For " << user1 << ", what would you like to add to their cart?" << endl;
-            cout << "Please enter the item number from the restaurant you have selected." << endl;
-            cout << "After all items have been added, press '0'." << endl;
-
-            cin >> mcdonalds_item_number;
-            cart_component *i_user1_cart_items = new cart_items(i_mcdonalds_cart.at(mcdonalds_item_number - 1));
-
-            bool mcdonalds_condition = true;
-            while (mcdonalds_condition)
-            {
-                cin >> mcdonalds_item_number_1;
-                if (mcdonalds_item_number_1 == 0)
-                {
-                    mcdonalds_item_number_1 = false;
-                    break;
-                }
-                i_user1_cart_items->add_to_cart(i_mcdonalds_cart.at(mcdonalds_item_number_1 - 1));
-            }
-            i_user1_cart->add(i_user1_cart_items);
-            i_user1_cart->display();
+            mcdonalds_item_number_1 = false;
+            break;
         }
+        i_user1_cart_items->add_to_cart(i_mcdonalds_cart.at(mcdonalds_item_number_1 - 1));
+    }
+    i_user1_cart->add(i_user1_cart_items);
+    i_user1_cart->display();
+}
 ```
 
 This process will repeat for the number of users.
@@ -384,12 +389,393 @@ Total Cart Price (Including Tax): $11.3861
 	
 ## Phase III: Development, Testing, and Scrum Meeting
 ###### Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
+All unit test cases abide by the **Google Test Framework**[https://github.com/google/googletest]. Print statements were utilized to display the output of a function call before ```main.cpp``` was coded. 
 ### Testing Restaurant Prototype Pattern
-### Testing Composite Patterns
-#### Testing Menu & Menu Items Composite Pattern
-#### Testing Party & Party Members Composite Pattern
-#### Testinc User Cart & Cart Items Composite Pattern
-### Testing Strategy Patterns
+Here is our unit test cases for our ```restaurant``` prototype pattern. This file can be found in ```prototype/tests/fastfood_tests.hpp```.
+
+Some unit test cases include:
+
+```c++
+TEST(FastFood_Tests, SizeTest)
+{
+    vector<FastFood *> m_sizeTest;
+    m_sizeTest.push_back(new Pizza("Domino's Pizza"));
+    m_sizeTest.push_back(new Taco("Taco Bell"));
+    m_sizeTest.push_back(new Burger("McDonald's"));
+    ASSERT_EQ(m_sizeTest.size(), 3);
+}
+
+TEST(FastFood_Tests, StringTest)
+{
+    vector<FastFood *> m_stringTest;
+    m_stringTest.push_back(new Pizza("Domino's Pizza"));
+    m_stringTest.push_back(new Taco("Taco Bell"));
+    m_stringTest.push_back(new Burger("McDonald's"));
+    for (auto FastFood : m_stringTest)
+    {
+        EXPECT_EQ(m_stringTest.at(0)->get_fastfood_store_name(), "Domino's Pizza");
+        EXPECT_EQ(m_stringTest.at(1)->get_fastfood_store_name(), "Taco Bell");
+        EXPECT_EQ(m_stringTest.at(2)->get_fastfood_store_name(), "McDonald's");
+    }
+}
+
+TEST(FastFood_Tests, Clone_McDonalds_FiveGuys)
+{
+    vector<FastFood *> m_Burgers;
+    m_Burgers.push_back(new Burger("McDonald's")); //Clone this
+
+    cout << "Cloning from -> " << m_Burgers.at(0)->get_fastfood_store_name() << endl;
+    m_Burgers.at(0)->set_fastfood_store_price("$");
+    
+    auto FastFood = m_Burgers[0]->clone();
+    FastFood->set_fastfood_store_name("Five Guys");
+    FastFood->set_fastfood_store_price("$$");
+    m_Burgers.push_back(FastFood);
+    
+    cout << "Cloned object is: " << m_Burgers.at(1)->get_fastfood_store_name() << endl;
+    cout << endl;
+    
+    for(auto FastFood: m_Burgers)
+    {
+        FastFood->fastfood_display_store_info();
+    }
+
+    EXPECT_EQ(m_Burgers.at(0)->get_fastfood_store_name(), "McDonald's");
+    EXPECT_EQ(m_Burgers.at(1)->get_fastfood_store_name(), "Five Guys");
+}
+
+```
+These 3 tests would yield the results:
+
+```
+[ RUN      ] FastFood_Tests.SizeTest
+[       OK ] FastFood_Tests.SizeTest (0 ms)
+[ RUN      ] FastFood_Tests.StringTest
+[       OK ] FastFood_Tests.StringTest (0 ms)
+[ RUN      ] FastFood_Tests.Clone_McDonalds_FiveGuys
+Cloning from -> McDonald's
+Cloned object is: Five Guys
+
+Restaurant Name: McDonald's
+Restaurant Category: Fast Food
+Restaurant Price (from $ to $$$): $
+
+Restaurant Name: Five Guys
+Restaurant Category: Fast Food
+Restaurant Price (from $ to $$$): $$
+
+[       OK ] FastFood_Tests.Clone_McDonalds_FiveGuys (0 ms)
+```
+
+### Testing Menu & Menu Items Composite Pattern
+### Testing Party & Party Members Composite Pattern
+Here is our unit test cases for our ```party``` and ```user``` composite pattern. This file can be found in ```composite/party_tests/party_test.hpp```.
+
+Some unit test cases include:
+
+```c++
+TEST(Party_Test, Create_Party)
+{
+    party_component *m_party_1 = new party("Party of 3", 3);
+    cout << "EXPECTED PARTY NAME: Party of 3" << '\n'
+         << "RECEIVED PARTY NAME: " << m_party_1->get_name() << endl;
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+
+    cout << endl;
+
+    cout << "EXPECTED PARTY SIZE: 3" << '\n'
+         << "RECEIVED PARTY SIZE: " << m_party_1->get_size() << endl;
+    EXPECT_EQ(m_party_1->get_size(), 3);
+
+    m_party_1->print();
+}
+
+TEST(Party_Test, Create_Parties)
+{
+    party_component *m_party_1 = new party("Party of 3", 3);
+    cout << "EXPECTED PARTY NAME: Party of 3" << '\n'
+         << "RECEIVED PARTY NAME: " << m_party_1->get_name() << endl;
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+
+    cout << endl;
+
+    cout << "EXPECTED PARTY SIZE: 3" << '\n'
+         << "RECEIVED PARTY SIZE: " << m_party_1->get_size() << endl;
+    EXPECT_EQ(m_party_1->get_size(), 3);
+
+    party_component *m_party_2 = new party("Party of 8", 8);
+    cout << "EXPECTED PARTY NAME: Party of 8" << '\n'
+         << "RECEIVED PARTY NAME: " << m_party_2->get_name() << endl;
+    EXPECT_EQ(m_party_2->get_name(), "Party of 8");
+
+    cout << endl;
+
+    cout << "EXPECTED PARTY SIZE: 8" << '\n'
+         << "RECEIVED PARTY SIZE: " << m_party_2->get_size() << endl;
+    EXPECT_EQ(m_party_2->get_size(), 8);
+    m_party_2->print();
+}
+
+TEST(Party_Test, Remover_User_1)
+{
+    party_component *m_party_1 = new party("Party of 3", 3);
+    EXPECT_EQ(m_party_1->get_name(), "Party of 3");
+    EXPECT_EQ(m_party_1->get_size(), 3);
+    cout << endl;
+    m_party_1->print();
+
+    cout << endl;
+    party_component *user_1 = new user("Xin");
+    m_party_1->add(user_1);
+    cout << "EXPECTED USER NAME: " << user_1->get_name() << endl;
+    EXPECT_EQ(user_1->get_name(), "Xin");
+    user_1->print();
+
+    cout << endl;
+    party_component *user_2 = new user("Jeanette");
+    m_party_1->add(user_2);
+    cout << "EXPECTED USER NAME: " << user_2->get_name() << endl;
+    EXPECT_EQ(user_2->get_name(), "Jeanette");
+    user_2->print();
+
+    cout << endl;
+    party_component *user_3 = new user("Hongan");
+    m_party_1->add(user_3);
+    cout << "EXPECTED USER NAME: " << user_3->get_name() << endl;
+    EXPECT_EQ(user_3->get_name(), "Hongan");
+    user_3->print();
+
+    cout << endl
+         << endl;
+
+    cout << "BEFORE REMOVE: " << endl;
+
+    m_party_1->print();
+
+    m_party_1->remove(user_1);
+
+    cout << endl;
+
+    cout << "AFTER REMOVE: " << endl;
+    m_party_1->print();
+}
+```
+
+These 3 tests would yield the results:
+
+```
+[ RUN      ] Party_Test.Create_Party
+EXPECTED PARTY NAME: Party of 3
+RECEIVED PARTY NAME: Party of 3
+
+EXPECTED PARTY SIZE: 3
+RECEIVED PARTY SIZE: 3
+Party Name: Party of 3
+Party Size: 3
+[       OK ] Party_Test.Create_Party (0 ms)
+```
+```
+[ RUN      ] Party_Test.Create_Parties
+EXPECTED PARTY NAME: Party of 3
+RECEIVED PARTY NAME: Party of 3
+
+EXPECTED PARTY SIZE: 3
+RECEIVED PARTY SIZE: 3
+EXPECTED PARTY NAME: Party of 8
+RECEIVED PARTY NAME: Party of 8
+
+EXPECTED PARTY SIZE: 8
+RECEIVED PARTY SIZE: 8
+Party Name: Party of 8
+Party Size: 8
+[       OK ] Party_Test.Create_Parties (0 ms)
+```
+```
+[ RUN      ] Party_Test.Remover_User_1
+
+Party Name: Party of 3
+Party Size: 3
+
+EXPECTED USER NAME: Xin
+Xin
+EXPECTED USER NAME: Jeanette
+Jeanette
+EXPECTED USER NAME: Hongan
+Hongan
+
+BEFORE REMOVE: 
+Party Name: Party of 3
+Party Size: 3
+User 1: Xin
+User 2: Jeanette
+User 3: Hongan
+
+AFTER REMOVE: 
+Party Name: Party of 3
+Party Size: 3
+User 1: Jeanette
+User 2: Hongan
+[       OK ] Party_Test.Remover_User_1 (0 ms)
+```
+
+### Testing User Cart & Cart Items Composite Pattern
+Here is our unit test cases for our ```user_cart``` and ```cart_items``` composite pattern. This file can be found in ```composite/cart/test/cart_test.hpp```.
+
+Some unit test cases include:
+
+```c++ 
+TEST(Cart_Test, Total_Price_Test)
+{
+    party_component *c_p = new party("Party1", 2);
+    party_component *c_user_xin = new user("Xin");
+    party_component *c_user_jeanette = new user("Jeanette");
+
+    c_p->add(c_user_xin);
+    c_p->add(c_user_jeanette);
+
+    menu_component *c_mcdonalds_test = new menu_mcdonalds("McDonalds Test", "\nDescription Test");
+    menu_component *test_1 = new menu_items_mcdonalds(1, "Test 1", "Description Test 1", 1200);
+    c_mcdonalds_test->add(test_1);
+    menu_component *test_2 = new menu_items_mcdonalds(2, "Test 2", "Description Test 2", 732.84);
+
+    cart_component *c_user_xin_cart_1 = new user_cart(c_user_xin);
+    cart_component *xin_cart_items_1 = new cart_items(test_1);
+    xin_cart_items_1->add_to_cart(test_2);
+    
+    c_user_xin_cart_1->add(xin_cart_items_1);
+
+    cout << endl
+         << endl;
+    cout << "EXPECTED TOTAL PRICE: $ 1932.84, RECEIVED TOTAL PRICE: " << xin_cart_items_1->cart_price() << endl
+         << endl;
+
+    c_user_xin_cart_1->display();
+    double m_absolute_error = 0.001;
+    EXPECT_NEAR(xin_cart_items_1->cart_price(), 1932.84, m_absolute_error);
+}
+
+TEST(Cart_Test, Adding_Items_To_Multiple_Carts)
+{
+     party_component *party_jeanette_xin = new party("Jeanette and Xin", 2);
+     party_component *user_xin = new user("Xin");
+     party_component *user_jeanette = new user("Jeanette");
+
+     party_jeanette_xin->add(user_xin);
+     party_jeanette_xin->add(user_jeanette);
+     party_jeanette_xin->print();
+
+     menu_component *c_mcdonalds_test = new menu_mcdonalds("McDonalds Test", "\nDescription Test");
+     menu_component *test_1 = new menu_items_mcdonalds(1, "Test 1", "Description Test 1", 6);
+     menu_component *test_2 = new menu_items_mcdonalds(2, "Test 2", "Description Test 2", 4.30);
+     menu_component *test_3 = new menu_items_mcdonalds(3, "Test 3", "Description Test 3", 2.5);
+
+     cart_component *cart_xin = new user_cart(user_xin);
+     cart_component *cart_jeanette = new user_cart(user_jeanette);
+
+     cart_component *cart_items_xin = new cart_items(test_1);
+     cart_items_xin->add_to_cart(test_3);
+     
+     cart_component *cart_items_jeanette = new cart_items(test_2);
+     cart_items_jeanette->add_to_cart(test_2);
+     cart_items_jeanette->add_to_cart(test_3);
+
+     cart_xin->add(cart_items_xin);
+     cart_jeanette->add(cart_items_jeanette);
+
+     cart_xin->display();
+     cout << endl
+          << endl;
+     cart_jeanette->display();
+
+
+     EXPECT_EQ(cart_items_xin->get_size(), 2);
+     EXPECT_EQ(cart_items_jeanette->get_size(), 3);
+     double m_absolute_error = 0.001; // 0.1% absolute error allowed for doubles
+     EXPECT_NEAR(cart_items_xin->cart_price(), 8.5, m_absolute_error);
+     EXPECT_NEAR(cart_items_jeanette->cart_price(), 11.1, m_absolute_error);
+}
+```
+
+These 2 tests would yield the results:
+
+```
+[ RUN      ] Cart_Test.Total_Price_Test
+
+
+EXPECTED TOTAL PRICE: $ 1932.84, RECEIVED TOTAL PRICE: 1932.84
+
+Displaying Xin's Cart
+---------------------------------
+Item Number: 1
+Item Name: Test 1
+Item Description: Description Test 1
+Item Price: 1200
+
+Item Number: 2
+Item Name: Test 2
+Item Description: Description Test 2
+Item Price: 732.84
+
+Price of Test 1 is: $1200
+Price of Test 2 is: $732.84
+
+Total Cart Price is: $1932.84
+Total Cart Price (Including Tax): $2101.96
+[       OK ] Cart_Test.Total_Price_Test (1 ms)
+```
+
+```
+[ RUN      ] Cart_Test.Adding_Items_To_Multiple_Carts
+Party Name: Jeanette and Xin
+Party Size: 2
+User 1: Xin
+User 2: Jeanette
+Displaying Xin's Cart
+---------------------------------
+Item Number: 1
+Item Name: Test 1
+Item Description: Description Test 1
+Item Price: 6
+
+Item Number: 3
+Item Name: Test 3
+Item Description: Description Test 3
+Item Price: 2.5
+
+Price of Test 1 is: $6
+Price of Test 3 is: $2.5
+
+Total Cart Price is: $8.5
+Total Cart Price (Including Tax): $9.24375
+
+
+Displaying Jeanette's Cart
+---------------------------------
+Item Number: 2
+Item Name: Test 2
+Item Description: Description Test 2
+Item Price: 4.3
+
+Item Number: 2
+Item Name: Test 2
+Item Description: Description Test 2
+Item Price: 4.3
+
+Item Number: 3
+Item Name: Test 3
+Item Description: Description Test 3
+Item Price: 2.5
+
+Price of Test 2 is: $4.3
+Price of Test 2 is: $4.3
+Price of Test 3 is: $2.5
+
+Total Cart Price is: $11.1
+Total Cart Price (Including Tax): $12.0712
+[       OK ] Cart_Test.Adding_Items_To_Multiple_Carts (0 ms)
+```
+
+### Testing Strategy Pattern
 	
 
 ## Final deliverable
@@ -398,8 +784,8 @@ Total Cart Price (Including Tax): $11.3861
  > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
 
-## Screenshots
-When ```main.cpp``` is executed, this input: CS100, 2, John, Pluto, 1, 3, 1, 5, 4, 0, 2, 3, 0
+## Inputs, Outputs, and Screenshots
+When ```main.cpp``` is executed, the input: ```CS100, 2, John, Pluto, 1, 3, 1, 5, 4, 0, 2, 3, 0``` triggers the following prompts:
 
 ```
 Hello! Welcome to SPLICE. Remember, you can press 'q' at anytime to quit!
@@ -498,7 +884,7 @@ After all items have been added, press '0'.
 0
 ```
 
-will yield the following output for user 1:
+yielding the following output for user 1:
 
 ```
 Displaying John's Cart
@@ -526,7 +912,7 @@ Total Cart Price is: $7.2
 Total Cart Price (Including Tax): $7.83
 ```
 
-and this output for user 2:
+triggering the following prompts for user 2:
 
 ```
 For Pluto, what would you like to add to their cart?
@@ -536,6 +922,9 @@ After all items have been added, press '0'.
 3
 0
 ```
+
+and yielding the following output for user 2:
+
 ```
 Displaying Pluto's Cart
 ---------------------------------
@@ -560,7 +949,7 @@ Total Cart Price (Including Tax): $4.89375
 ![Screenshot_2](interface/input2.png)
 
 ## Installation/Usage
-To use this project, first clone our repository, configure cmake and CMakeLists.txt, and lastly, running ./main.
+To use this project, first clone our repository, then configure cmake and CMakeLists.txt, and lastly run ./main.
  
 Despite the myriad of testing that we have put our program through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable as a user interface. The sequence within ```main.cppp``` is solely depended on user input; the sequence is as follows:
 1. Ask for a party name
@@ -570,8 +959,7 @@ Despite the myriad of testing that we have put our program through, to ensure th
 5. Display the restaurants that fall under the category chosen, and then ask for an input to select the restaurant
 6. Display the restaurant menu, ask for continuous inputs to add items into the user cart
 7. Output cart items and total amount needed to pay
-
-*Repeat steps 6 and 7 depending on the party size*
+> *Repeat steps 6 and 7 depending on the party size*
 
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
