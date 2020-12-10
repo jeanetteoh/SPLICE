@@ -560,7 +560,7 @@ Total Cart Price (Including Tax): $4.89375
 ![Screenshot_2](interface/input2.png)
 
 ## Installation/Usage
- > Instructions on installing and running your application
+To use this project, first clone our repository, configure cmake and CMakeLists.txt, and lastly, running ./main.
  
 Despite the myriad of testing that we have put our program through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable as a user interface. The sequence within ```main.cppp``` is solely depended on user input; the sequence is as follows:
 1. Ask for a party name
