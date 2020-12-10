@@ -385,11 +385,11 @@ Total Cart Price (Including Tax): $11.3861
 ## Phase III: Development, Testing, and Scrum Meeting
 ###### Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
 ### Testing Restaurant Prototype Pattern
-### Testing Composite Pattern
+### Testing Composite Patterns
 #### Testing Menu & Menu Items Composite Pattern
 #### Testing Party & Party Members Composite Pattern
 #### Testinc User Cart & Cart Items Composite Pattern
-### Testing Strategy Pattern
+### Testing Strategy Patterns
 	
 
 ## Final deliverable
