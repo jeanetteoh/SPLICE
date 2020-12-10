@@ -56,8 +56,8 @@ add_executable(main
 #     strategy/tests/sort_unit_tests.cpp
 # )
 
-target_link_libraries(sort_test2 gtest)
-target_compile_definitions(sort_test2 PRIVATE gtest_disable_pthreads=ON)
+# target_link_libraries(sort_test2 gtest)
+# target_compile_definitions(sort_test2 PRIVATE gtest_disable_pthreads=ON)
 
 target_link_libraries(fastfood_test gtest)
 target_compile_definitions(fastfood_test PRIVATE gtest_disable_pthreads=ON)
