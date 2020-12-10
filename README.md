@@ -24,7 +24,7 @@ Incorporating the prototype design pattern within our project would entail creat
 As the composite design pattern would allow us to treat individual objects in an uniformed manner. We have utilized this pattern for constructing the menu and its menu items, the parties and the party members, and lastly, linking the party members with their respective carts.
 
 ##### 2a. Constructing the menu and the menu items for different restaurants
-As all ```menus (container)``` contain different ```menu items (leaf)```, the ```menu component (interface)``` will provide common specific operations that will delegate the work to the respective location in the hierarchy. For example, when constructing the menu and its items, the ```menu_component``` should successfully recognize the difference between what is a menu versus what is a menu item in our client. 
+As all ```menu_<restaurant name> (container)``` contain different ```menu_item_<restaurant name> (leaf)```, the ```menu_component (interface)``` will provide common specific operations that will delegate the work to the respective location in the hierarchy. For example, when constructing the menu and its items, the ```menu_component``` should successfully recognize the difference between what is a menu versus what is a menu item in our client. 
 
 ```c++
 menu_component *mcdonalds_menu_customer_favorites = new menu_mcdonalds("McDonald's Menu, Customer Favorites", "Following Options are the Most Popular Items at McDonald's");
@@ -44,7 +44,7 @@ Item Price: 3.99
 ##### 2b. Constructing the parties and the party members
 > Note that when discussing the ```parties and the party members composite pattern``` the term **party member** is synonymous to the class type ```party_component user```. The term party member is used throughout the ```README.md``` for clarity. 
 
-By utilizing the composite pattern to create the ```parties (container)```, and the ```party members (leaves)``` - we have constructed a ```party_component (interface)``` that successfully recognizes whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
+By utilizing the composite pattern to create the ```party (container)```, and the party members, ```user (leaves)``` - we have constructed a ```party_component (interface)``` that successfully recognizes whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
 
 ```c++
 party_component *m_party_1 = new party("Party of 3", 3);
@@ -64,7 +64,7 @@ User 3: Hongan
 ```
 
 ##### 2c. Constructing the user carts and their respective cart items
-We had a bit of a difficulty implementing this class as ```cart_component user_cart``` and ```party_component user``` shared some commonalities of redundancy. However, we were still able to utilize this in the way we originally intended. All ```user_cart (container)``` will take in a ```party_component *``` as a parameter to recognize the user, and each user will have their individual ```cart_items (leaves)``` which takes in a parameter of ```menu_component *``` to recognize the menu items. The ```cart_component (interface)``` will manage the necessary operations to successfuly delegate work based on the parameter. The purpose of utilizing this composite function is for it to successfully recognize the individuality between different users and output their respective cart items based on the menu items they have selected. This composite pattern also successfuly provides a linkage to the previous two patterns. An example of how it is utilized in our client is:
+We had a bit of a difficulty implementing this class as ```cart_component user_cart``` and ```party_component user``` shared some commonalities of redundancy. However, we were still able to utilize this in the way we originally intended. All ```user_cart (container)``` will take in a ```party_component *``` as a parameter to recognize the user, and each user will have their individual ```cart_items (leaves)``` which takes in a parameter of ```menu_component *``` to recognize the menu items. There is an ```add_to_cart``` function that also takes in a ```menu_component*``` parameter in order to continue adding menu items and building the specific user's cart. The ```cart_component (interface)``` will manage the necessary operations to successfuly delegate work based on the parameter. The purpose of utilizing this composite function is for it to successfully recognize the individuality between different users and output their respective cart items based on the menu items they have selected. This composite pattern also successfuly provides a linkage to the previous two patterns. An example of how it is utilized in our client is:
 
 ```c++
 menu_component *c_mcdonalds_test = new menu_mcdonalds("McDonalds Test", "\nDescription Test");
@@ -348,10 +348,9 @@ if(i_party_size == 1)
     i_user1_cart->display();
 }
 ```
+> This process will repeat depending on the number of users.
 
-This process will repeat depending on the number of users.
-
-Let's say Xin ate at McDonald's and he had a *McNuggets 10 Piece, Iced Coffee (Large), and a Big Mac*, ```i_user1_cart``` will store all of those inputs through the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
+Let's say Xin ate at McDonald's and he had a *McNuggets 10 Piece, Iced Coffee (Large), and a Big Mac*, ```i_user1_cart``` will store all of those inputs by identifying the ```item_number``` variable in ```menu_component``` and ```i_user1_cart->display()``` will then yield an output of:
 
 ```
 For Xin, what would you like to add to their cart?
@@ -382,7 +381,7 @@ Price of Big Mac is: $3.99
 Total Cart Price is: $10.47
 Total Cart Price (Including Tax): $11.3861
 ```
-> The input for to receive this result was 1, Xin, 1, 1, 6, 3, 1, 0
+> The input for to receive this result was ```1, Xin, 1, 1, 6, 3, 1, 0```
 
 #### Sort Strategy Pattern
 ![Sort Strategy](https://user-images.githubusercontent.com/58233764/99926181-a44c3700-2cf5-11eb-889b-36309dfe1711.png)
@@ -390,8 +389,10 @@ Total Cart Price (Including Tax): $11.3861
 
 	
 ## Phase III: Development, Testing, and Scrum Meeting
-###### Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
-All unit test cases abide by the [**Google Test Framework**](https://github.com/google/googletest). All test executables are run on our local machines for testing and then through Continuous Integration from GitHub Actions through our ```splice.yml``` file located in ```.github/workflows/splice.yml```. Print statements were utilized to display the output of a function call before ```main.cpp``` was coded. 
+
+###### Scrum Meeting with Philip Park - Monday, November 23 (11:00am - 2:00pm)
+All unit test cases abide by the [**Google Test Framework**](https://github.com/google/googletest). All test executables are run on our local machines for testing and then through Continuous Integration from GitHub Actions through our ```splice.yml``` file located in ```.github/workflows/splice.yml```. Print statements were utilized to display the output of a function call before ```main.cpp``` was created.
+
 ### Testing Restaurant Prototype Pattern
 Here is our unit test cases for our ```restaurant``` prototype pattern. This file can be found in ```prototype/tests/fastfood_tests.hpp```.
 
@@ -1071,7 +1072,7 @@ Total Cart Price is: $7.2
 Total Cart Price (Including Tax): $7.83
 ```
 
-triggering the following prompts for user 2:
+and then triggering the following prompts for user 2:
 
 ```
 For Pluto, what would you like to add to their cart?
@@ -1082,7 +1083,7 @@ After all items have been added, press '0'.
 0
 ```
 
-and yielding the following output for user 2:
+lastly, yielding the following output for user 2:
 
 ```
 Displaying Pluto's Cart
@@ -1108,7 +1109,7 @@ Total Cart Price (Including Tax): $4.89375
 ![Screenshot_2](interface/input2.png)
 
 ## Installation/Usage
-To use this project, first clone our repository, then configure cmake and CMakeLists.txt, and lastly run ./main.
+To use this project, first clone this repository, then configure cmake, and lastly run ./main.
  
 Despite the myriad of testing that we have put our program through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable as a user interface. The sequence within ```main.cpp``` is solely depended on user input; the sequence is as follows:
 1. Ask for a party name
