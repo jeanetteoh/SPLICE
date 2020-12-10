@@ -9,7 +9,7 @@
 using namespace std;
 
 //class Rest
- vector<string> priceSort::sort(vector<Rest*> r_list)
+ vector<string> priceSort::ssort(vector<Rest*> r_list)
 {
 
     vector<string> pricelist;
@@ -33,9 +33,12 @@ using namespace std;
 
         if (pricelist.at(i) > pricelist.at(j)) {
             std::swap(pricelist.at(i) , pricelist.at(j));
-        }
-    }
-}
+         }
+      }
+   }
+ 
+             return pricelist;
+
 }
     
 

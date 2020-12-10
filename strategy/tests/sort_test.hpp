@@ -18,7 +18,7 @@ TEST(Sort_Tests, NameSortTest)
 
 
     nameSort* test = new nameSort();
-    vector<string> save = test->sort(name_Test);
+    vector<string> save = test->ssort(name_Test);
 
     EXPECT_EQ(save.at(0), "Domino");
     EXPECT_EQ(save.at(1), "McDonald");
@@ -35,7 +35,7 @@ TEST(Sort_Tests, PriceSortTest)
 
     nameSort* test = new nameSort();
    
-    vector<string> save = test->sort(Price_Test);
+    vector<string> save = test->ssort(Price_Test);
 
     EXPECT_EQ(save.at(0), "234");
     EXPECT_EQ(save.at(1), "45");

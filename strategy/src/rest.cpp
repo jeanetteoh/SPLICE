@@ -1,4 +1,4 @@
-#include "../strategy/header/rest.hpp"
+#include "../header/rest.hpp"
 
 Rest::Rest(const string &fastfood_store_name)
 {

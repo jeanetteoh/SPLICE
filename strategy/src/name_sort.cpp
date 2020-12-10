@@ -18,7 +18,7 @@
 
 
 
-vector<string> nameSort::sort(vector<Rest*> r_list) {
+vector<string> nameSort::ssort(vector<Rest*> r_list) {
 
     vector<string> namelist ;
 

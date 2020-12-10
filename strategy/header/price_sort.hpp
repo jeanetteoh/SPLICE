@@ -9,7 +9,7 @@ class priceSort : public Sort
 {
 public:
     priceSort() {};
-    vector<string> sort(vector<Rest*> r_list);
+    vector<string> ssort(vector<Rest*> r_list);
    
 
 };
