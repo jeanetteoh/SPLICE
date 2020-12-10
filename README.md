@@ -13,7 +13,7 @@ This project will be coded in C++. We understand that testing is an integral par
 
 ### What will be the input/output for our project?
 
-The inputs to our project will be the party name, party size, party member names, restaurant selection, and item selections from the menus that will be outputted. We will then create a unique cart for each party member, and the output of our project will be the exact amount each consumer needs to pay per their specific carts. 
+The inputs to our project will be the party name, party size, party member names, restaurant selection, and item selections in response to menu items from the restaurant that will be outputted. We will then create a unique cart for each party member that will serve as an intermediate step to our final output, which is the exact amount each consumer needs to pay per their specific carts. 
 
 ### What design patterns will we be incorporating?
 **1. Prototype**
