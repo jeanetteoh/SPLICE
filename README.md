@@ -474,9 +474,9 @@ As mentioned before, our ```menu``` component classes and ```menu_items``` leaf 
 
 > The following pizza classes: ```menu_dominos.hpp```, ```menu_items_dominos.hpp```, ```menu_papajohns.hpp```, ```menu_items_papajohns.hpp```, ```menu_pizzahut.hpp```, ```menu_items_pizzahut.hpp``` also derive from the base interface class ```menu_component.hpp```; these files can be found under ```composite/menu_pizza/header/```. 
 
-> The following taco classes: ```menu_tacobell.hpp```, ```menu_items_tacobell.hpp```, ```menu_deltaco.hpp```, ```menu_items_deltaco.hpp```, ```menu_elpolloloco.hpp```, ```menu_items_elpolloloco.hpp```; these files can be found under ```composite/menu_taco/header/```. 
+> The following taco classes: ```menu_tacobell.hpp```, ```menu_items_tacobell.hpp```, ```menu_deltaco.hpp```, ```menu_items_deltaco.hpp```, ```menu_elpolloloco.hpp```, ```menu_items_elpolloloco.hpp```also derive from the base interface class ```menu_component.hpp```; these files can be found under ```composite/menu_taco/header/```. 
 
-> The test cases can be found at their respective directory as well.
+> The test cases for each class can be found within their respective directories under ```composite/menu_<restaurant_category>/tests/```
 
 For the purpose of condensing the ```README.md``` file, we will only display unit test cases for ```menu_mcdonalds``` and ```menu_items_mcdonalds```, since both of these files belong to ```menu_burger```, its test files can be found under ```composite/menu_burger/tests/```.
 
@@ -1116,4 +1116,4 @@ Despite the myriad of testing that we have put our program through, to ensure th
 5. Display the restaurants that fall under the category chosen, and then ask for an input to select the restaurant
 6. Display the restaurant menu, ask for continuous inputs to add items into the user cart
 7. Output cart items and total amount needed to pay
-> *Repeat steps 6 and 7 depending on the party size*
+> * Repeat steps 6 and 7 depending on the party size
