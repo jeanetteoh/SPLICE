@@ -285,7 +285,7 @@ Item Price: 1.89
 ![Party_Composite](composite/party_composite_pattern.png)
 > Note that the term "party member" is synonymous to class ```party_component user```. The term party member is used within throughout the README for clarity. 
 
-In addition to the usage shown in Phase 2/2b., an example of utilizing the party and party member composite pattern in our ```main.cpp``` would be the initial asking for a party name and their size. Depending on the size, we will instantiate a corresponding number of user carts. The ```party_component *i_user1``` works hand in hand with ```cart_component *i_user1_cart```.
+In addition to the usage shown in Phase 2/2b., another example of utilizing the party and party member composite pattern in our ```main.cpp``` would be the initial asking for a party name and their size. Depending on the size, we will instantiate a corresponding number of user carts. Note that the ```party_component *i_user1``` works hand in hand with ```cart_component *i_user1_cart```.
 
 ```c++
 ...
@@ -312,34 +312,36 @@ In addition to the usage shown in Phase 2/2b., an example of utilizing the party
 > At this moment, we only support up to 3 users.
 
 If there is only 1 user, we will only instantiate 1 ```user_cart``` and 1 ```cart_items``` to store all of the menu items they selected.
+
 An example is shown below from ```main.cpp```:
 
 ```c++
-        if(i_party_size == 1)
+...
+if(i_party_size == 1)
+{
+    party_component *i_user1 = new user(user1);
+    cart_component *i_user1_cart = new user_cart(i_user1);
+    cout << "For " << user1 << ", what would you like to add to their cart?" << endl;
+    cout << "Please enter the item number from the restaurant you have selected." << endl;
+    cout << "After all items have been added, press '0'." << endl;
+
+    cin >> mcdonalds_item_number;
+    cart_component *i_user1_cart_items = new cart_items(i_mcdonalds_cart.at(mcdonalds_item_number - 1));
+
+    bool mcdonalds_condition = true;
+    while (mcdonalds_condition)
+    {
+        cin >> mcdonalds_item_number_1;
+        if (mcdonalds_item_number_1 == 0)
         {
-            party_component *i_user1 = new user(user1);
-            cart_component *i_user1_cart = new user_cart(i_user1);
-            cout << "For " << user1 << ", what would you like to add to their cart?" << endl;
-            cout << "Please enter the item number from the restaurant you have selected." << endl;
-            cout << "After all items have been added, press '0'." << endl;
-
-            cin >> mcdonalds_item_number;
-            cart_component *i_user1_cart_items = new cart_items(i_mcdonalds_cart.at(mcdonalds_item_number - 1));
-
-            bool mcdonalds_condition = true;
-            while (mcdonalds_condition)
-            {
-                cin >> mcdonalds_item_number_1;
-                if (mcdonalds_item_number_1 == 0)
-                {
-                    mcdonalds_item_number_1 = false;
-                    break;
-                }
-                i_user1_cart_items->add_to_cart(i_mcdonalds_cart.at(mcdonalds_item_number_1 - 1));
-            }
-            i_user1_cart->add(i_user1_cart_items);
-            i_user1_cart->display();
+            mcdonalds_item_number_1 = false;
+            break;
         }
+        i_user1_cart_items->add_to_cart(i_mcdonalds_cart.at(mcdonalds_item_number_1 - 1));
+    }
+    i_user1_cart->add(i_user1_cart_items);
+    i_user1_cart->display();
+}
 ```
 
 This process will repeat for the number of users.
@@ -387,7 +389,9 @@ Total Cart Price (Including Tax): $11.3861
 All unit test cases abide by the **Google Test Framework**
 ### Testing Restaurant Prototype Pattern
 Here is our unit test cases for our ```restaurant``` prototype pattern. This file can be found in ```prototype/tests/fastfood_tests.hpp```.
+
 Some unit test cases include:
+
 ```c++
 TEST(FastFood_Tests, SizeTest)
 {
@@ -463,7 +467,9 @@ Restaurant Price (from $ to $$$): $$
 ### Testing Menu & Menu Items Composite Pattern
 ### Testing Party & Party Members Composite Pattern
 Here is our unit test cases for our ```party``` and ```user``` composite pattern. This file can be found in ```composite/party_tests/party_test.hpp```.
+
 Some unit test cases include:
+
 ```c++
 TEST(Party_Test, Create_Party)
 {
@@ -611,7 +617,9 @@ User 2: Hongan
 
 ### Testing User Cart & Cart Items Composite Pattern
 Here is our unit test cases for our ```user_cart``` and ```cart_items``` composite pattern. This file can be found in ```composite/cart/test/cart_test.hpp```.
+
 Some unit test cases include:
+
 ```c++ 
 TEST(Cart_Test, Total_Price_Test)
 {
