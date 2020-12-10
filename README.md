@@ -468,7 +468,15 @@ Restaurant Price (from $ to $$$): $$
 ```
 
 ### Testing Menu & Menu Items Composite Pattern
-As mentioned before, our ```menu``` component classes and ```menu_items``` leaf classes are separated by the different restaurants. The following burger classes: ```menu_mcdonalds.hpp```, ```menu_items_mcdonalds.hpp```,```menu_chickfila.hpp```, ```menu_items_chickfila.hpp```, ```menu_innout.hpp```, ```menu_items_innout.hpp``` all derive from the base interface class ```menu_component.hpp```; these files can be found under ```composite/menu_burger/header/```. In addition to the burger classes, the following pizza classes: ```menu_dominos.hpp```, ```menu_items_dominos.hpp```, ```menu_papajohns.hpp```, ```menu_items_papajohns.hpp```, ```menu_pizzahut.hpp```, ```menu_items_pizzahut.hpp``` also derive from the base interface class ```menu_component.hpp```; these files can be found under ```composite/menu_pizza/header/```. Lastly, the same is applied for taco classes: ```menu_tacobell.hpp```, ```menu_items_tacobell.hpp```, ```menu_deltaco.hpp```, ```menu_items_deltaco.hpp```, ```menu_elpolloloco.hpp```, ```menu_items_elpolloloco.hpp```; these files can be found under ```composite/menu_taco/header/```. The test cases can be found at their respective directory as well.
+As mentioned before, our ```menu``` component classes and ```menu_items``` leaf classes are separated by the different restaurants. 
+
+> The following burger classes: ```menu_mcdonalds.hpp```, ```menu_items_mcdonalds.hpp```,```menu_chickfila.hpp```, ```menu_items_chickfila.hpp```, ```menu_innout.hpp```, ```menu_items_innout.hpp``` all derive from the base interface class ```menu_component.hpp```; these files can be found under ```composite/menu_burger/header/```. 
+
+> The following pizza classes: ```menu_dominos.hpp```, ```menu_items_dominos.hpp```, ```menu_papajohns.hpp```, ```menu_items_papajohns.hpp```, ```menu_pizzahut.hpp```, ```menu_items_pizzahut.hpp``` also derive from the base interface class ```menu_component.hpp```; these files can be found under ```composite/menu_pizza/header/```. 
+
+> The following taco classes: ```menu_tacobell.hpp```, ```menu_items_tacobell.hpp```, ```menu_deltaco.hpp```, ```menu_items_deltaco.hpp```, ```menu_elpolloloco.hpp```, ```menu_items_elpolloloco.hpp```; these files can be found under ```composite/menu_taco/header/```. 
+
+> The test cases can be found at their respective directory as well.
 
 For the purpose of condensing the ```README.md``` file, we will only display unit test cases for ```menu_mcdonalds``` and ```menu_items_mcdonalds```, since both of these files belong to ```menu_burger```, its test files can be found under ```composite/menu_burger/tests/```.
 
