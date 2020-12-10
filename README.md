@@ -43,7 +43,7 @@ Item Price: 3.99
 ```
 
 ###### 2b. Constructing the parties and the party members
-By utilizing the composite pattern to construct the ```parties (container)```, and the ```party members (leaves)``` - we have constructed the ```party_component (interface)``` to successfully recognize whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
+By utilizing the composite pattern to create the ```parties (container)```, and the ```party members (leaves)``` - we have constructed a ```party_component (interface)``` that successfully recognizes whether we are creating new parties or new party members. A snippet of how we utilized this portion of the composite pattern within our client is:
 
 ```c++
 party_component *m_party_1 = new party("Party of 3", 3);
@@ -62,7 +62,7 @@ User 2: Jeanette
 User 3: Hongan
 ```
 
-###### 2c. Constructing the users and their respective carts
+###### 2c. Constructing the user carts and their respective cart items
 We had a bit of a difficulty implementing this without any redundancy as the terms users and party members are synonymous within this project. However, we were still able to utilize this in the way we originally intended. All ```users (container)``` will take in a ```party_component *``` as a parameter to recognize the user, and each user will have their individual ```cart items (leaves)``` which takes in a parameter of ```menu_component *``` to recognize the menu items. The ```cart component (interface)``` will manage the necessary operations to successfuly delegate work based on the parameter. The purpose of utilizing this composite function is for it to successfully recognize the individuality between different users and output their respective cart items based on the menu items they have selected. This composite pattern also successfuly provides a linkage to the previous two patterns. An example of how it is utilized in our client is:
 
 ```c++
@@ -166,7 +166,7 @@ As displayed above, the usage of this pattern makes the process of creating new 
 ![Menu_Composite1](composite/menu_composite_pattern.png)
 > The OMT Disgram above only demonstrates one of the many restaurants that utilize the ```menu_component``` base class. All the other restaurants we have chose to implement also comprises of a respective component class and leaf class that replicates a similar OMT diagram. Such files can be found under ```composite/menu_burger/...```, ```composite/menu_pizza/...```, and ```composite/menu_taco/...```
 
-For each restaurant, we added around 9-10 of their top 10 items. These can be found under ```interface/```, an example will be displayed below:
+Due to limitations, for each restaurant, we decided to only add around 9-10 of their customer favorite items. These display functions can be found under ```interface/```, an example will be displayed below:
 
 ```c++
 class menu_mcdonalds_display
@@ -283,8 +283,26 @@ Item Price: 1.89
 
 ###### Party & Party Members Composite Pattern
 ![Party_Composite](composite/party_composite_pattern.png)
+> Note that the term "party member" is synonymous to class user. The term party member is used within the README for clarification purposes. 
 
-###### User & User Carts Composite Pattern
+In addition to the usage shown in Phase 2/2b., an example of utilizing the party and party member composite pattern in our ```main.cpp``` would be the initial asking for a party name and their size. Depending on the size, we will instantiate a corresponding number of user carts. The ```party_component *i_user1``` works hand in hand with ```cart_component *i_user1_cart```.
+
+```c++
+	party_component *i_party = new party(i_party_name, i_party_size);
+	...
+	party_component *i_user1 = new user(user1);
+
+```c++
+	...
+        if(i_party_size == 1)
+        {
+            party_component *i_user1 = new user(user1);
+            cart_component *i_user1_cart = new user_cart(i_user1);
+	...
+```
+
+
+###### User Cart & Cart Items Composite Pattern
 ![Cart_Composite](composite/cart_composite_pattern.png)
 
 
