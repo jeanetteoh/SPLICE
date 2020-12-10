@@ -570,7 +570,7 @@ Despite the myriad of testing that we have put our program through, to ensure th
 5. Display the restaurants that fall under the category chosen, and then ask for an input to select the restaurant
 6. Display the restaurant menu, ask for continuous inputs to add items into the user cart
 7. Output cart items and total amount needed to pay
-> Repeat steps 6 and 7 depending on the party size
+*Repeat steps 6 and 7 depending on the party size*
 
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
