@@ -13,7 +13,9 @@ public:
     Sort() {};
 
     /* Pure Virtual Functions */
-    virtual vector<string> sort(vector<Rest*> r_list) = 0;
+    virtual vector<string> ssort(vector<Rest*> r_list) ;
+
+    virtual vector<double> psort(vector<Rest*> p_list) ;
 };
 
 #endif _SORT_

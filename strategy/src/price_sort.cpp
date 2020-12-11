@@ -9,18 +9,26 @@
 using namespace std;
 
 //class Rest
- vector<string> priceSort::sort(vector<Rest*> r_list)
+ 
+ //vector<string> priceSort::ssort(vector<Rest*> r_list)
+ 
+  vector<double> priceSort::psort(vector<Rest*> p_list)
 {
 
-    vector<string> pricelist;
-   
+     //vector<string> pricelist;
+     vector<double> pricelist;
 
-    for (int i = 0; i < r_list.size(); i++) {
+    for (int i = 0; i < p_list.size(); i++) {
 
-        Rest* addprice = r_list.at(i);
-        pricelist.push_back(addprice->get_fastfood_store_price());
-       
+        Rest* addprice = p_list.at(i);
+        pricelist.push_back( addprice->get_fastfood_store_price());
+          
+          //atof( const addprice->get_fastfood_store_price() );
+
+          //pricelist.push_back(atof(addprice->get_fastfood_store_price())
+
     }
+
 
                       
     for (int i = 0; i <pricelist.size(); i++) {
@@ -28,9 +36,12 @@ using namespace std;
 
         if (pricelist.at(i) > pricelist.at(j)) {
             std::swap(pricelist.at(i) , pricelist.at(j));
-        }
-    }
-}
+         }
+      }
+   }
+ 
+             return pricelist;
+
 }
     
 

@@ -9,7 +9,7 @@ class nameSort : public Sort
 {
 public:
     nameSort() {};
-    vector<string> sort(vector<Rest*> r_list);
+    vector<string> ssort(vector<Rest*> r_list);
 
 };
 #endif
