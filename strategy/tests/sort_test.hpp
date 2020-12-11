@@ -34,8 +34,7 @@ TEST(Sort_Tests, PriceSortTest)
     Price_Test.push_back(new Rest("45"));
 
     priceSort* test = new priceSort();
-     //priceSort* test;
-    //vector<string> save = test->ssort(Price_Test);
+    
     vector<double> save = test->psort(Price_Test);
     EXPECT_EQ(save.at(0), 234);
     EXPECT_EQ(save.at(1), 45);

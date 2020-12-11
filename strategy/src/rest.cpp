@@ -1,12 +1,8 @@
 #include "../header/rest.hpp"
 
-Rest::Rest(){
 
-            fastfood_store_price = 0;
-            fastfood_store_name = "";
-}
 
-Rest::Rest(string fastfood_store_name)
+Rest::Rest(string fastfood_store_name )
 {
     this->fastfood_store_name = fastfood_store_name;
    
@@ -32,8 +28,7 @@ double Rest::get_fastfood_store_price()
     return this->fastfood_store_price;
 }
 
-
-Rest::~Rest(){}
+//Rest::~Rest();
 
 
 

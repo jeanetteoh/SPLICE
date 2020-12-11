@@ -10,6 +10,5 @@ class nameSort : public Sort
 public:
     nameSort() {};
     vector<string> ssort(vector<Rest*> r_list);
-
 };
 #endif

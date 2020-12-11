@@ -47,6 +47,7 @@ add_executable(sort_test2
 
      strategy/src/name_sort.cpp
      strategy/src/price_sort.cpp
+     strategy/src/rest.cpp
      strategy/tests/sort_unit_tests.cpp
  )
 

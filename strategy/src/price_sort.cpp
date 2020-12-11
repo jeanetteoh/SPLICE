@@ -23,9 +23,7 @@ using namespace std;
         Rest* addprice = p_list.at(i);
         pricelist.push_back( addprice->get_fastfood_store_price());
           
-          //atof( const addprice->get_fastfood_store_price() );
-
-          //pricelist.push_back(atof(addprice->get_fastfood_store_price())
+          
 
     }
 

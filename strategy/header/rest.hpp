@@ -12,7 +12,6 @@ private:
     
     string fastfood_store_name;
     
-
 public:
     Rest(){};
 
@@ -24,9 +23,8 @@ public:
   
     double get_fastfood_store_price();
     void set_fastfood_store_price(double fastfood_store_price);
-
    
-    virtual ~Rest();
+    //virtual ~Rest();
  
 };
 
