@@ -9,25 +9,23 @@ class Rest
 {
 private:
     double fastfood_store_price;
-    //string fastfood_store_price;
+    
     string fastfood_store_name;
-    //Restaurant *m_Restaurant;
+    
 
 public:
     Rest(){};
-    Rest(const string &fastfood_store_name);
 
-    const string &get_fastfood_store_name() const;
-    void set_fastfood_store_name(const string &fastfood_store_name);
+    Rest(string fastfood_store_name);
+
+    string get_fastfood_store_name();
+    void set_fastfood_store_name(string fastfood_store_name);
     
   
-    const double &get_fastfood_store_price() const;
-    void set_fastfood_store_price(const double &fastfood_store_price);
+    double get_fastfood_store_price();
+    void set_fastfood_store_price(double fastfood_store_price);
 
-    //const string &get_fastfood_store_price() const;
-    //void set_fastfood_store_price(const string &fastfood_store_price);
-
-    /* Rule of three */
+   
     virtual ~Rest();
  
 };

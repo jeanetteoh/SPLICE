@@ -1838,7 +1838,6 @@ int main()
         cout << "THERE IS AN ERROR MF IN REST TYPE LOOP" << endl;
     }
 
-    
 
     return 0;
 }
