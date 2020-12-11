@@ -1108,7 +1108,7 @@ Total Cart Price (Including Tax): $4.89375
 ![Screenshot_2](interface/input2.png)
 
 ## Installation/Usage
-To use this project, first clone this repository, then configure cmake, and lastly run ./main.
+To use this project, first clone this repository ```git clone https://github.com/cs100/final-project-joh046-hzhan265-xwang315.git```, then ```cd``` into the repo, configure cmake, and lastly run ```./main```.
  
 Despite the myriad of testing that we have put our program through, to ensure that the program performs its functionality, we have created a ```main.cpp``` command line executable as a user interface. The sequence within ```main.cpp``` is solely depended on user input; the sequence is as follows:
 1. Ask for a party name
